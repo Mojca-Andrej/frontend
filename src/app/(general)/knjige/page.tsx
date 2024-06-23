@@ -1,5 +1,3 @@
-import Topbar from "../components/topbar"
-import Footer from "../components/footer"
 import { books } from "./data/books"
 import { Genre } from "./data/books"
 import Link from "next/link"
@@ -11,7 +9,6 @@ export default function Knjige() {
   const booksForChildren = books.filter(book => book.genre === Genre.Children)
   return (
     <main>
-        <Topbar/>
         <div className="bg-white px-4 py-8 md:px-16">
           <h1 className="text-black font-semibold text-2xl py-4">Knjige za odrasle</h1>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-screen-xl">
@@ -35,8 +32,6 @@ export default function Knjige() {
             ))}
           </div>
         </div>
-        
-        <Footer/>
     </main>
   )
 }
