@@ -14,7 +14,7 @@ export default function Knjige() {
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-screen-xl">
             {booksForAdults.map(book => (
                 <div key={book.title} className="">
-                    <Link href={`/knjige/${book.title}`}>
+                    <Link href={`/knjige/${book.link}`}>
                             <img src={`${book.image}`} alt={book.title} className="h-[280px] w-[200px] aspect-auto transition ease-in-out delay-0 hover:scale-105" />
                     </Link>
                 </div>
@@ -25,7 +25,7 @@ export default function Knjige() {
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-screen-xl">
             {booksForChildren.map(book => (
                 <div key={book.title} className="">
-                    <Link href={`/knjige/${book.title}`}>
+                    <Link href={`/knjige/${book.link}`}>
                             <img src={`${book.image}`} alt={book.title} className="h-[280px] w-[200px] aspect-auto transition ease-in-out delay-0 hover:scale-105" />
                     </Link>
                 </div>

@@ -12,7 +12,8 @@ export interface Book {
     description: string;
     image: string;
     publisher: string;
-    type?: string;
+    link: string;
+    type: string;
     shortDescription?: string;
     cd?: string;
     ilustrator?: string;
@@ -33,7 +34,8 @@ export const books: Book[] = [
         med snovnim in pojmovnim.«`,
         image: "nikoli_ne_reci.jpg",
         publisher: "Mariborska literarna družba",
-        type: "pesniška zbirka"
+        type: "pesniška zbirka",
+        link: "nikoli-ne-reci-da-ni-skrivnosti"
     },
     {
         title: "Dež v gugalnici",
@@ -50,7 +52,8 @@ export const books: Book[] = [
         včasih se prelivajo med sabo … /…/ V teh pesmih so sanje in besede in tišina …«`,
         image: "dez_v_gugalnici.jpg",
         publisher: "Mariborska literarna družba, Klub KU-KU in Kulturni klub Nomadi",
-        type: "pesniška zbirka"
+        type: "pesniška zbirka",
+        link: "dez-v-gugalnici"
     },
     {
         title: "Ostanek umrle zvezde",
@@ -66,10 +69,11 @@ export const books: Book[] = [
         bogata in izvirna. Pravi užitek.«`,
         image: "ostanek_umrle_zvezde.jpg",
         publisher: "Litera Maribor",
-        type: "pesniška zbirka"
+        type: "pesniška zbirka",
+        link: "ostanek-umrle-zvezde"
     },
     {
-        title: "Kavč učiteljive Veronike",
+        title: "Kavč učiteljive Veronike (2022)",
         year: 2022,
         author: "Mojca Andrej",
         genre: Genre.Adult,
@@ -81,10 +85,11 @@ export const books: Book[] = [
         proti sistemu in da se le izčrpava.«`,
         image: "kuv1.jpg",
         publisher: "Litera Maribor",
-        type: "roman"
+        type: "roman",
+        link: "kavc-uciteljive-veronike-2022"
     },
     {
-        title: "Kavč učiteljive Veronike",
+        title: "Kavč učiteljive Veronike (2024)",
         year: 2024,
         author: "Mojca Andrej",
         genre: Genre.Adult,
@@ -94,7 +99,8 @@ export const books: Book[] = [
         v karikiranje.«`,
         image: "kuv2.jpg",
         publisher: "Klub KU KU, Glazerjeva domačija",
-        type: "roman (ponatis oz. prvi natis druge založbe)"
+        type: "roman (ponatis oz. prvi natis druge založbe)",
+        link: "kavc-uciteljive-veronike-2024"
     },
     {
         title: "Transitions",
@@ -105,7 +111,8 @@ export const books: Book[] = [
         svoje poezije v angleščini. Prevajalci so različni.`,
         image: "transitions.jpg",
         publisher: "Mariborska literarna družba",
-        type: "prevedena poezija, dvostranska knjiga"
+        type: "prevedena poezija, dvostranska knjiga",
+        link: "transitions"
 
     },
     {
@@ -127,7 +134,8 @@ export const books: Book[] = [
         pomočjo poezije z lahkoto premagati.«`,
         image: "rastem_do_tebe.jpg",
         publisher: "OŠ Prežihovega Voranca Maribor, Klub KU KU",
-        type: "zbirka pesmi za otroke"
+        type: "zbirka pesmi za otroke",
+        link: "rastem-do-tebe"
 
     },
     {
@@ -167,7 +175,8 @@ export const books: Book[] = [
         skupno isto čudenje? In ali ni prav čudenje tista najbolj živa neznana sila, ki nas vodi
         naprej, iz znanega v neznano? In da se dva, kot sta Agica in Ages, srečata na isti
         zvezdi, je pravzaprav čudež, kajne?
-        Dedek že ve.`
+        Dedek že ve.`,
+        link: "agica-mala-carovnica"
     },
 
 ]
