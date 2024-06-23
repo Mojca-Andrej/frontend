@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "lucide": "^0.396.0",
     "lucide-react": "^0.396.0",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-photo-album": "^2.4.1",
+    "tailwind-merge": "^2.3.0",
+    "yet-another-react-lightbox": "^3.20.0"
   },
   "devDependencies": {
     "@types/node": "^20",

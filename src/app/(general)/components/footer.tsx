@@ -20,7 +20,7 @@ export default function Footer () {
                         <Facebook size={22}/>
                         </Link>
 
-                        <Link href="https://www.facebook.com/mojca.andrej" target="_blank">
+                        <Link href="https://www.instagram.com/mojcaandrej/" target="_blank">
                         <Instagram size={22}/>
                         </Link>
                     </div>
