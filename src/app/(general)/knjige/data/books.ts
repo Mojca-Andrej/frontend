@@ -73,7 +73,7 @@ export const books: Book[] = [
         link: "ostanek-umrle-zvezde"
     },
     {
-        title: "Kavč učiteljive Veronike (2022)",
+        title: "Kavč učiteljice Veronike (2022)",
         year: 2022,
         author: "Mojca Andrej",
         genre: Genre.Adult,
@@ -86,10 +86,10 @@ export const books: Book[] = [
         image: "kuv1.jpg",
         publisher: "Litera Maribor",
         type: "roman",
-        link: "kavc-uciteljive-veronike-2022"
+        link: "kavc-uciteljice-veronike-2022"
     },
     {
-        title: "Kavč učiteljive Veronike (2024)",
+        title: "Kavč učiteljice Veronike (2024)",
         year: 2024,
         author: "Mojca Andrej",
         genre: Genre.Adult,
@@ -100,7 +100,7 @@ export const books: Book[] = [
         image: "kuv2.jpg",
         publisher: "Klub KU KU, Glazerjeva domačija",
         type: "roman (ponatis oz. prvi natis druge založbe)",
-        link: "kavc-uciteljive-veronike-2024"
+        link: "kavc-uciteljice-veronike-2024"
     },
     {
         title: "Transitions",
