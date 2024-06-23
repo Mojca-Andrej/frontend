@@ -15,7 +15,10 @@ const config: Config = {
       },
       colors: {
         "primary-100": "#A481C6",
-      }
+      },
+      aspectRatio: {
+        'A4': '1.44 / 1',
+      },
     },
   },
   plugins: [],
