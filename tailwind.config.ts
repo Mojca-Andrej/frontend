@@ -14,7 +14,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        "primary-100": "#A481C6",
+        "primary-100": "#118ab2",
       },
       aspectRatio: {
         'A4': '1.44 / 1',

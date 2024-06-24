@@ -71,8 +71,8 @@ export default function Nastopi() {
           <p>Predstavitev avtorske sodobne pravljice <em className="font-semibold">Agica, mala čarovnica</em>. Glasbeni kamišibaj ob podpori glasbe (uglasbene pesmi iz pravljice) kantavtorja Petra Andreja in gledališke igralke Alenke Cilenšek. Oder knjižnega sejma Glavni trg Maribor – Slovenski dnevi knjige (organizator MKC); 21. 6. 2020</p>
         </div>
       </section>
-
       <h2 className="text-xl text-neutral-700 py-4 font-semibold">Magnetno Gledališče</h2>
+      <div className="border border-primary-100 border-1 rounded-md p-4">
 
       <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
         <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
@@ -85,6 +85,7 @@ export default function Nastopi() {
           <p>Nastopali: Mojca Andrej, Peter Andrej in Alenka Cilenšek</p>
         </div>
       </section>
+      
 
       <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
         <h3 className="text-sm font-light mt-1 md:mt-0">2023</h3>
@@ -93,6 +94,7 @@ export default function Nastopi() {
           <p>Soorganizatorji: Letni oder Ruše, Zavod Rast Ruše, Glazerjeva domačija / Glazerjevi dnevi, Klub KU KU in Občina Ruše.</p>
         </div>
       </section>
+      </div>
 
       <h1 className="text-2xl text-black py-4 font-semibold">Nastopi in Predstavitve</h1>
 

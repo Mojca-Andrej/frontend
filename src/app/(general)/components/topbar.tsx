@@ -11,6 +11,7 @@ export default function Topbar() {
                 <Link className="text-neutral-500 hover:text-black" href={"/nastopi"}>nastopi</Link>
                 <Link className="text-neutral-500 hover:text-black" href={"/odmevi"}>odmevi</Link>
                 <Link className="text-neutral-500 hover:text-black" href={"/galerija"}>galerija</Link>
+                <Link className="text-neutral-500 hover:text-black" href={"/branja"}>branja</Link>
                 <Link className="text-neutral-500 hover:text-black" href={"#footer"}>kontakt</Link>
             </div>
             <div></div>
