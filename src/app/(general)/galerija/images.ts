@@ -3,99 +3,17 @@ interface Image {
     alt: string;
     }
 
-
-
-export const images: Image[] = [
+export const regeImages: Image[] = [
     {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
+        src: '/rege/Rege Ruše 2018-8.JPG',
+        alt: 'Rege, žabje frke'
     },
     {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
+        src: '/rege/Rege Ruše 2018-29 (2).jpg',
+        alt: 'Rege, žabje frke'
     },
     {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
-    {
-        src:"/gallery/kuv1.jpg",
-        alt:"kuv1"
-    },
+        src: '/rege/Rege se veselijo novega CD-ja-2018-30.jpg',
+        alt: 'Rege, žabje frke'
+    }
 ]
