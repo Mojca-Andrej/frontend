@@ -8,7 +8,7 @@ export default function Odmevi() {
   const arsOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.ars)
   const raznoOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.razno)
   return (
-    <main className="px-4 md:px-16 bg-white">
+    <main className="bg-white pb-16 px-4 md:px-16">
         <h1 className="text-2xl text-black font-semibold">Odmevi</h1>
         <section className="text-md md:text-lg pt-4 pb-2">
             <ul className="pb-2">

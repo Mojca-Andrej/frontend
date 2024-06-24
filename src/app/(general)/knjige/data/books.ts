@@ -28,10 +28,10 @@ export const books: Book[] = [
         year: 2000,
         author: "Mojca Andrej",
         genre: Genre.Adult,
-        description: `V spremni besedi urednik MLD, Marjan Pungartnik, pesniško zbirko označi kot
-        »Gravitacijsko polje ljubezni./…/ Čar te zbirke je v uravnovešenosti med "lebdečim",
+        description: `V spremni besedi urednik MLD, <b>Marjan Pungartnik</b>, pesniško zbirko označi kot
+        <em>»Gravitacijsko polje ljubezni./…/ Čar te zbirke je v uravnovešenosti med "lebdečim",
         ki se razpreda v obilici subtilnih občutij, podob, in "gibanjem", padanjem in vrtenjem,
-        med snovnim in pojmovnim.«`,
+        med snovnim in pojmovnim.« </em>`,
         image: "nikoli_ne_reci.jpg",
         publisher: "Mariborska literarna družba",
         type: "pesniška zbirka",
@@ -42,14 +42,14 @@ export const books: Book[] = [
         year: 2015,
         author: "Mojca Andrej",
         genre: Genre.Adult,
-        description: `Zoran Pevec v spremni besedi Beseda in tišina razmišlja: » ... In kaj mu (bralcu)
+        description: `<b>Zoran Pevec</b> v spremni besedi Beseda in tišina razmišlja: <em>» ... In kaj mu (bralcu)
         pošilja Mojca Andrej v knjigi z naslovom Dež v gugalnici … Kar je na zunaj najbolj
         opazno – pet sklopov pesmi, od katerih se vsak nanaša na zanimive eksistencialne
         izkušnje, a tudi na vprašanje o tem, kako biti, kako se nanašati na drugega, s tem ko
         upoveduješ samega sebe. Lirski subjekt se tako že z naslovom guglje v svet, v
         katerem ima svoje mesto pripovedovalka z razmišljanjem o smislu bivanja, o naravi
         in ljubezni. /…/ … verzi so napolnjeni s sodobnim besediščem, inovativno podobo in
-        včasih se prelivajo med sabo … /…/ V teh pesmih so sanje in besede in tišina …«`,
+        včasih se prelivajo med sabo … /…/ V teh pesmih so sanje in besede in tišina …« </em>`,
         image: "dez_v_gugalnici.jpg",
         publisher: "Mariborska literarna družba, Klub KU-KU in Kulturni klub Nomadi",
         type: "pesniška zbirka",
@@ -60,13 +60,13 @@ export const books: Book[] = [
         year: 2020,
         author: "Mojca Andrej",
         genre: Genre.Adult,
-        description: `V spremni besedi Tudi jokati je pozabljena navada je Vinko Möderndorfer zapisal:
-        »… Pomemben in zelo izviren pa je humor, ki ga pesnica Mojca Andrej neprestano in
+        description: `V spremni besedi Tudi jokati je pozabljena navada je <b>Vinko Möderndorfer</b> zapisal:
+        <em> »… Pomemben in zelo izviren pa je humor, ki ga pesnica Mojca Andrej neprestano in
         zelo uspešno vpleta v svoje pesmi. Pravzaprav je humor, nenavadne in na poseben
         način duhovite besedne zveze in metafore, osnovna značilnost njene poezije.
         Seveda ne gre za enostaven humor, prej za nekakšno ironijo, tudi cinizem, pa spet
         za dobrohotno dovtipnost … Silovita zbirka je pred nami. Duhovita in trpka. Jezikovno
-        bogata in izvirna. Pravi užitek.«`,
+        bogata in izvirna. Pravi užitek.« </em>`,
         image: "ostanek_umrle_zvezde.jpg",
         publisher: "Litera Maribor",
         type: "pesniška zbirka",
@@ -77,12 +77,12 @@ export const books: Book[] = [
         year: 2022,
         author: "Mojca Andrej",
         genre: Genre.Adult,
-        description: `Spremno besedo v romanu je napisala urednica Litere Gabriela Babnik Ouattara:
-        »V romanu Kavč učiteljice Veronike torej naletimo na presenetljivo iskrenost; med
+        description: `Spremno besedo v romanu je napisala urednica Litere <b>Gabriela Babnik Ouattara</b>:
+        <em>»V romanu Kavč učiteljice Veronike torej naletimo na presenetljivo iskrenost; med
         drugim je Veronika polna jeze, ker se mora ves čas boriti: za svojo malico in pijačo, v
         šoli za pozornost otrok in vsaj malo empatije vodstva, med sodelavkami za podporo
         in razumevanje, v parku za svojo klop … Zelo jasno pa razume, da se ne more boriti
-        proti sistemu in da se le izčrpava.«`,
+        proti sistemu in da se le izčrpava.«</em>`,
         image: "kuv1.jpg",
         publisher: "Litera Maribor",
         type: "roman",
@@ -93,10 +93,10 @@ export const books: Book[] = [
         year: 2024,
         author: "Mojca Andrej",
         genre: Genre.Adult,
-        description: `Milan Dekleva je zapisal: »Glavna oseba, njena kriza in upornost sta napisani
-        doživeto in sta žarek upanja v tem ubožnem razvrednotenem svetu. /…/ Romanu
+        description: `<b>Milan Dekleva</b> je zapisal: <em> »Glavna oseba, njena kriza in upornost sta napisani
+        doživeto in sta žarek upanja v tem ubožnem razvrednotenem svetu. /…/ Romanu
         dajejo poseben čar humorni, pa tudi groteskni toni, ki niso nikoli pretirani in ne peljejo
-        v karikiranje.«`,
+        v karikiranje.« </em>`,
         image: "kuv2.jpg",
         publisher: "Klub KU KU, Glazerjeva domačija",
         type: "roman (ponatis oz. prvi natis druge založbe)",
@@ -120,18 +120,17 @@ export const books: Book[] = [
         year: 2013,
         author: "Mojca Andrej",
         genre: Genre.Children,
-        description: `Ob tem je nastala istoimenska glasbeno-plesna predstava, 2014.
+        description: `Ob tem je nastala istoimenska <b>glasbeno-plesna predstava</b>, 2014. <br /> <br />
 
-        Pesmi so nastajale kot šolski projekt Kako zraste knjiga, ker so bili učenci soavtorji
+        Pesmi so nastajale kot šolski projekt <em>Kako zraste knjiga</em>, ker so bili učenci soavtorji
         knjige, saj je opremljena z njihovimi ilustracijami. Knjigi je dodana glasbena
         zgoščenka, na kateri so te pesmi uglasbene (Peter Andrej), dodani pa so tudi notni
-        zapisi in
-        glasbene podlage, da se otroci lažje sami naučijo zapeti pesem.
+        zapisi in glasbene podlage, da se otroci lažje sami naučijo zapeti pesem. <br /> <br />
 
-        Borut Gombač je zapisal:
-        »Pesnica Mojca Andrej paradoksalno dokazuje, da prepad med svetom odraslosti in
+        <b>Borut Gombač</b> je zapisal:
+        <em> »Pesnica Mojca Andrej paradoksalno dokazuje, da prepad med svetom odraslosti in
         svetom otroštva le ni tako velik, kot se zdi na prvi pogled, oziroma da se ga da s
-        pomočjo poezije z lahkoto premagati.«`,
+        pomočjo poezije z lahkoto premagati.« </em>`,
         image: "rastem_do_tebe.jpg",
         publisher: "OŠ Prežihovega Voranca Maribor, Klub KU KU",
         type: "zbirka pesmi za otroke",
