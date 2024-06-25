@@ -9,7 +9,7 @@ export default function Odmevi() {
   const raznoOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.razno)
   return (
     <main>
-        <h1 className="text-2xl w-fit bg-gradient-to-r bg-clip-text text-transparent from-[#FFAFBD] to-[#ffc3a0] font-semibold mb-4">Odmevi</h1>
+        <h1 className="text-2xl w-fit bg-gradient-to-r bg-clip-text text-transparent from-[#642b73] to-[#c6426e] font-semibold mb-4">Odmevi</h1>
         <section className="md:text-lg">
             <ul className="pb-2">
                 {zvezdaOdmevi.map(odmev => (

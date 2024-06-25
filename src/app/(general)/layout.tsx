@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     return (
         <div>
             <Topbar/>
-            <main className="px-4 py-8 md:px-16 xl:px-32 bg-white">
+            <main className="px-4 pt-8 pb-16 md:px-16 xl:px-32 bg-white">
             {children}
             </main>
             <Footer/>

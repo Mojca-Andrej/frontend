@@ -10,10 +10,10 @@ export default function AgicaMalaCarovnica() {
         <main>   
             {book && <Info book={book} />}
             <div className="container mx-auto">
-                <h2 className="text-2xl text-semibold text-neutral-700 py-2">Kratek opis</h2>
-                <p className="text-neutral-600 py-2">
+                <h2 className="text-2xl text-semibold text-neutral-700 mt-8 py-4">Kratek opis</h2>
+                <p className="text-neutral-600">
                 ...poetična zgodba o malem Jakobu in dedku se prične, ko se Jakob sredi črne črne
-        noči nenadoma <em>prebudi</em> in z radovednim vprašanjem<em>prebudi</em> dedka, da se zazreta v
+        noči nenadoma <em>prebudi</em> in z radovednim vprašanjem <em>prebudi</em> dedka, da se zazreta v
         nočno nebo in se skupaj <em>čudovita</em> mežikajoči zvezdi. Njuno <em>čudenje</em> je pravzaprav uvod
         v zgodbo o Agici, o majhnem bitju, ki je v očeh drugih čudna. <br />
         Edina v svojem gnezdu je, ki ne joče, ampak cviiiili, ki zeha z usti v obliki črke i, ki ne
