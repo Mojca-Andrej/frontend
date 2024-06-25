@@ -15,6 +15,12 @@ const config: Config = {
       },
       colors: {
         "primary-100": "#118ab2",
+        "primary-50": "#3a96ba",
+        "primary-200": "#0d779a",
+        "primary-300": "#096583",
+        "primary-400": "#06536d",
+        "primary-500": "#044257",
+        "primary-600": "#032f41",
       },
       aspectRatio: {
         'A4': '1.44 / 1',
