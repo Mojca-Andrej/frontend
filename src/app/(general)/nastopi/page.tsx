@@ -1,11 +1,11 @@
 
 export default function Nastopi() {
   return (
-    <main className="bg-white text-black px-4 py-8 md:px-16">
-      <h1 className="text-2xl font-semibold pb-4">Gledališče</h1>
-      <h2 className="text-xl text-neutral-700 py-4"><span className="font-semibold">MOR</span> (Mladi oder Ruše) je CEZAM (Center za mlade Ruše) zasnoval leta 2014 z režiserko Tanjo Lužar.</h2>
+    <main>
+      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-[#6dd5ed] from-40% md:mb-4 mb-2">Gledališče</h1>
+      <h2 className="md:text-xl text-lg text-neutral-700 py-4"><span className="font-semibold">MOR</span> (Mladi oder Ruše) je CEZAM (Center za mlade Ruše) zasnoval leta 2014 z režiserko Tanjo Lužar.</h2>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2015</h3>
         <div>
           <p>s predstavo <em className="font-semibold">Vse ob pravem času</em> (David Ives) uvrstitev na regijsko tekmovanje Linhartovega srečanja.</p>
@@ -13,7 +13,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2016</h3>
         <div>
           <p>Performans (recital) Glazerjeve poezije na Glazerjevih dnevih v Domu kulture Ruše, marec 2016;</p>
@@ -21,7 +21,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2017</h3>
         <div>
           <p>Glasbeno-lutkovno gledališka predstava <em className="font-semibold">Mali princ</em>, Dom kulture Ruše</p>
@@ -31,7 +31,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2018</h3>
         <div>
           <p>Glasbeno-lutkovno gledališka predstava <em className="font-semibold">Mali princ</em>, Gostovanje v gledališču v Osijeku, maj 2018</p>
@@ -40,9 +40,9 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <h2 className="text-xl text-neutral-700 py-4 font-semibold">Kamišibaj</h2>
+      <h2 className="md:text-xl text-lg text-neutral-700 py-4 font-semibold">Kamišibaj</h2>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2018</h3>
         <div>
           <p><em className="font-semibold">Rege ali žabje frke</em>; knjižnica Janka Glazerja Ruše, 7. 12. 2018</p>
@@ -53,7 +53,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2019</h3>
         <div>
           <p><em className="font-semibold">Agica, mala čarovnica</em>; knjižnica Janka Glazerja Ruše, 11. 12. 2019</p>
@@ -64,17 +64,17 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2020</h3>
         <div>
           <p>Glasbeni kamišibaj <em className="font-semibold">Agica, mala čarovnica</em>; Mariborska knjižnica, Knjižnica Nova vas, februar 2020.</p>
           <p>Predstavitev avtorske sodobne pravljice <em className="font-semibold">Agica, mala čarovnica</em>. Glasbeni kamišibaj ob podpori glasbe (uglasbene pesmi iz pravljice) kantavtorja Petra Andreja in gledališke igralke Alenke Cilenšek. Oder knjižnega sejma Glavni trg Maribor – Slovenski dnevi knjige (organizator MKC); 21. 6. 2020</p>
         </div>
       </section>
-      <h2 className="text-xl text-neutral-700 py-4 font-semibold">Magnetno Gledališče</h2>
-      <div className="border border-primary-100 border-1 rounded-md p-4">
+      <h2 className="md:text-xl text-lg text-neutral-700 py-4 font-semibold">Magnetno Gledališče</h2>
+      {/* <div className="border border-primary-50 border-1 rounded-md p-4"> */}
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
         <div>
           <p>Premierna predstava z magnetnimi lutkami <em className="font-semibold">Agica, mala čarovnica</em>; gostovanje v Avstriji v Gradcu, Pavlova hiša, Laafeld, junij 2022</p>
@@ -87,20 +87,20 @@ export default function Nastopi() {
       </section>
       
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2023</h3>
         <div>
           <p>12. Pohorska pravljica: predstava (muzikal) <em className="font-semibold">Jezernik, povodni mož iz Črnega jezera</em>. V muzikal sta ga v svojo mini magnetno gledališče ujela Mojca Andrej in Peter Andrej.</p>
           <p>Soorganizatorji: Letni oder Ruše, Zavod Rast Ruše, Glazerjeva domačija / Glazerjevi dnevi, Klub KU KU in Občina Ruše.</p>
         </div>
       </section>
-      </div>
+      {/* </div> */}
 
-      <h1 className="text-2xl text-black py-4 font-semibold">Nastopi in Predstavitve</h1>
+      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-[#6dd5ed] from-40% md:my-4 mt-4 mb-2">Nastopi in Predstavitve</h1>
 
-      <h2 className="text-xl text-neutral-700 py-4 font-semibold">Doma</h2>
+      <h2 className="md:text-xl text-lg text-neutral-700 py-4 font-semibold">Doma</h2>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2015</h3>
         <div>
           <p>Predstavitev pesniške zbirke <em className="font-semibold">Dež v gugalnici</em>; Literarna hiša Maribor, julij 2015. Z avtorico se je pogovarjal Marjan Pungartnik.</p>
@@ -108,21 +108,21 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2016</h3>
         <div>
           <p>Predstavitev pesniške zbirke <em className="font-semibold">Dež v gugalnici</em>, Klub Daktari v Ljubljani, november 2016. Pogovor je vodila Cvetka Bevc, Peter Andrej je uglasbil in zapel nekaj pesmi iz te pesniške zbirke.</p>
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2020</h3>
         <div>
           <p>Branje poezije na Slovenskih dnevih knjige, Grajski trg Maribor, junij 2020.</p> 
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2021</h3>
         <div>
           <p>Branje poezije na literarnem maratonu z Združenimi državami poezije in predstavitvijo knjige <em className="font-semibold">Janko Glazer v prevodu</em>; 19. 6. 2021, Grajski trg Maribor. V soorganizaciji z MKC Maribor in Klubom kulturnih ustvarjalcev KU KU.</p>
@@ -130,7 +130,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
         <div>
           <p>Prisotnost na predstavitvi slikanice <em className="font-semibold">Agica, mala čarovnica</em>, ki jo je študentka predšolske vzgoje Eva Tomažin predstavila in analizirala pri predmetu Mladinska književnost, mentorica dr. Milena Mileva Blažić; Pedagoška fakulteta v Ljubljani, oktober 2022.</p>
@@ -138,7 +138,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0" >2023</h3>
         <div>
           <p>Predstavitev romana <em className="font-semibold">Kavč učiteljice Veronike</em>; Konjeniški park Starošince - Nazaj na konja, 3. 10. 2023. Z avtorico se je pogovarjala Metka Demšar Goljevšček.</p>
@@ -148,7 +148,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0" >2024</h3>
         <div>
           <p>27. festival Slovenski dnevi knjige Na preži v Mariboru, 22. 5. 2024, Grajski trg Maribor.</p>
@@ -158,26 +158,26 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <h3 className="text-lg text-neutral-800 py-4 font-semibold">Knjižni Sejem</h3>
+      <h3 className="md:text-lg sm:text-md text-neutral-600 py-4 font-semibold">Knjižni Sejem</h3>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2019</h3>
         <div>
           <p>Slikanica <em className="font-semibold">Agica, mala čarovnica</em> na 35. slovenskem knjižnem sejmu, v paviljonu založbe Litera, v Cankarjevem domu v Ljubljani.</p>
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
         <div>
           <p>Roman <em className="font-semibold">Kavč učiteljice Veronike</em> na 38. slovenskem knjižnem sejmu; na stojnici založbe Litera, na Gospodarskem razstavišču v Ljubljani.</p>
         </div>
       </section>
 
-      <h2 className="text-xl text-neutral-700 pt-4 pb-2 font-semibold">Tujina</h2>
-      <h4 className="text-lg text-neutral-500">Hrvaška, Bosna in Hercegovina, Srbija, Severna Makedonija, Bolgarija, Avstrija, Palma de Mallorca, Maroko.</h4>
+      <h2 className="md:text-xl text-lg text-neutral-700 pt-4 pb-2 font-semibold">Tujina</h2>
+      <h4 className="md:text-md text-sm pl-1 pb-2 text-neutral-500">Hrvaška, Bosna in Hercegovina, Srbija, Severna Makedonija, Bolgarija, Avstrija, Palma de Mallorca, Maroko.</h4>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <div className="flex flex-col items-center">
           <h3 className="text-sm font-light mt-1 md:mt-0">2012</h3>
           <h3 className="text-sm font-light mt-1 md:mt-0">–</h3>
@@ -188,7 +188,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2017</h3>
         <div>
           <p>Gostovanje na festivalu Impuls – poezija u kafiću; Varaždin, 25. 1. 2017. Organizator: Ritam misli. Moderatorja: Ljubica Ribić, Milan Novak</p>
@@ -198,14 +198,14 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2018</h3>
         <div>
           <p>Poetics international festival june in Sofia, Bolgarija, 16. – 17. junij 2018.</p>
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2019</h3>
         <div>
           <p>Festival SOFAFEST; branje poezije v Palmi de Mallorci, maj 2019.</p>
@@ -213,7 +213,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
         <div>
           <p>Majska srečanja slovanskih umetnikov; Burgas, Bolgarija, 25. – 29. 5. 2022. Gostitelj: ekipa СВЯТО СЛОВО. Združene Države Poezije so v Burgasu predstavile nekaj slovenskih knjig, ki so doživele tudi prevod v bolgarski jezik: <em className="font-semibold">Janko Glazer v prevodu</em> (Klub KU KU, Cezam 2020), <em className="font-semibold">Mojca Andrej: Ostanek umrle zvezde</em> (Litera Maribor, 2020), <em className="font-semibold">Peter Andrej: Skoz zvočni zid</em> (Založba Litera, 2019).</p>
@@ -221,14 +221,14 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2023</h3>
         <div>
           <p>Branje na predstavitvi projekta <em className="font-semibold">VSI SMO MI ENO/SVI SMO MI JEDNO</em> Muzej suvremene umetnosti Zagreb, 18. maj 2023.</p>
         </div>
       </section>
 
-      <section className="text-neutral-900 py-2 flex space-x-4 items-start md:items-center md:px-4 px-2">
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
         <h3 className="text-sm font-light mt-1 md:mt-0">2024</h3>
         <div>
             <p>Festival pesnikov petih kontinentov - <em className="font-semibold">POETS FROM FIVE CONTINENTS</em> – Maroko (Laayoune, Safi, Tangiers, Meknes in Marakeš), 19. – 28. 4. 2024. Organizator: Al Kalima Institution Of Culture And Arts In Safi, The Forum Of The Sahraoui Woman, Development And Democracy, Laayoune, Morocco.</p>
