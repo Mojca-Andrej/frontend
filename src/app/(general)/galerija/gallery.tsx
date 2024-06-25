@@ -8,19 +8,21 @@ interface Props {
   onClick: (index: number) => void;
   isMobile: boolean;
   images: IImage[];
+  color1: string;
+  color2: string;
 
 }
-export default function Gallery({ onClick, isMobile, images}: Props) {
+export default function Gallery({ onClick, isMobile, images, color1, color2}: Props) {
   return (
-    <main className="bg-neutral-200 rounded-sm px-4 py-10 md:px-16 md:pb-10 md:pt-20" id="gallery">
-      <div className="container mb-10  max-h-[400px] md:max-h-max overflow-hidden grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7">
+<main className={`bg-neutral-50 shadow-lg bg-gradient-to-tr from-${color1} to-${color2} p-2 md:p-8 rounded-lg `} id="gallery">
+      <div className="container max-h-[400px] md:max-h-max overflow-hidden grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7">
         {images.map((image, index) => {
           return (
             <div
               key={index}
               onClick={() => onClick(index)}
               className={cn(
-                'relative aspect-square h-full w-full cursor-pointer rounded-md overflow-hidden hover:opacity-85',
+                'relative aspect-square h-full w-full cursor-pointer rounded-md overflow-hidden hover:opacity-90',
                 index === 0 && !isMobile && 'col-span-2 row-span-2',
               )}
             >
@@ -35,13 +37,6 @@ export default function Gallery({ onClick, isMobile, images}: Props) {
             </div>
           );
         })}
-      </div>
-      <div className="view-gallery flex justify-center md:justify-end">
-        <button
-          className="flex items-center px-5 md:text-lg text-md text-my-white hover:text-black"
-          onClick={() => onClick(0)}
-        >
-        </button>
       </div>
     </main>
   );

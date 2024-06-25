@@ -81,10 +81,10 @@ export default function Gal() {
   }, []);
 
   return (
-    <main className='py-8 px-4 md:px-16 bg-white'>
-      <h1 className='text-2xl text-semibold text-neutral-700 py-2'>Veronika</h1>
+    <main>
+      <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-pink-500 w-fit to-fuchsia-500 pt-10 pb-4'>Veronika</h1>
       <div>
-        <Gallery onClick={setindex1} isMobile={isMobile} images={veronikaImages}/>
+        <Gallery color1={"red-500"} color2={"yellow-500"} onClick={setindex1} isMobile={isMobile} images={veronikaImages}/>
           <Lightbox
             styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
             slides={veronikaPhotos}
@@ -95,9 +95,9 @@ export default function Gal() {
           />
         </div>
 
-      <h1 className='text-2xl text-semibold text-neutral-700 py-2'>Agica</h1>
+      <h1 className='text-2xl font-bold pt-10 pb-4 bg-gradient-to-r text-transparent bg-clip-text from-indigo-500 w-fit to-violet-500'>Agica</h1>
         <div>
-        <Gallery onClick={setindex2} isMobile={isMobile} images={agicaImages}/>
+        <Gallery color1={"red-500"} color2={"blue-500"} onClick={setindex2} isMobile={isMobile} images={agicaImages}/>
           <Lightbox
             styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
             slides={agicaPhotos}
@@ -108,9 +108,9 @@ export default function Gal() {
           />
         </div>
 
-        <h1 className='text-2xl text-semibold text-neutral-700 py-2'>Rege, žabje frke</h1>
+        <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-emerald-500 w-fit to-green-500 pt-10 pb-4'>Rege, žabje frke</h1>
         <div>
-        <Gallery onClick={setindex3} isMobile={isMobile} images={regeImages}/>
+        <Gallery color1={"red-500"} color2={"blue-500"} onClick={setindex3} isMobile={isMobile} images={regeImages}/>
           <Lightbox
             styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
             slides={regePhotos}
@@ -121,9 +121,9 @@ export default function Gal() {
           />
         </div>
 
-        <h1 className='text-2xl text-semibold text-neutral-700 py-2'>Gledališče</h1>
+        <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-cyan-500 w-fit to-sky-500 pt-10 pb-4'>Gledališče</h1>
         <div>
-        <Gallery onClick={setindex4} isMobile={isMobile} images={gledalisceImages}/>
+        <Gallery color1={"red-500"} color2={"blue-500"} onClick={setindex4} isMobile={isMobile} images={gledalisceImages}/>
           <Lightbox
             styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
             slides={gledaliscePhotos}
@@ -134,9 +134,9 @@ export default function Gal() {
           />
         </div>
 
-        <h1 className='text-2xl text-semibold text-neutral-700 py-2'>Nastopi</h1>
+        <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-orange-500 w-fit to-amber-500 pt-10 pb-4'>Nastopi</h1>
         <div>
-        <Gallery onClick={setindex5} isMobile={isMobile} images={nastopiImages}/>
+        <Gallery color1={"red-500"} color2={"blue-500"} onClick={setindex5} isMobile={isMobile} images={nastopiImages}/>
           <Lightbox
             styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
             slides={nastopiPhotos}
@@ -147,7 +147,7 @@ export default function Gal() {
           />
         </div>
 
-        <h1 className='text-2xl text-semibold text-neutral-700 py-2'>Posnetki</h1>
+        <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-lime-500 w-fit to-teal-500 pt-10 pb-4'>Posnetki</h1>
         <div>
           TODO
         </div>
