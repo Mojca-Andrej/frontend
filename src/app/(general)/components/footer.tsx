@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
 
 export default function Footer () {
     return (
@@ -15,13 +15,17 @@ export default function Footer () {
                         <Phone size={20}/>
                         <p className="text-md">+386 51 368 588</p>
                     </div>
-                    <div className="flex space-x-4 items-center">
+                    <div className="flex space-x-4 items-center justify-center">
                         <Link href="https://www.facebook.com/mojca.andrej" target="_blank">
-                        <Facebook size={22}/>
+                            <Facebook size={22}/>
                         </Link>
 
                         <Link href="https://www.instagram.com/mojcaandrej/" target="_blank">
-                        <Instagram size={22}/>
+                            <Instagram size={22}/>
+                        </Link>
+
+                        <Link href="https://www.youtube.com/channel/UCFa7IHSXM1oKzEXmXG3NC5Q" target="_blank">
+                            <Youtube size={24}/>
                         </Link>
                     </div>
                     <div className="flex items-center pt-4 opacity-90">

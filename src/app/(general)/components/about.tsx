@@ -27,8 +27,9 @@ export default function About() {
         Živi in ustvarja v Rušah. 
         </p>
       </div>
-      <div className="flex justify-center md:col-span-1 items-center">
+      <div className="flex flex-col justify-center md:col-span-1 items-center md:items-start ">
         <Image width={"400"} height={"400"} src="/naslovnica.jpg" alt="Descriptive Alt Text" className="md:w-full max-h-[90%] object-cover w-2/3 rounded-sm shadow-sm" />
+        <p className="text-neutral-500 text-sm flex justify-start px-1 py-2">Foto: Boštjan Lah</p>
       </div>
     </div>
   );
