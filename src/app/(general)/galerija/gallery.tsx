@@ -10,11 +10,15 @@ interface Props {
   images: IImage[];
   color1: string;
   color2: string;
-
 }
-export default function Gallery({ onClick, isMobile, images, color1, color2}: Props) {
+
+export default function Gallery({ onClick, isMobile, images, color1, color2 }: Props) {
   return (
-<main className={`bg-neutral-50 shadow-lg bg-gradient-to-tr from-${color1} to-${color2} p-2 md:p-8 rounded-lg `} id="gallery">
+    <main
+      style={{ backgroundImage: `linear-gradient(to top right, ${color1}, ${color2})` }}
+      className="shadow-lg p-2 md:p-8 rounded-lg"
+      id="gallery"
+    >
       <div className="container max-h-[400px] md:max-h-max overflow-hidden grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7">
         {images.map((image, index) => {
           return (

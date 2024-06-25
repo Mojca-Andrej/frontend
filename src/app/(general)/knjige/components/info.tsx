@@ -22,7 +22,7 @@ export default function Info({ book }: InfoProps) {
                     </section>
                 </div>  
                 <div className="md:col-span-1 flex items-center justify-center">
-                    <Image src={`/${book.image}`} alt={book.title} height={800} width={800} className="w-2/3 sm:w-1/2 md:w-full xl:w-2/3 aspect-A4 rounded-sm shadow-md" />
+                    <Image src={`/${book.image}`} alt={book.title} height={800} width={800} className="w-2/3 sm:w-1/2 md:w-full xl:w-2/3 object-contain rounded-sm shadow-md" />
                 </div>
             </div>
         </main>
