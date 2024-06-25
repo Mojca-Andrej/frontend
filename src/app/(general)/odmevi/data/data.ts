@@ -55,16 +55,16 @@ export const odmevi: Odmevi[] = [
     {
         title: "Radio Slovenske gorice – Pod zvezdami",
         src: "https://www.rsg.si/2023/03/02/pod-zvezdami-mojca-andrej/",
-        type: TipiOdmevov.razno
+        type: TipiOdmevov.veronika
     },
     {
         title: "Matej Krajnc v Kulturno-medijskem centru Slovenije",
         src: "https://homocumolat.com/2023/10/09/mojca-andrej-kavc-uciteljice-veronike/",
-        type: TipiOdmevov.razno
+        type: TipiOdmevov.veronika
     },
     {
         title: "Primorske novice, 21. 6. 2024",
         src: "https://primorske.svet24.si/kultura/knjizna-polica/do-sijaja-zlosceno-ogledalo",
-        type: TipiOdmevov.razno
+        type: TipiOdmevov.veronika
     }
 ]

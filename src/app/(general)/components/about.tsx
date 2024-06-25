@@ -2,9 +2,9 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-      <div className="text-black md:col-span-2">
-        <h2 className="text-2xl font-semibold bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text w-fit">Pesnica, pisateljica, performerka</h2>
-        <p className="mt-4">
+      <div className="md:col-span-2">
+        <h2 className="text-2xl font-semibold bg-gradient-to-r from-[#4568DC] to-[#B06AB3] text-transparent bg-clip-text w-fit">Pesnica, pisateljica, performerka</h2>
+        <p className="mt-4 text-neutral-900">
         <b>Mojca Andrej</b> (dekliško Alešovec) se je rodila leta 1973 v Mariboru. Po srednji
         ekonomski šoli je študirala slovenščino in hrvaščino na Filozofski fakulteti Maribor.
         Danes je profesorica slovenščine. <br /> 

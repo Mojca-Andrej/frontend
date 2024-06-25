@@ -20,7 +20,7 @@ export default function Knjige() {
           ))}
         </div>
         <h1 className="font-semibold text-2xl my-8 bg-gradient-to-r from-cyan-500 to-emerald-500 w-fit bg-clip-text text-transparent">Knjige za otroke</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-screen-xl mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-screen-xl">
           {booksForChildren.map(book => (
               <div key={book.title} className="">
                   <Link href={`/knjige/${book.link}`}>
