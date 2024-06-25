@@ -23,7 +23,7 @@ const config: Config = {
         "primary-600": "#032f41",
       },
       aspectRatio: {
-        'A4': '1.44 / 1',
+        'A4': '1 / 1.44',
       },
     },
   },

@@ -11,7 +11,7 @@ export default function Topbar() {
                     </img>
                 </Link>
             </div>
-            <div className="buttons flex space-x-1 sm:space-x-2 md:space-x-4 items-center justify-center text-md md:text-lg">
+            <div className="buttons flex space-x-1 sm:space-x-2 md:space-x-4 items-center justify-center text-md sm:text-lg md:text-xl">
                 <Link className="text-neutral-500 hover:text-primary-500 focus:text-primary-400 hover-border-bottom" href="/knjige">knjige</Link>
                 <Link className="text-neutral-500 hover:text-primary-500 focus:text-primary-400 hover-border-bottom" href="/nastopi">nastopi</Link>
                 <Link className="text-neutral-500 hover:text-primary-500 focus:text-primary-400 hover-border-bottom" href="/odmevi">odmevi</Link>
