@@ -2,7 +2,7 @@
 export default function Nastopi() {
   return (
     <main>
-      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-[#6dd5ed] from-40% md:mb-4 mb-2">Gledališče</h1>
+      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-sky-400 from-40% md:mb-4 mb-2">Gledališče</h1>
       <h2 className="md:text-xl text-lg text-neutral-700 py-4"><span className="font-semibold">MOR</span> (Mladi oder Ruše) je CEZAM (Center za mlade Ruše) zasnoval leta 2014 z režiserko Tanjo Lužar.</h2>
 
       <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
@@ -96,7 +96,7 @@ export default function Nastopi() {
       </section>
       {/* </div> */}
 
-      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-[#6dd5ed] from-40% md:my-4 mt-4 mb-2">Nastopi in Predstavitve</h1>
+      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-sky-400 from-40% md:my-4 mt-4 mb-2">Nastopi in Predstavitve</h1>
 
       <h2 className="md:text-xl text-lg text-neutral-700 py-4 font-semibold">Doma</h2>
 

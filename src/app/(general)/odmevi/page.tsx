@@ -17,7 +17,7 @@ export default function Odmevi() {
                       <div className="text-neutral-900 mr-2">
                         {odmev.title}
                       </div>
-                      <Link className="text-sky-500 hover:text-sky-700 flex  items-center" href={odmev.src} target="_blank"> <SquareArrowOutUpRight className="h-[18px] aspect-square"/></Link>
+                      <Link className="text-sky-400 hover:text-sky-600 flex  items-center" href={odmev.src} target="_blank"> <SquareArrowOutUpRight className="h-[18px] aspect-square"/></Link>
                     </li>
                 ))}
             </ul>
@@ -31,7 +31,7 @@ export default function Odmevi() {
                       <div className="text-neutral-900 mr-2">
                         {odmev.title}
                       </div>
-                      <Link className="text-sky-500 hover:text-sky-700 flex items-center justify-center" href={odmev.src} target="_blank"> <SquareArrowOutUpRight className="h-[18px] aspect-square"/></Link>
+                      <Link className="text-sky-400 hover:text-sky-600 flex items-center justify-center" href={odmev.src} target="_blank"> <SquareArrowOutUpRight className="h-[18px] aspect-square"/></Link>
                     </li>
                 ))}
             </ul>
@@ -43,7 +43,7 @@ export default function Odmevi() {
                           <div className="text-neutral-900 mr-2">
                             {odmev.title}:
                           </div>
-                          <Link className="text-sky-500 hover:text-sky-700 flex items-center" href={odmev.src} target="_blank"> <SquareArrowOutUpRight className="h-[18px] aspect-square"/></Link>
+                          <Link className="text-sky-400 hover:text-sky-600 flex items-center" href={odmev.src} target="_blank"> <SquareArrowOutUpRight className="h-[18px] aspect-square"/></Link>
                         </li>
                     ))}
                 </ul>
