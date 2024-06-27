@@ -20,7 +20,7 @@ export default function ZaOtroke() {
                                 </div>                     
                         </div>
                         <div>
-                        <Image height={800} width={800} src="/agica_slikanica.png" alt="Agica slikanica" className="rounded-md shadow-md md:mb-8" layout="responsive" quality={100} priority={true}/>
+                        <Image height={800} width={800} src="/agica_slikanica.png" alt="Agica slikanica" className="rounded-md shadow-md md:mb-8" quality={100} priority={true}/>
                         </div>
                     </div>
                 </div>
@@ -29,10 +29,10 @@ export default function ZaOtroke() {
                         <h2 className="text-xl font-semibold mb-2">{pesem.title}</h2>
                         <div className="text-sm text-neutral-900 mb-8">
                             {pesem.text.map((line, index) => (
-                                <>
+                                <div key={index}>
                                     {line !== "" && <p key={index} className="mb-2" dangerouslySetInnerHTML={{__html: line}}></p>}
                                     {line === "" && <div key={index} className="h-4"></div>}
-                                </>
+                                </div>
                             ))}
                         </div>
                         {pesem.mp3Url && (

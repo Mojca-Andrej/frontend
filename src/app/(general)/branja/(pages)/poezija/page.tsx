@@ -10,10 +10,10 @@ export default function Poezija() {
                         <h2 className="text-xl font-semibold mb-2">{pesem.title}</h2>
                         <div className="text-sm text-neutral-900 mb-8">
                             {pesem.text.map((line, index) => (
-                                <>
+                                <div key={index}>
                                     {line !== "" && <p key={index} className="mb-2" dangerouslySetInnerHTML={{__html: line}}></p>}
                                     {line === "" && <div key={index} className="h-4"></div>}
-                                </>
+                                </div>
                             ))}
                         </div>
                         {pesem.mp3Url && (
