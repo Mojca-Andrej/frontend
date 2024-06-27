@@ -3,10 +3,10 @@ import { pesmi } from "./data";
 export default function Poezija() {
     return (
         <div>
-            <h1 className="text-2xl bg-gradient-to-r font-semibold text-transparent bg-clip-text from-purple-500 w-fit to-sky-500 mb-4">Poezija</h1>
+            <h1 className="text-2xl bg-gradient-to-r font-semibold text-transparent bg-clip-text from-rose-500 w-fit to-purple-500 mb-4">Poezija</h1>
             <div className="container md:px-0 text-black">
                 {pesmi.map((pesem, index) => (
-                    <div key={index} className="mb-8 bg-gradient-to-br from-purple-200 to-sky-200 p-4 rounded-md shadow-md">
+                    <div key={index} className="mb-8 bg-gradient-to-br from-rose-200 to-purple-200 p-4 rounded-md shadow-md">
                         <h2 className="text-xl font-semibold mb-2">{pesem.title}</h2>
                         <div className="text-sm text-neutral-900">
                             {pesem.text.map((line, index) => (

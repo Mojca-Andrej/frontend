@@ -1,4 +1,4 @@
-interface Pesmi {
+export interface Pesmi {
     title: string;
     text: string[];
     source: string;

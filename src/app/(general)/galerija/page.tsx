@@ -147,11 +147,6 @@ export default function Gal() {
             plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
           />
         </div>
-
-        <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-lime-500 w-fit to-teal-500 pt-10 pb-4'>Posnetki</h1>
-        <div>
-          <Videos/>
-        </div>
     </main>
 
   );
