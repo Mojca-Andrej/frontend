@@ -10,7 +10,6 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import { regeImages, agicaImages, veronikaImages, nastopiImages, gledalisceImages} from './images';
 import Gallery from './gallery';
-import Videos from './videos';
 
 export default function Gal() {
   const [index1, setindex1] = useState(-1);
@@ -83,7 +82,7 @@ export default function Gal() {
 
   return (
     <main>
-      <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-pink-500 w-fit to-fuchsia-500 pt-10 pb-4'>Veronika</h1>
+      <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-pink-500 w-fit to-fuchsia-500 pb-4'>Veronika</h1>
       <div>
         <Gallery color1="#d9a7c7" color2="#fffcdc" onClick={setindex1} isMobile={isMobile} images={veronikaImages}/>
           <Lightbox

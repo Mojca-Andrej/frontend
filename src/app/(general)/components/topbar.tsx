@@ -28,10 +28,10 @@ export default function Topbar() {
                 <div className="dropdown relative" >
                 <button onMouseEnter={toggleDropdown} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold">branja</button>
                 {showDropdown && (
-                    <div className="dropdown absolute bg-white shadow-md top-full rounded-sm w-[150%] mt-0 md:mt-1 left-0 px-1 text-sm md:text-md">
-                        <Link onClick={toggleDropdown} className="block px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/poezija">poezija</Link>
-                        <Link onClick={toggleDropdown} className="block px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/proza">proza</Link>
-                        <Link onClick={toggleDropdown} className="block px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/za-otroke">za otroke</Link>
+                    <div className="dropdown absolute bg-white shadow-md top-full rounded-sm w-[150%] mt-0 md:mt-1 left-0 text-sm md:text-md">
+                        <Link onClick={toggleDropdown} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/poezija">poezija</Link>
+                        <Link onClick={toggleDropdown} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/proza">proza</Link>
+                        <Link onClick={toggleDropdown} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/za-otroke">za otroke</Link>
                     </div>
                 )}
                 </div>
