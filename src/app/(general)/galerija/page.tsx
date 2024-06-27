@@ -10,6 +10,7 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import { regeImages, agicaImages, veronikaImages, nastopiImages, gledalisceImages} from './images';
 import Gallery from './gallery';
+import Videos from './videos';
 
 export default function Gal() {
   const [index1, setindex1] = useState(-1);
@@ -149,7 +150,7 @@ export default function Gal() {
 
         <h1 className='text-2xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-lime-500 w-fit to-teal-500 pt-10 pb-4'>Posnetki</h1>
         <div>
-          TODO
+          <Videos/>
         </div>
     </main>
 
