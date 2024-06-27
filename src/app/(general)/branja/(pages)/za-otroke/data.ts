@@ -2,9 +2,8 @@ import { Pesmi } from "../poezija/data";
 
 export const pesmi: Pesmi[] = [
     {
-        title: "Rastem do tebe",
+        title: "Mama",
         text: [
-            "<b>Mama</b>,",
             "Moja mama ni takšna",
             "kot je tvoja!",
             "Moja mama ni podobna",
@@ -50,7 +49,7 @@ export const pesmi: Pesmi[] = [
             "toplonežna, podobna pižami,",
             "nasmejana, razigrana."
         ],
-        source: "Ostanek umrle zvezde",
+        source: "Rastem do tebe",
         mp3Url: "/audio/za-otroke/mama.mp3",
         mp3Sub: "Pesem je uglasbena, uglasbil in izvaja jo kantavtor Peter Andrej.<br/>Poje Barbara Gabrielle."
     },
@@ -88,7 +87,7 @@ export const pesmi: Pesmi[] = [
             "",
             "Takrat je pomlad!"
         ],
-        source: "Ostanek umrle zvezde",
+        source: "Rastem do tebe",
         mp3Url: "/audio/za-otroke/kdaj-je-pomlad.mp3",
         mp3Sub: "Pesem je uglasbena, uglasbil in izvaja jo kantavtor Peter Andrej."
     },
@@ -125,7 +124,7 @@ export const pesmi: Pesmi[] = [
             "Žarek v rosi se umiva,",
             "trava me v svoj sen pokriva."
         ],
-        source: "Ostanek umrle zvezde",
+        source: "Rastem do tebe",
         mp3Url: "/audio/za-otroke/kresnica.mp3",
         mp3Sub: "Pesem je uglasbena, uglasbil in izvaja jo kantavtor Peter Andrej.<br/>Poje Barbara Gabrielle."
     },
