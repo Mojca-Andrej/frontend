@@ -1,6 +1,7 @@
 import { books } from "./data/books"
 import { Genre } from "./data/books"
 import Link from "next/link"
+import Image from "next/image"
 
 
 export default function Knjige() {
@@ -14,7 +15,7 @@ export default function Knjige() {
           {booksForAdults.map(book => (
               <div key={book.title} className="flex items-center justify-center">
                   <Link href={`/knjige/${book.link}`}>
-                          <img src={`${book.image}`} alt={book.title} className="w-full rounded-sm object-contain hover:shadow-md transition ease-in-out delay-0 hover:scale-105" />
+                          <Image priority={true} height={400} width={400} src={`/${book.image}`} alt={book.title} className="w-full rounded-sm object-contain hover:shadow-md transition ease-in-out delay-0 hover:scale-105" />
                   </Link>
               </div>
           ))}

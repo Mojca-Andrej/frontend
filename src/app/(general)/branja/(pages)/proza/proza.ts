@@ -1,7 +1,11 @@
 export interface Proza {
     title: string;
-    content: string [];
+    content: (string | ProzaPesem)[];
     part: number;
+}
+
+export interface ProzaPesem {
+    text: string[];
 }
 
 export const prozaVeronika: Proza[] = [
@@ -58,7 +62,36 @@ export const prozaVeronika: Proza[] = [
         "",
         "kot uročena zrla v nebo, na katerem sta se prelivali rdeča in oranžna. Spomnila sem se svojih padajočih sanj in oranž, ki so se skotalile v globoko morje. Le kaj bi to pomenilo, tega pa v sanjski knjigi nisem preverila, a zdaj je bilo prepozno, da bi šla po razlago k babici. Pohitela sem domov in se prilepila v medmrežje. Naklikala sem toliko zadetkov, da me je ta web šlogarica povsem zmedla:<em> če v sanjah vidite pomaranče, boste doživeli presenečenje, ni določeno, ali slabo ali dobro</em>. Z Bertijem sva se strinjala, da vsak dan doživljava veliko presenečenj, nič novega nisva izvedela. Brala sem naprej:<em> Lepi sadeži govorijo o prijetnih težavah /…/ oranžna barva ne pomeni nič groznega, le zapravljen čas za delo, ki ga opravljate /.../ svetlo rdeča barva ploda označuje usodne dogodke, ki bodo spremenili vaše življenje …</em>",
         "",
-        "Bolj kot sem tonila v vesolje možnih razlag, bolj je stvar postajala poljubna. Tega pač nisem hotela. Dovolj sem prebrala, besedne zveze <em>prijetne težave</em> sploh nisem razumela, tisto o <em>zapravljenem</em> času sem vedela že ves čas in to me je spravljalo ob pamet, na <em>usodne dogodke</em> pa čakam že skoraj celo življenje. Kljub tem spoznanjem me je nekoliko začela grabiti panika, čutila sem, da se nekaj pripravlja. Ugasnila sem računalnik in stopila k oknu; iz oranžnega neba je pričel pršiti droban pesek. Začela sem pisati:"
+        "Bolj kot sem tonila v vesolje možnih razlag, bolj je stvar postajala poljubna. Tega pač nisem hotela. Dovolj sem prebrala, besedne zveze <em>prijetne težave</em> sploh nisem razumela, tisto o <em>zapravljenem</em> času sem vedela že ves čas in to me je spravljalo ob pamet, na <em>usodne dogodke</em>    pa čakam že skoraj celo življenje. Kljub tem spoznanjem me je nekoliko začela grabiti panika, čutila sem, da se nekaj pripravlja. Ugasnila sem računalnik in stopila k oknu; iz oranžnega neba je pričel pršiti droban pesek. Začela sem pisati:",
+        {
+            text: [
+                "Oranžno",
+                "se plazi,",
+                "veter pa pleše",
+                "počasni tango.",
+                "Razpihovati barve",
+                "je vznemirljivo delo!",
+                "",
+                "Vse je oranžno,",
+                "ribe poljubijo zemljo,",
+                "skovirji objamejo mesec",
+                "in vode se spenijo."
+            ]
+        },
+        "Ob tem zapisu me je postalo strah; saj sem si res želela, da bi se nekaj zgodilo, da bi me uslišalo vesolje ali da bi se mi spremenilo življenje, ampak razlaga sanj in nebo zunaj so me plašili, ne, nisem si kaj takega želela zares. S tresočimi rokami sem vklopila televizor, morda me bodo potolažili, da je oranžno obarvan svet čisto v redu.",
+        "",
+        "Večerni Dnevnik na televiziji se je začel dramatično:",
+        "",
+        "»Danes ponoči nas čaka huda puščavska nevihta. Prognostiki z Agencije za okolje opozarjajo, da z Juga prihaja vihar, ki bo s seboj prinesel puščavski pesek. Prognoza ne določa natančno, v kolikšni meri oziroma gostoti bo ta pesek v našem ozračju, a za vsak primer svetujejo, da dobro zaprete okna in vrata in ne hodite iz svojih domov.« Zemljevid so obarvali z rdečo, meteorološko barvo nevarnosti.",
+        "",
+        "Zdaj je strah popustil, čutila sem samo vznemirjenje, podobno tistemu, preden sem stopila na oder in odigrala opico. Dobro, sem se poskušala pomiriti, saj je petek, vikend bomo preživeli doma in v ponedeljek bo spet vse po starem.",
+        "",
+        "Preverila sem vsa okna, spustila žaluzije do konca, podložila vrata še z debelo podlogo, ki sem jo uporabljala v zimskih nočeh, da ni vlekel po tleh hladen zrak. Tako opremljena sem šla spat, a nisem mogla zaspati, Berti se je ves tresel, lezel pod odejo in cvilil. Tolažila sem ga, še bolj sebe, medtem ko se je od zunaj slišalo ječanje vetra, škripanje vrat na dvorišču, lomljenje vej in kričanje ljudi; kakor koli že, z mano je bil varen, sem mu prigovarjala še celo noč, ki je bila strašna in dolga in nadaljevala se je vse do naslednjega večera. Bil je dan teme, nikjer nobenega žarka, nobene luči. Stikala sem vrtela v prazno, nobenega glasu razen tuljenja vetra, ki je hotel izpuliti okna in vrata. Brez elektrike nas ni doseglo nobeno opozorilo, da se naj skrijemo globoko v svojo malo luknjo in čakamo; pa saj nihče ni potreboval posebnih pojasnil ali razlage, z Bertijem sva se gledala s peščenimi očmi in z ustnic sem lizala droben prah.",
+        "",
+        "Proti večeru je tuljenje le pojenjalo, zdelo se je, da ga je vihar popihal naprej, zato sem nestrpno pridvignila žaluzije, za vzorec, da se ne bi prenaglila in zagledala, kako plujem med oblaki kot Doroteja v Čarovniku iz Oza. Soba je zažarela oranžno (oh, moj preroški zapis v pesmi) in spraševala sem se, kam je šla gosta črna tema. Vsa okna sem čisto razgalila, saj je šlo za svečani trenutek: na nebo so bili pripeti rumeni in rdeči oblaki, oranžni zrak se je valjal po puščavski pokrajini, pločniki so se pozibavali kakor peščeni valovi, na parkiriščih pa so bili videti le obrisi pozabljenih avtomobilov. Ulične svetilke so spominjale na ogromne bele šparglje in strehe hiš so čudno visele, kot da bodo zdrsnile v velikanski peskovnik. Navdal me je val nekakšnega navdušenja, najhujše smo preživeli, sem razmišljala, in zame se je zgodil ta pesek prav zdaj, ko sem bila že tik na tem, da počim, da me Kreon že končno odpusti, sicer bi morala še malo <em>noreti.</em>",
+        "",
+        "Ta večer smo se zares zbudili v puščavi, sredi sipin in tišine. Televizor je molčal, veter je verjetno odnesel s seboj tudi signale in druga elektro valovanja; dobra kupčija za pesek, sem tlesknila z rokami, brez odmeva, nobenega odgovora; vse je ugasnilo. Zaspali bomo v čisto novem svetu. Kaj bo z našimi sanjami?"
+        
     ],
     part: 3
     }
