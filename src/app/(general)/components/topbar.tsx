@@ -36,7 +36,7 @@ export default function Topbar() {
                 <div className="dropdown relative" >
                 <button onMouseEnter={toggleDropdownBranja} className="text-neutral-500 hover:text-violet-400">branja</button>
                 {showDropdownBranja && (
-                    <div className="dropdown absolute bg-white shadow-md top-full rounded-sm w-[150%] mt-0 md:mt-1 left-0 text-sm md:text-md">
+                    <div className="dropdown absolute bg-white shadow-md top-full rounded-sm min-w-[150%] w-fit mt-0 md:mt-1 left-0 text-sm md:text-md">
                         <Link onClick={toggleDropdownBranja} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/poezija">poezija</Link>
                         <Link onClick={toggleDropdownBranja} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/proza">proza</Link>
                         <Link onClick={toggleDropdownBranja} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/branja/za-otroke">za otroke</Link>
@@ -46,7 +46,7 @@ export default function Topbar() {
                 <div className="dropdown relative" >
                 <button onMouseEnter={toggleDropdownPrevodi} className="text-neutral-500 hover:text-violet-400">prevodi</button>
                 {showDropdownPrevodi && (
-                    <div className="dropdown absolute bg-white shadow-md top-full rounded-sm w-[150%] mt-0 md:mt-1 left-0 text-sm md:text-md">
+                    <div className="dropdown absolute bg-white shadow-md top-full rounded-sm min-w-[150%] w-fit mt-0 md:mt-1 left-0 text-sm md:text-md">
                         <Link onClick={toggleDropdownPrevodi} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/prevodi/ang">Angleško</Link>
                         <Link onClick={toggleDropdownPrevodi} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/prevodi/hrv">Hrvaško</Link>
                         <Link onClick={toggleDropdownPrevodi} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/prevodi/mkd">Makedonsko</Link>

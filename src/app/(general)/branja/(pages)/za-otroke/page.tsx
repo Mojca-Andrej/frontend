@@ -6,7 +6,7 @@ export default function ZaOtroke() {
         <div>
             <h1 className="text-2xl bg-gradient-to-r font-semibold text-transparent bg-clip-text from-indigo-500 w-fit to-sky-500 mb-4">Za otroke</h1>
             <div className="container md:px-0 text-black">
-                <div className="mb-8 bg-gradient-to-br from-indigo-200 to-sky-200 p-4 md:p-8 rounded-sm shadow-md text-neutral-900">
+                <div className="mb-8 bg-gradient-to-br from-indigo-200 to-sky-200 p-4 md:p-8 rounded-md shadow-md text-neutral-900">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="">
                             <h2 className="text-xl font-semibold mb-8">Agica, mala čarovnica</h2>

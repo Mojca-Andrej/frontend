@@ -70,3 +70,27 @@ body {
 }
 
 
+
+.hover-border-bottom-2 {
+  position: relative;
+}
+
+.hover-border-bottom-2::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: -1px; /* Adjust the position as needed */
+  width: 40%;
+  height: 1px; /* Adjust the height as needed */
+  background-color: #7c63b6; /* Use the current text color */
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-border-bottom-2:hover::after {
+  transform: scaleX(1);
+}
+
+
