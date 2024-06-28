@@ -158,21 +158,24 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <h3 className="md:text-lg sm:text-md text-neutral-600 py-4 font-semibold">Knjižni Sejem</h3>
+      <div className="border border-1 border-sky-500 p-4 rounded-lg">
+        <h3 className="md:text-lg sm:text-md text-neutral-600 font-semibold mb-2">Knjižni Sejem</h3>
 
-      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
-        <h3 className="text-sm font-light mt-1 md:mt-0">2019</h3>
-        <div>
-          <p>Slikanica <em className="font-semibold">Agica, mala čarovnica</em> na 35. slovenskem knjižnem sejmu, v paviljonu založbe Litera, v Cankarjevem domu v Ljubljani.</p>
-        </div>
-      </section>
+        <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
+          <h3 className="text-sm font-light mt-1 md:mt-0">2019</h3>
+          <div>
+            <p>Slikanica <em className="font-semibold">Agica, mala čarovnica</em> na 35. slovenskem knjižnem sejmu, v paviljonu založbe Litera, v Cankarjevem domu v Ljubljani.</p>
+          </div>
+        </section>
+      
 
-      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
-        <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
-        <div>
-          <p>Roman <em className="font-semibold">Kavč učiteljice Veronike</em> na 38. slovenskem knjižnem sejmu; na stojnici založbe Litera, na Gospodarskem razstavišču v Ljubljani.</p>
-        </div>
-      </section>
+        <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-md">
+          <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
+          <div>
+            <p>Roman <em className="font-semibold">Kavč učiteljice Veronike</em> na 38. slovenskem knjižnem sejmu; na stojnici založbe Litera, na Gospodarskem razstavišču v Ljubljani.</p>
+          </div>
+        </section>
+      </div>
 
       <h2 className="md:text-xl text-lg text-neutral-700 pt-4 pb-2 font-semibold">Tujina</h2>
       <h4 className="md:text-md text-sm pl-1 pb-2 text-neutral-500">Hrvaška, Bosna in Hercegovina, Srbija, Severna Makedonija, Bolgarija, Avstrija, Palma de Mallorca, Maroko.</h4>
