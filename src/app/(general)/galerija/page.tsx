@@ -6,10 +6,12 @@ import 'yet-another-react-lightbox/styles.css';
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
 import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import { Captions, Share } from 'yet-another-react-lightbox/plugins';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import { regeImages, agicaImages, veronikaImages, nastopiImages, gledalisceImages} from './images';
 import Gallery from './gallery';
+import "yet-another-react-lightbox/plugins/captions.css";
 
 export default function Gal() {
   const [index1, setindex1] = useState(-1);
@@ -24,6 +26,8 @@ export default function Gal() {
       alt: image.alt,
       width: 1080,
       height: 1080,
+      title: image.title,
+      description: image.description,
     })),
   );
 
@@ -33,6 +37,8 @@ export default function Gal() {
       alt: image.alt,
       width: 1080,
       height: 1080,
+      title: image.title,
+      description: image.description,
     })),
   );
   
@@ -42,6 +48,8 @@ export default function Gal() {
       alt: image.alt,
       width: 1080,
       height: 1080,
+      title: image.title,
+      description: image.description,
     })),
   );
 
@@ -51,6 +59,8 @@ export default function Gal() {
       alt: image.alt,
       width: 1080,
       height: 1080,
+      title: image.title,
+      description: image.description,
     })),
   );
 
@@ -61,6 +71,8 @@ export default function Gal() {
       alt: image.alt,
       width: 1080,
       height: 1080,
+      title: image.title,
+      description: image.description,
     })),
   );
 
@@ -91,7 +103,8 @@ export default function Gal() {
             open={index1 >= 0}
             index={index1}
             close={() => setindex1(-1)}
-            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
+            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
           />
         </div>
 
@@ -104,7 +117,8 @@ export default function Gal() {
             open={index2 >= 0}
             index={index2}
             close={() => setindex2(-1)}
-            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
+            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
           />
         </div>
 
@@ -117,7 +131,8 @@ export default function Gal() {
             open={index3 >= 0}
             index={index3}
             close={() => setindex3(-1)}
-            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
+            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
           />
         </div>
 
@@ -130,7 +145,8 @@ export default function Gal() {
             open={index4 >= 0}
             index={index4}
             close={() => setindex4(-1)}
-            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
+            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
           />
         </div>
 
@@ -143,7 +159,8 @@ export default function Gal() {
             open={index5 >= 0}
             index={index5}
             close={() => setindex5(-1)}
-            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
+            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
           />
         </div>
     </main>
