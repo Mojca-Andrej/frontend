@@ -171,7 +171,7 @@ export const nastopiImages: IImage[] = [
         alt: "Nastopi"
     },
     {
-        src: "/Nastopi/11.jpeg",
+        src: "/Nastopi/11.jpg",
         alt: "Nastopi"
     },
     {
@@ -187,7 +187,7 @@ export const nastopiImages: IImage[] = [
         alt: "Nastopi"
     },
     {
-        src: "/Nastopi/15.jpg",
+        src: "/Nastopi/15.jpeg",
         alt: "Nastopi"
     },
     {
