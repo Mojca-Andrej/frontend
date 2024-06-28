@@ -1,12 +1,14 @@
 "use client"
-import Link from "next/link"
-import { useState } from "react";
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 
 export default function Topbar() {
-
-
     const [showDropdownBranja, setShowDropdownBranja] = useState(false);
     const [showDropdownPrevodi, setShowDropdownPrevodi] = useState(false);
+
+
+    const branjaRef = useRef<HTMLDivElement>(null);
+    const prevodiRef = useRef<HTMLDivElement>(null);
 
     const toggleDropdownBranja = () => {
       setShowDropdownBranja(!showDropdownBranja);
@@ -16,8 +18,24 @@ export default function Topbar() {
     const toggleDropdownPrevodi = () => {
         setShowDropdownPrevodi(!showDropdownPrevodi);
         setShowDropdownBranja(false);
-      };
-  
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (branjaRef.current && !branjaRef.current.contains((event.target as Node))) {
+            setShowDropdownBranja(false);
+        }
+        if (prevodiRef.current && !prevodiRef.current.contains((event.target as Node))) {
+            setShowDropdownPrevodi(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     return (
         <main className="flex md:flex-row flex-col py-8 md:px-16 px-2 bg-white md:text-lg items-center md:justify-between">
             <div className="logo py-3 md:py-0">
@@ -33,7 +51,7 @@ export default function Topbar() {
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/nastopi">nastopi</Link>
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/odmevi">odmevi</Link>
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/galerija">galerija</Link>
-                <div className="dropdown relative" >
+                <div ref={branjaRef} className="dropdown relative">
                 <button onMouseEnter={toggleDropdownBranja} className="text-neutral-500 hover:text-violet-400">branja</button>
                 {showDropdownBranja && (
                     <div className="dropdown absolute bg-white shadow-md top-full rounded-sm min-w-[150%] w-fit mt-0 md:mt-1 left-0 text-sm md:text-md">
@@ -43,7 +61,7 @@ export default function Topbar() {
                     </div>
                 )}
                 </div>
-                <div className="dropdown relative" >
+                <div ref={prevodiRef} className="dropdown relative">
                 <button onMouseEnter={toggleDropdownPrevodi} className="text-neutral-500 hover:text-violet-400">prevodi</button>
                 {showDropdownPrevodi && (
                     <div className="dropdown absolute bg-white shadow-md top-full rounded-sm min-w-[150%] w-fit mt-0 md:mt-1 left-0 text-sm md:text-md">
@@ -59,5 +77,5 @@ export default function Topbar() {
             <div>
             </div>
         </main>
-    )
+    );
 }
