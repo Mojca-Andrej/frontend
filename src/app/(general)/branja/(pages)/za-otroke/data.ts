@@ -88,7 +88,7 @@ export const pesmi: Pesmi[] = [
             "Takrat je pomlad!"
         ],
         source: "Rastem do tebe",
-        mp3Url: "/audio/za-otroke/kdaj-je-pomlad.mp3",
+        mp3Url: "/audio/za-otroke/kdaj_je_pomlad.mp3",
         mp3Sub: "Pesem je uglasbena, uglasbil in izvaja jo kantavtor Peter Andrej."
     },
     {

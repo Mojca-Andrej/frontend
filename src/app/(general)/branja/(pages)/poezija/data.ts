@@ -155,7 +155,7 @@ export const pesmi: Pesmi[] = [
             "<em>Univerzum leži v travi z rokami pod glavo</em>"
         ],
         source: "Dež v gugalnici",
-        mp3Url: "/audio/poezija/15_NOC-Peter Andrej-Mojca Andrej-Dejan Berden.mp3",
+        mp3Url: "/audio/poezija/ad_astra.mp3",
         mp3Sub : "Pesem je uglasbena, uglasbil in izvaja jo kantavtor Peter Andrej."
     },
     {
@@ -187,7 +187,7 @@ export const pesmi: Pesmi[] = [
             "in cvrčanjem škržatov"
         ],
         source: "Dež v gugalnici",
-        mp3Url: "/audio/poezija/15_NOC-Peter Andrej-Mojca Andrej-Dejan Berden.mp3",
+        mp3Url: "/audio/poezija/noc.mp3",
         mp3Sub : "Pesem je uglasbena, uglasbil in izvaja jo kantavtor Peter Andrej."
     },
     {
