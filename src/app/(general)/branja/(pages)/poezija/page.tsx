@@ -26,7 +26,7 @@ export default function Poezija() {
                         {pesem.mp3Sub && (
                             <p className="text-sm mt-2 text-neutral-700">{pesem.mp3Sub}</p>
                         )}
-                        <p className="italic flex justify-end text-neutral-700">({pesem.source})</p>
+                        <p className="italic flex justify-end text-neutral-700 text-sm md:text-base">({pesem.source})</p>
                     </div>
                 ))}
             </div>

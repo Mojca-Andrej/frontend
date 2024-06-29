@@ -17,7 +17,7 @@ export default function About() {
         objavlja tudi v reviji Galeb, ki izhaja v Trstu. <br />
         Vodi srečanja in usmerja pogovore v Glazerjevem bralnem klubu, ki je nastal maja
         2023 v Zavodu Rast Ruše v sodelovanju z Društvom Glazerjeva domačija.
-        Junija 2024 je postala članica Društva slovenskih pisateljev. <br />
+        Junija 2024 je postala članica <a target= "_blank" className="text-blue-700 hover:text-blue-500" href="https://drustvo-dsp.si/pisatelji/mojcaandrej/">Društva slovenskih pisateljev.</a> <br />
         Svojo poezijo predstavlja na festivalih doma in v tujini. Nekatere njene pesmi so
         prevedene v slovaški, hrvaški, makedonski, bolgarski, arabski in angleški jezik in so
         objavljene v domačih in tujih revijah in zbornikih. <br />

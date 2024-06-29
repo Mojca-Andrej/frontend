@@ -9,11 +9,11 @@ export default function Footer () {
                     <h2 className="text-lg font-semibold text-white">Kontakt</h2>
                     <div className="flex space-x-2 items-center text-neutral-100">
                         <Mail size={20}/>
-                        <p className="text-md">petojca@gmail.com</p>
+                        <p className="text-base">petojca@gmail.com</p>
                     </div>
                     <div className="flex space-x-2 items-center text-neutral-100">
                         <Phone size={20}/>
-                        <p className="text-md">+386 51 368 588</p>
+                        <p className="text-base">+386 51 368 588</p>
                     </div>
                     <div className="flex space-x-3 items-center justify-center text-neutral-100">
                         <Link href="https://www.facebook.com/mojca.andrej" target="_blank">

@@ -16,7 +16,7 @@ export default function ZaOtroke() {
                                         <source src="/audio/za-otroke/agica.mp3" type="audio/mpeg"/>
                                         Your browser does not support the audio element.
                                     </audio>
-                                    <p className="mb-4">Pesem je napisal, uglasbil in jo izvaja Peter Andrej.</p>
+                                    <p className="mb-4">Pesem je napisal, uglasbil in jo izvaja Peter Andrej.<br/> Pojeta Peter Andrej in Alenka Cilenšek.</p>
                                 </div>                     
                         </div>
                         <div>
@@ -45,7 +45,7 @@ export default function ZaOtroke() {
                         {pesem.mp3Sub && (
                             <p className="text-sm mt-2 text-neutral-700"  dangerouslySetInnerHTML={{__html: pesem.mp3Sub}}></p>
                         )}
-                        <p className="italic flex justify-end text-neutral-700">({pesem.source})</p>
+                        <p className="italic flex justify-end text-neutral-700 text-sm md:text-base">({pesem.source})</p>
                     </div>
                 ))}
             </div>
