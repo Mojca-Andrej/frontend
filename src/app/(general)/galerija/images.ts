@@ -7,19 +7,19 @@ export interface IImage {
 
 export const regeImages: IImage[] = [
     {
-        src: '/rege/Rege Ruše 2018-8.JPG',
+        src: '/rege/1.jpg',
         alt: 'Rege',
         title: "Kamišibaj Rege, žabje frke",
         description: "Knjižnica Janka Glazerja Ruše, 2018",
     },
     {
-        src: '/rege/Rege Ruše 2018-29 (2).jpg',
+        src: '/rege/2.jpg',
         alt: 'Rege',
         title: "Kamišibaj Rege, žabje frke",
         description: "Knjižnica Janka Glazerja Ruše, 2018",
     },
     {
-        src: '/rege/Rege se veselijo novega CD-ja-2018-30.jpg',
+        src: '/rege/3.jpg',
         alt: 'Rege',
         title: "Kamišibaj Rege, žabje frke",
         description: "Knjižnica Janka Glazerja Ruše, 2018",

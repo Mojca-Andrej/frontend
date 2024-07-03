@@ -387,7 +387,7 @@ export const vsiPrevodi: Prevodi[] = [
     },
     {
         title: "Сениште",
-        language: "Makedosko",
+        language: "Makedonsko",
         abv: Jezik.mk,
         text: [
             "Ако си сениште",
@@ -431,7 +431,7 @@ export const vsiPrevodi: Prevodi[] = [
     },
     {
         title: "Ноќ над градот",
-        language: "Makedosko",
+        language: "Makedonsko",
         abv: Jezik.mk,
         text: [
             "ноќ, ноќ",
@@ -463,7 +463,7 @@ export const vsiPrevodi: Prevodi[] = [
     },
     {
         title: "Остаток од изумрени ѕвезди",
-        language: "Makedosko",
+        language: "Makedonsko",
         abv: Jezik.mk,
         text: [
             "Јас сум само остаток од мртвите ѕвезди.",
@@ -494,7 +494,7 @@ export const vsiPrevodi: Prevodi[] = [
     },
     {
         title: "Самиот ти",
-        language: "Makedosko",
+        language: "Makedonsko",
         abv: Jezik.mk,
         text: [
             "Пловиш по потокот. Тек си.",
