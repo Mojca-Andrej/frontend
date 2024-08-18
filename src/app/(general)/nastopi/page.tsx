@@ -71,6 +71,15 @@ export default function Nastopi() {
           <p>Predstavitev avtorske sodobne pravljice <em className="font-semibold">Agica, mala čarovnica</em>. Glasbeni kamišibaj ob podpori glasbe (uglasbene pesmi iz pravljice) kantavtorja Petra Andreja in gledališke igralke Alenke Cilenšek. Oder knjižnega sejma Glavni trg Maribor – Slovenski dnevi knjige (organizator MKC); 21. 6. 2020</p>
         </div>
       </section>
+
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-base">
+        <h3 className="text-sm font-light mt-1 md:mt-0">2024</h3>
+        <div>
+          <p>Glasbeni kamišibaj <em className="font-semibold">Rege ali žabje frke</em>; Trg pred občino Ruše, Rast Ruše, 12.8.2024</p>
+          <p>Kamišibaj predstavlja: Mojca Andrej</p>
+          <p>Pojeta: Barbara Gabrielle in Peter Andrej</p>
+        </div>
+      </section>
       <h2 className="md:text-xl text-lg text-neutral-700 py-4 font-semibold">Magnetno Gledališče</h2>
       {/* <div className="border border-primary-50 border-1 rounded-md p-4"> */}
 
