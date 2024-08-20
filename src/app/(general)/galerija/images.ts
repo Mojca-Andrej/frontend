@@ -25,7 +25,7 @@ export const regeImages: IImage[] = [
         description: "Knjižnica Janka Glazerja Ruše, 2018",
     },
     {
-        src: '/rege/4.jpg',
+        src: '/rege/rege.jpg',
         alt: 'Rege',
         title: "Kamišibaj Rege, žabje frke",
         description: "Trg pred občino Ruše, 12.8.2024",
