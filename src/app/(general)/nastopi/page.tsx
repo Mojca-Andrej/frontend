@@ -164,6 +164,9 @@ export default function Nastopi() {
           <p><em className="font-semibold">Pijani čoln v Delti jezika, na Tnalu pesmi pa Prehodi: Literarni performans.</em> Nastopali: Mojca Andrej, Peter Andrej, Bojan Tomažič in Bojan Sedmak.</p>
           <p>Knjižni sejem Na preži v Murski Soboti, 15. 6. 2024.</p>
           <p><em className="font-semibold">Pijani čoln v Delti jezika, na Tnalu pesmi pa Prehodi: Literarni performans.</em> Nastopali: Mojca Andrej, Peter Andrej, Bojan Tomažič in Bojan Sedmak.</p>
+          <p>19. 9. 2024 Literarni večer v mali dvorani Zavoda Rast Ruše.</p>
+          <p>Predstavitev romana Kavč učiteljice Veronike. Z avtorico se je pogovarjal Oskar Kranjc.</p>
+          <p>Večer v okviru Glazerjevega bralnega kluba so v sodelovanju izvedli; Zavod Rast Ruše in Glazerjeva domačija.</p>
         </div>
       </section>
 

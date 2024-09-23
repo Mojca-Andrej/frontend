@@ -189,6 +189,18 @@ export const veronikaImages: IImage[] = [
         title: "Predlog naslovnice romana Kavč učiteljice Veronike",
         description: "Ilustracija: Eva Rajher",
     },
+    {
+        src: '/Veronika/12.jpg',
+        alt: 'Veronika',
+        title: "Predstavitev romana Kavč učiteljice Veronike",
+        description: "Rast Ruše, 19.9.2024",
+    },
+    {
+        src: '/Veronika/13.jpg',
+        alt: 'Veronika',
+        title: "Predstavitev romana Kavč učiteljice Veronike",
+        description: "Rast Ruše, 19.9.2024",
+    },
 ]
 
 
