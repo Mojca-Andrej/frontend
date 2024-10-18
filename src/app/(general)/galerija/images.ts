@@ -201,6 +201,13 @@ export const veronikaImages: IImage[] = [
         title: "Predstavitev romana Kavč učiteljice Veronike",
         description: "Rast Ruše, 19.9.2024",
     },
+    {
+        src: '/Veronika/14.jpg',
+        alt: 'Veronika',
+        title: "Članek v reviji Jana",
+        description: "Jana (Muze), 8. 10. 2024",
+    },
+
 ]
 
 
@@ -343,6 +350,12 @@ export const nastopiImages: IImage[] = [
         alt: "Nastopi",
         title: "Slovenski dnevi knjige - Stojnica Kluba KuKu",
         description: "Foto: Boštjan Lah, 2024",
+    },
+    {
+        src: "/Nastopi/24.jpg",
+        alt: "Nastopi",
+        title: "Po Maistrovi lirični poti",
+        description: "Kibla Maribor, 10. 10. 2024",
     },
 ]
 
