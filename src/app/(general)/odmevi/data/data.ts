@@ -43,16 +43,6 @@ export const odmevi: Odmevi[] = [
         type: TipiOdmevov.veronika
     },
     {
-        title: `intervju`,
-        src: `https://www.arslitera.org/2023/02/07/pescena-ura-ne-tiktaka-neslisno-polzi-pogovor-z-mojco-andrej/`,
-        type: TipiOdmevov.ars
-    },
-    {
-        title: `odlomki`,
-        src: `https://www.arslitera.org/2023/02/07/kavc-uciteljice-veronike-odlomki/`,
-        type: TipiOdmevov.ars
-    },
-    {
         title: "Radio Slovenske gorice – Pod zvezdami",
         src: "https://www.rsg.si/2023/03/02/pod-zvezdami-mojca-andrej/",
         type: TipiOdmevov.veronika
@@ -66,5 +56,20 @@ export const odmevi: Odmevi[] = [
         title: "Primorske novice, 21. 6. 2024",
         src: "https://primorske.svet24.si/kultura/knjizna-polica/do-sijaja-zlosceno-ogledalo",
         type: TipiOdmevov.veronika
-    }
+    },
+    {
+        title: `Prlekija`,
+        src: `https://www.prlekija-on.net/lokalno/36675/v-muzeju-splosne-knjiznice-ljutomer-predstavili-knjigo-kavc-uciteljice-veronike-avtorice-mojce-andrej.html`,
+        type: TipiOdmevov.veronika
+    },
+    {
+        title: `intervju`,
+        src: `https://www.arslitera.org/2023/02/07/pescena-ura-ne-tiktaka-neslisno-polzi-pogovor-z-mojco-andrej/`,
+        type: TipiOdmevov.ars
+    },
+    {
+        title: `odlomki`,
+        src: `https://www.arslitera.org/2023/02/07/kavc-uciteljice-veronike-odlomki/`,
+        type: TipiOdmevov.ars
+    },
 ]
