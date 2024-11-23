@@ -168,6 +168,9 @@ export default function Nastopi() {
           <p>Večer v okviru Glazerjevega bralnega kluba so v sodelovanju izvedli; Zavod Rast Ruše in Glazerjeva domačija.</p>
           <p>10. 10. 2024 <em className="font-semibold"> Po Maistrovi lirični poti:</em> ob dvojnem jubileju, Kibla Maribor</p>
           <p>Branje poezije v organizaciji Društva slovenskih pisateljev in JAK; brali so: Mojca Andrej, Borut Gombač, Marjan Pungartnik in Matej Krajnc</p>
+          <p>29. 10. 2024 <em className="font-semibold"> Večer grozljivih zgodb:</em> branje kratke zgodbe (Knjižničarka) v organizaciji Društva slovenskih pisateljev, v prostorih DSP, Ljubljana.</p>
+          <p>21. 11. 2024 Muzej splošne knjižnice Ljutomer; <em className="font-semibold">predstavitev romana Kavč učiteljice Veronike</em>. Z avtorico se je pogovarjala direktorica Splošne knjižnice Ljutomer Vesna Laissani.</p>
+          <p>November 2024 Mariborska knjižnica - Pionirska knjižnica v TPC City; <em className="font-semibold">razstava Ustvarjalna dvojina ilustracij slikanice Agica, mala čarovnica;</em> ta predstavlja ustvarjalni tandem pisateljice Mojce Andrej in ilustratorke Darke Erdelji, ki sta združili moči ob slikanici Agica, mala čarovnica. Na razstavi so originalne ilustracije Darke Erdelji. Razstavo je postavila Zdenka Gajser.</p>
         </div>
       </section>
 
