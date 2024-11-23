@@ -118,6 +118,19 @@ export const agicaImages: IImage[] = [
         alt: 'Agica',
         title: "35. knjižni sejem v Ljubljani",
         description: "Orlando Uršič, Bojan Sedmak, Mojca Andrej, Peter Andrej, 2019",
+    },
+    {
+        src:'/Agica/15.jpg',
+        alt: 'Agica',
+        title: "razstava Ustvarjalna dvojina ilustracij slikanice Agica, mala čarovnica",
+        description: "Pionirska knjižnica v TPC City, November 2024",
+
+    },
+    {
+        src:'/Agica/16.jpg',
+        alt: 'Agica',
+        title: "razstava Ustvarjalna dvojina ilustracij slikanice Agica, mala čarovnica",
+        description: "Pionirska knjižnica v TPC City, November 2024",
     }
 ];
 
@@ -207,6 +220,18 @@ export const veronikaImages: IImage[] = [
         title: "Članek v reviji Jana",
         description: "Jana (Muze), 8. 10. 2024",
     },
+    {
+        src: '/Veronika/15.jpg',
+        alt: 'Veronika',
+        title: "Predstavitev romana Kavč učiteljice Veronike",
+        description: "Muzej splošne knjižnice Ljutomer, 21. 11. 2024",
+    },
+    {
+        src: '/Veronika/16.jpeg',
+        alt: 'Veronika',
+        title: "Predstavitev romana Kavč učiteljice Veronike",
+        description: "Muzej splošne knjižnice Ljutomer, 21. 11. 2024",
+    }
 
 ]
 
@@ -357,6 +382,12 @@ export const nastopiImages: IImage[] = [
         title: "Po Maistrovi lirični poti",
         description: "Kibla Maribor, 10. 10. 2024",
     },
+    {
+        src: "/Nastopi/25.jpg",
+        alt: "Nastopi",
+        title: "Večer grozljivih zgodb",
+        description: "v prostorih DSP, Ljubljana, 29. 10. 2024 ",
+    }
 ]
 
 
