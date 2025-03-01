@@ -201,5 +201,72 @@ export const pesmi: Pesmi[] = [
             "V BELE NEVESTE."
         ],
         source: "Galeb"
+    },
+    {
+        title: "Pasja dlaka",
+        text: [
+            "Tako je, če si pasja dlaka.",
+            "Namesto z oblaka",
+            "padeš s kosmatega psa",
+            "naravnost na kuhinjska tla.",
+            "",
+            "Zdaj sem na begu.",
+            "",
+            "Pred metlo se skrivam,",
+            "pod mizo, med stoli,",
+            "rep maha, uživam,",
+            "letim naokoli",
+            "",
+            "med kozarce, žlice, lonce,",
+            "po kredenci na vse konce.",
+            "Končno znajdem se v copati,",
+            "tudi dlaka mora spati.",
+            "",
+            "Zjutraj se okopam v kavi,",
+            "topla je, džakuzi pravi …",
+            "",
+            "Mož za mizo glasno krikne,",
+            "gospa mama jezno sikne,",
+            "Eva zakriči: »Fuj, dlaka,",
+            "kava je zdaj dlačja mlaka!«",
+            "",
+            "A v tej hiši res ne vejo,",
+            "da stvari po svoje grejo?",
+            "Bolha pod odejo fino,",
+            "dlaka pač v kapučino."
+        ],
+        source: "Mlada Sodobnost"
+        
+    },
+    {
+        title: "Če bi srečal okostnjaka",
+        text: [
+            "Danes je praznik. Dan,",
+            "ko duše mrtvih zbujamo iz sanj.",
+            "In če bi srečal okostnjaka,",
+            "bi prepričal korenjaka,",
+            "",
+            "da odšla bi na grobove,",
+            "med nagrobnike, vrtove.",
+            "Tam zaspance bi zbudila,",
+            "jih na karneval zvabila,",
+            "",
+            "na obraze in nosove",
+            "jim narisala cvetove.",
+            "Plesali bi in se smejali,",
+            "živžav, radost praznovali.",
+            "",
+            "Oh, ti strašni okostnjak,",
+            "zlezla bi na nebesni vrtiljak,",
+            "vesele svate nanj pripela,",
+            "se v kolesju zvezd vrtela!",
+            "",
+            "A ko se tam gor zasvita",
+            "in ugasne noč barvita,",
+            "bi duše vrnila v sanje,",
+            "saj midva sanjava zanje."
+        ],
+        source: "Mlada Sodobnost"
+        
     }
 ];
