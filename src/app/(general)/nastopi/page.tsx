@@ -174,6 +174,13 @@ export default function Nastopi() {
         </div>
       </section>
 
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-base">
+        <h3 className="text-sm font-light mt-1 md:mt-0" >2025</h3>
+        <div>
+          <p>8. 2. 2025 <em className="font-semibold">Za Prešernom;</em> literarni večer društva DSP. <br/> Branje novih članic in članov DSP: Mojca Andrej, Sanja Rozman, Barbara Hanuš, Igor Karlovšek in Jasmin B. Frelih. <br/> Dvorana Alme Karlin, Cankarjev dom, Ljubljana.</p>
+        </div>
+      </section>
+
       <div className="border border-1 border-sky-500 p-4 rounded-lg">
         <h3 className="md:text-lg sm:text-base text-neutral-600 font-semibold mb-2">Knjižni sejem</h3>
 
@@ -189,6 +196,13 @@ export default function Nastopi() {
           <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
           <div>
             <p>Roman <em className="font-semibold">Kavč učiteljice Veronike</em> na 38. slovenskem knjižnem sejmu; na stojnici založbe Litera, na Gospodarskem razstavišču v Ljubljani.</p>
+          </div>
+        </section>
+
+        <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-base">
+          <h3 className="text-sm font-light mt-1 md:mt-0">2024</h3>
+          <div>
+            <p>Revija za književnost <em className="font-semibold">Mlada Sodobnost</em> na 40. slovenskem knjižnem sejmu; na stojnici založbe Sodobnost, na Gospodarskem razstavišču v Ljubljani.</p>
           </div>
         </section>
       </div>
@@ -251,6 +265,13 @@ export default function Nastopi() {
         <h3 className="text-sm font-light mt-1 md:mt-0">2024</h3>
         <div>
             <p>Festival pesnikov petih kontinentov - <em className="font-semibold">POETS FROM FIVE CONTINENTS</em> – Maroko (Laayoune, Safi, Tangiers, Meknes in Marakeš), 19. – 28. 4. 2024. Organizator: Al Kalima Institution Of Culture And Arts In Safi, The Forum Of The Sahraoui Woman, Development And Democracy, Laayoune, Morocco.</p>
+        </div>
+      </section>
+
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-base">
+        <h3 className="text-sm font-light mt-1 md:mt-0">2025</h3>
+        <div>
+          <p>Branje na dogodku <em className="font-semibold">Riječka književna jutra;</em> Book caffe Dnevni boravak, februar 2025.</p>
         </div>
       </section>
     </main>
