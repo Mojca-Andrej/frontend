@@ -27,7 +27,7 @@ export default function Footer () {
                         </Link>
                     </div>
                     <div className="flex items-center pt-4 opacity-90">
-                        <p className="text-sm">© 2024 Mojca Andrej. Vse pravice pridržane.</p>
+                        <p className="text-sm">© 2025 Mojca Andrej. Vse pravice pridržane.</p>
                     </div>
                 </div>   
             </div>

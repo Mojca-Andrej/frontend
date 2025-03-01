@@ -110,7 +110,7 @@ export const books: Book[] = [
         description: `Zbirka prevedene poezije v angleški jezik; vsak avtor se predstavi z desetimi prevodi
         svoje poezije v angleščini. Prevajalci so različni.`,
         image: "transitions.jpg",
-        publisher: "Mariborska literarna družba",
+        publisher: "Klub KU KU, Glazerjeva domačija",
         type: "prevedena poezija, dvostranska knjiga",
         link: "transitions"
 
@@ -176,6 +176,19 @@ export const books: Book[] = [
         zvezdi, je pravzaprav čudež, kajne?
         Dedek že ve.`,
         link: "agica-mala-carovnica"
+    },
+    {
+        title: "Mijene",
+        year: 2025,
+        author: "Mojca Andrej in Peter Andrej",
+        genre: Genre.Adult,
+        description: `Zbirka prevedene poezije v hrvaški jezik; vsak avtor se predstavi z desetimi prevodi
+        svoje poezije v hrvaščini. Prevajalci so različni.`,
+        image: "mijene.jpg",
+        publisher: "Klub KU KU, Glazerjeva domačija",
+        type: "prevedena poezija, dvostranska knjiga",
+        link: "mijene"
+
     },
 
 ]

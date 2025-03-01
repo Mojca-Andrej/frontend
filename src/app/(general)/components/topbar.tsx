@@ -69,6 +69,7 @@ export default function Topbar() {
                     </div>
                 )}
                 </div>  
+                <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/objave">objave</Link>
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/odmevi">odmevi</Link>
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/galerija">galerija</Link>
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="#footer">kontakt</Link>
