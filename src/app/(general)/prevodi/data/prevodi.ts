@@ -10,8 +10,8 @@ enum Jezik {
 
 interface Prevodi {
     title: string;
-    abv: string;
     language: string;
+    abv: string;
     text: string[];
     translation:string
 }
@@ -524,5 +524,39 @@ export const vsiPrevodi: Prevodi[] = [
             "Крпа ги покрива зборовите. Зборовите се под тебе. Збор си."
         ],
         translation: "Превод на мак. Борче Панов"
-    }    
+    },
+    {
+        title: "Piękno",
+        language: "Poljsko",
+        abv: Jezik.pl,
+        text: [
+            "Ciche brzozy na brzegu,",
+            "odbicie w pulsujących liściach.",
+            "Znana odległość zanika.",
+            "Słońce zstępuje w dół zbocza.",
+            "",
+            "Lwica ofiarowuje ostatni taniec",
+            "swojemu młodemu łupowi.",
+            "Która strona będzie stroną zwycięstwa?",
+            "Wahadło odpoczywa.",
+            "",
+            "Z orbity niewinności",
+            "machają zakonnice.",
+            "Jadą na rolkach w swojej naiwności,",
+            "zbaczając z drogi przechodniów.",
+            "",
+            "Ostatnie modowe granice kosmosu.",
+            "Stoisz na schodach, ubrany w dziwny sposób,",
+            "w getry i buty przypominające łódki.",
+            "Podwinięte nogawki dobrze komponują się",
+            "z brzmieniem twojego głosu.",
+            "",
+            "Zmienię twoje imię,",
+            "płeć, przypadek i liczbę.",
+            "Piękno.",
+            "Sączysz mnie przez zwężone powieki."
+        ],
+        translation: "Tłumaczenie: Katarzyna Juvančič"
+        
+    }
 ];

@@ -66,6 +66,7 @@ export default function Topbar() {
                         <Link onClick={toggleDropdownPrevodi} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/prevodi/ang">Angleško</Link>
                         <Link onClick={toggleDropdownPrevodi} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/prevodi/hrv">Hrvaško</Link>
                         <Link onClick={toggleDropdownPrevodi} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/prevodi/mkd">Makedonsko</Link>
+                        <Link onClick={toggleDropdownPrevodi} className="block hover:bg-neutral-50 px-2 py-2 text-neutral-800 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/prevodi/pol">Poljsko</Link>
                     </div>
                 )}
                 </div>  
@@ -74,7 +75,6 @@ export default function Topbar() {
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="/galerija">galerija</Link>
                 <Link onMouseEnter={() => {setShowDropdownBranja(false); setShowDropdownPrevodi(false)}} className="text-neutral-500 hover:text-violet-400 focus:text-violet-300 focus:font-semibold hover-border-bottom" href="#footer">kontakt</Link>
             </div>
-            
             <div>
             </div>
         </main>
