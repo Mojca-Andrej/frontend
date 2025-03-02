@@ -10,7 +10,7 @@ export default function Odmevi() {
   
   return (
     <main>
-        <h1 className="text-2xl w-fit bg-gradient-to-r bg-clip-text text-transparent from-[#642b73] to-[#c6426e] font-semibold mb-4">Odmevi</h1>
+         
         <section className="md:text-lg">
             <ul className="pb-2">
                 {zvezdaOdmevi.map(odmev => (
@@ -18,7 +18,7 @@ export default function Odmevi() {
                       <div className="text-neutral-900 mr-2">
                         {odmev.title}
                       </div>
-                      <Link className="text-sky-400 hover:text-sky-600 flex items-center" href={odmev.src} target="_blank"> 
+                      <Link className="text-sky-400 hover:text-sky-600 flex items-center transition-colors" href={odmev.src} target="_blank"> 
                         <SquareArrowOutUpRight className="h-[18px] aspect-square"/>
                       </Link>
                     </li>
@@ -34,7 +34,7 @@ export default function Odmevi() {
                       <div className="text-neutral-900 mr-2">
                         {odmev.title}
                       </div>
-                      <Link className="text-sky-400 hover:text-sky-600 flex items-center justify-center" href={odmev.src} target="_blank"> 
+                      <Link className="text-sky-400 hover:text-sky-600 flex items-center justify-center transition-colors" href={odmev.src} target="_blank"> 
                         <SquareArrowOutUpRight className="h-[18px] aspect-square"/>
                       </Link>
                     </li>
