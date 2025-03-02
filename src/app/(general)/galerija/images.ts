@@ -386,7 +386,19 @@ export const nastopiImages: IImage[] = [
         src: "/Nastopi/25.jpg",
         alt: "Nastopi",
         title: "Večer grozljivih zgodb",
-        description: "v prostorih DSP, Ljubljana, 29. 10. 2024 ",
+        description: "v prostorih DSP, Ljubljana, 29. 10. 2024",
+    },
+    {
+        src: "/Nastopi/26.jpg",
+        alt: "Nastopi",
+        title: "Za Prešernom - literarni večer društva DSP",
+        description: "Cankarjev dom, Ljubljana, 8. 2. 2025",
+    },
+    {
+        src: "/Nastopi/27.jpg",
+        alt: "Nastopi",
+        title: "Branje na dogodku Riječka književna jutra",
+        description: "Book caffe Dnevni boravak, 22. 2. 2025.",
     }
 ]
 
