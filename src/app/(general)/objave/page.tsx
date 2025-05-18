@@ -13,7 +13,7 @@ export default function Objave() {
             key={index}
             className="bg-yellow-100 text-black p-6 rounded-xl shadow-lg relative border border-yellow-300 transition-transform duration-300 hover:scale-105"
           >
-            <h2 className="text-xl font-bold mb-2">{objava.naslov}</h2>
+            <h2 className="text-xl font-bold mb-2 pr-6">{objava.naslov}</h2>
             <p className="text-sm text-gray-700 mb-1">{objava.mesto}</p>
             <p className="absolute top-3 right-3 text-gray-500 text-xs">
               {objava.datum}

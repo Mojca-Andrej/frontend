@@ -40,4 +40,10 @@ export const objave: Objava[] = [
     vsebina: "Pesmi iz še neobjavljene pesniške zbirke",
     datum: "april 2025",
   },
+  {
+    naslov: "Pesem Oblak in zgodba Prazna knjiga",
+    mesto:"Galeb, revija za otroke, ki izhaja v Trstu",
+    vsebina: "za otroke",
+    datum: "april 2025",
+  }
 ];
