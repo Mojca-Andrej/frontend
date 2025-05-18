@@ -399,7 +399,25 @@ export const nastopiImages: IImage[] = [
         alt: "Nastopi",
         title: "Branje na dogodku Riječka književna jutra",
         description: "Book caffe Dnevni boravak, 22. 2. 2025.",
-    }
+    },
+    {
+        src: "/Nastopi/28.jpg",
+        alt: "Nastopi",
+        title: "Glas avtoric",
+        description: "V prostorih DSP, Ljubljana, 8. 3. 2025",
+    },
+    {
+        src: "/Nastopi/29.jpg",
+        alt: "Nastopi",
+        title: "Glas avtoric",
+        description: "V prostorih DSP, Ljubljana, 8. 3. 2025",
+    },
+    {
+        src: "/Nastopi/30.jpg",
+        alt: "Nastopi",
+        title: "Poetikon",
+        description: "Center za poezijo Tomaža Šalamuna, Ljubljana, 14. 5. 2025",
+    },
 ]
 
 

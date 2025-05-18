@@ -4,6 +4,7 @@ export interface Objava {
   vsebina: string;
   datum: string;
   link?: string;
+  popup?: string;
 }
 
 export const objave: Objava[] = [
@@ -45,5 +46,6 @@ export const objave: Objava[] = [
     mesto:"Galeb, revija za otroke, ki izhaja v Trstu",
     vsebina: "za otroke",
     datum: "april 2025",
+    popup: "/popup/zgodba_prazna_knjiga.jpg",
   }
 ];

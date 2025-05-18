@@ -1,7 +1,18 @@
+"use client";
 import { objave } from "./data/data";
 import Link from "next/link";
+import Popup from "../components/popup";
+import { useState, useEffect } from "react";
 
 export default function Objave() {
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
     <main>
       <h1 className="text-2xl w-fit bg-gradient-to-r bg-clip-text text-transparent from-yellow-500 to-amber-500 font-semibold mb-4">
@@ -27,6 +38,18 @@ export default function Objave() {
               >
                 Več →
               </Link>
+            )}
+            {objava.popup && (
+              <>
+                <button
+                  className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                  onClick={() => setIsOpen(true)}
+                >
+                  Preberi tukaj →
+                </button>
+
+                {isOpen && <Popup src={objava.popup} setIsOpen={setIsOpen} />}
+              </>
             )}
           </article>
         ))}
