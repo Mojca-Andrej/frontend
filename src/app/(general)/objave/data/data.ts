@@ -10,9 +10,10 @@ export interface Objava {
 export const objave: Objava[] = [
   {
     naslov: "Male čarovnije",
-    mesto: "Mlada sodobnost",
+    mesto: "Mlada Sodobnost",
     vsebina: "Pesmi za otroke",
     datum: "november 2024",
+    popup: ["/popup/ms_1.jpeg", "/popup/ms_2.jpeg"],
   },
   {
     naslov: "Forgotten by birds",
@@ -41,25 +42,27 @@ export const objave: Objava[] = [
     mesto: "Poetikon 124 - 125",
     vsebina: "Pesmi iz še neobjavljene pesniške zbirke",
     datum: "april 2025",
+    popup: ["/popup/poetikon_naslovna.jpeg", "/popup/poetikon_1.jpeg", "/popup/poetikon_2.jpeg", "/popup/poetikon_3.jpeg"],
   },
   {
     naslov: "Pesem Oblak in zgodba Prazna knjiga",
     mesto:"Galeb, revija za otroke, ki izhaja v Trstu",
     vsebina: "Za otroke",
     datum: "april 2025",
-    popup: ["/popup/zgodba_prazna_knjiga.jpg"],
+    popup: ["/popup/galeb_naslovnica.jpeg", "/popup/galeb_1.jpeg", "/popup/galeb_2.jpg"],
   },
   {
     naslov: "Žejna in druge pesmi",
     mesto: "Vrabec Anarhist",
-    vsebina: "Za otroke",
+    vsebina: "Pesmi iz še neobjavljene pesniške zbirke",
     datum: "maj 2025",
     link: "https://vrabecanarhist.eu/2025/05/22/zejna-in-druge-pesmi/"
   },
   {
     naslov: "Pet pesmi",
-    mesto: "Literatura",
-    vsebina: "Za otroke",
+    mesto: "LITERATURA",
+    vsebina: "Pesmi iz še neobjavljene pesniške zbirke",
     datum: " junij - julij 2025",
+    popup: ["/popup/literatura_naslovna.jpeg", "/popup/literatura_1.jpeg", "/popup/literatura_2.jpeg", "/popup/literatura_3.jpeg"],
   },
 ];

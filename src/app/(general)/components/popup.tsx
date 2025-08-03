@@ -4,9 +4,6 @@ import ReactDOM from "react-dom";
 import { useCallback, useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { ArrowRight, ArrowLeft, X } from "lucide-react";
-import InnerImageZoom from "react-inner-image-zoom";
-import "react-inner-image-zoom/lib/styles.min.css";
-import Image from "next/image";
 
 interface PopupProps {
   sources: string[];
@@ -16,7 +13,6 @@ interface PopupProps {
 export default function Popup({ sources, setIsOpen }: PopupProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [index, setIndex] = useState(0);
-
 
   useEffect(() => {
     setIsMounted(true);
@@ -42,50 +38,44 @@ export default function Popup({ sources, setIsOpen }: PopupProps) {
   if (!isMounted) return null;
 
   return ReactDOM.createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
-      {/* Modal content */}
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
       <div
         {...swipeHandlers}
-        className="relative z-50 bg-white rounded-md max-w-4xl w-[92vw] md:w-[90vw] max-h-[90vh] flex flex-col items-center overflow-hidden"
+        className="relative w-full h-full flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${sources[index]})`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
       >
-        {/* Close */}
+        {/* Close button */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-1 right-0 z-10 text-blue-600 hover:text-blue-800"
+          className="absolute top-4 right-4 z-10 text-white hover:text-blue-300"
         >
-          <X className="w-5 sm:w-7 h-5 sm:h-7" />
+          <X className="w-8 h-8" />
         </button>
 
         {/* Navigation buttons */}
         <button
           onClick={handlePrev}
           disabled={index === 0}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-blue-500 hover:text-blue-700 disabled:opacity-30"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:text-blue-300 disabled:opacity-30"
         >
-          <ArrowLeft className="w-5 h-5 sm:w-7 sm:h-7" />
+          <ArrowLeft className="w-10 h-10" />
         </button>
         <button
           onClick={handleNext}
           disabled={index === sources.length - 1}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-blue-500 hover:text-blue-700 disabled:opacity-30"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:text-blue-300 disabled:opacity-30"
         >
-          <ArrowRight className="w-5 h-5 sm:w-7 sm:h-7" />
+          <ArrowRight className="w-10 h-10" />
         </button>
 
-        <div className="w-full px-4 sm:px-6 pb-4 sm:pb-6 box-border">
-          <div className="relative w-full h-[75vh]">
-            <Image
-              src={sources[index]}
-              alt={`Popup image ${index + 1}`}
-              fill
-              className="object-contain rounded-md"
-              priority
-            />
-          </div>
-        </div>
         {/* Counter */}
         {sources.length > 1 && (
-          <div className="pb-2 sm:pb-4 text-sm text-gray-600">
+          <div className="absolute bottom-6 text-white text-sm bg-black/50 px-3 py-1 rounded">
             Slika {index + 1} / {sources.length}
           </div>
         )}
