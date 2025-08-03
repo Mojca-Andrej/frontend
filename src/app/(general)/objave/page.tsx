@@ -48,7 +48,7 @@ export default function Objave() {
                   Preberi tukaj →
                 </button>
 
-                {isOpen && <Popup src={objava.popup} setIsOpen={setIsOpen} />}
+                {isOpen && <Popup sources={objava.popup} setIsOpen={setIsOpen} />}
               </>
             )}
           </article>

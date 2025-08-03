@@ -14,7 +14,7 @@ export default function AgicaMalaCarovnica() {
                 <p className="text-neutral-600">
                 ...poetična zgodba o malem Jakobu in dedku se prične, ko se Jakob sredi črne črne
         noči nenadoma <em>prebudi</em> in z radovednim vprašanjem <em>prebudi</em> dedka, da se zazreta v
-        nočno nebo in se skupaj <em>čudovita</em> mežikajoči zvezdi. Njuno <em>čudenje</em> je pravzaprav uvod
+        nočno nebo in se skupaj <em>čudita</em> mežikajoči zvezdi. Njuno <em>čudenje</em> je pravzaprav uvod
         v zgodbo o Agici, o majhnem bitju, ki je v očeh drugih čudna. <br />
         Edina v svojem gnezdu je, ki ne joče, ampak cviiiili, ki zeha z usti v obliki črke i, ki ne
         hodi, ampak poskakuje. Počne take reči, ki drugim še na misel ne bi prišle. Tudi

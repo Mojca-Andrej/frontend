@@ -4,7 +4,7 @@ export interface Objava {
   vsebina: string;
   datum: string;
   link?: string;
-  popup?: string;
+  popup?: string [];
 }
 
 export const objave: Objava[] = [
@@ -34,6 +34,7 @@ export const objave: Objava[] = [
     mesto: "Mentor",
     vsebina: "Kratka zgodba",
     datum: "marec 2025",
+    popup: ["/popup/mentor_naslovna.jpeg", "/popup/mentor_objava.jpeg"],
   },
   {
     naslov: "Močvirje pozabe",
@@ -44,8 +45,21 @@ export const objave: Objava[] = [
   {
     naslov: "Pesem Oblak in zgodba Prazna knjiga",
     mesto:"Galeb, revija za otroke, ki izhaja v Trstu",
-    vsebina: "za otroke",
+    vsebina: "Za otroke",
     datum: "april 2025",
-    popup: "/popup/zgodba_prazna_knjiga.jpg",
-  }
+    popup: ["/popup/zgodba_prazna_knjiga.jpg"],
+  },
+  {
+    naslov: "Žejna in druge pesmi",
+    mesto: "Vrabec Anarhist",
+    vsebina: "Za otroke",
+    datum: "maj 2025",
+    link: "https://vrabecanarhist.eu/2025/05/22/zejna-in-druge-pesmi/"
+  },
+  {
+    naslov: "Pet pesmi",
+    mesto: "Literatura",
+    vsebina: "Za otroke",
+    datum: " junij - julij 2025",
+  },
 ];

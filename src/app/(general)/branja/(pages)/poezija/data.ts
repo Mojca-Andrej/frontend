@@ -299,7 +299,7 @@ export const pesmi: Pesmi[] = [
         source: "Še neobjavljeno"
     },
     {
-        title: "trobenčice",
+        title: "trobentačice",
         text: [
             "pred posteljo so se po pomoti pojavile tri trobentačice,",
             "spraševale so, zakaj imam kamenčke namesto tepiha",
