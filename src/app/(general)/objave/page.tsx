@@ -5,13 +5,14 @@ import Popup from "../components/popup";
 import { useState, useEffect } from "react";
 
 export default function Objave() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    document.body.style.overflow = openIndex !== null ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isOpen]);
+  }, [openIndex]);
 
   return (
     <main>
@@ -43,12 +44,12 @@ export default function Objave() {
               <>
                 <button
                   className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                  onClick={() => setIsOpen(true)}
+                  onClick={() => setOpenIndex(index)}
                 >
                   Preberi tukaj →
                 </button>
 
-                {isOpen && <Popup sources={objava.popup} setIsOpen={setIsOpen} />}
+                {openIndex === index && <Popup sources={objava.popup} setIsOpen={() => setOpenIndex(null)} />}
               </>
             )}
           </article>

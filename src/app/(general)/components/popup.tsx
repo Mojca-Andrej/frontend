@@ -6,6 +6,7 @@ import { useSwipeable } from "react-swipeable";
 import { ArrowRight, ArrowLeft, X } from "lucide-react";
 import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/styles.min.css";
+import Image from "next/image";
 
 interface PopupProps {
   sources: string[];
@@ -15,7 +16,7 @@ interface PopupProps {
 export default function Popup({ sources, setIsOpen }: PopupProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [index, setIndex] = useState(0);
-  
+
 
   useEffect(() => {
     setIsMounted(true);
@@ -71,21 +72,17 @@ export default function Popup({ sources, setIsOpen }: PopupProps) {
           <ArrowRight className="w-5 h-5 sm:w-7 sm:h-7" />
         </button>
 
-        {/* Zoomable image */}
-        <div className="w-full h-full flex justify-center items-center p-4 sm:p-6 overflow-hidden">
-          <InnerImageZoom
-            src={sources[index]}
-            zoomSrc={sources[index]}
-            zoomType="click"
-            zoomScale={1.8} // Now this will visibly zoom
-            moveType="drag"
-            fullscreenOnMobile={true}
-            zoomPreload={true}
-            hideCloseButton={true}
-            className="max-w-full max-h-[75vh]"
-          />
+        <div className="w-full px-4 sm:px-6 pb-4 sm:pb-6 box-border">
+          <div className="relative w-full h-[75vh]">
+            <Image
+              src={sources[index]}
+              alt={`Popup image ${index + 1}`}
+              fill
+              className="object-contain rounded-md"
+              priority
+            />
+          </div>
         </div>
-
         {/* Counter */}
         {sources.length > 1 && (
           <div className="pb-2 sm:pb-4 text-sm text-gray-600">
