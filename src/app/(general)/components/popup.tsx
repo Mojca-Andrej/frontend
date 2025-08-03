@@ -15,6 +15,7 @@ interface PopupProps {
 export default function Popup({ sources, setIsOpen }: PopupProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [index, setIndex] = useState(0);
+  
 
   useEffect(() => {
     setIsMounted(true);
