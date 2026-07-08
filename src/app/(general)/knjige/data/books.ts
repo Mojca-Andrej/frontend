@@ -17,6 +17,7 @@ export interface Book {
     shortDescription?: string;
     cd?: string;
     ilustrator?: string;
+    backImage?: string;
 }
 
 
@@ -188,6 +189,26 @@ export const books: Book[] = [
         publisher: "Klub KU KU, Glazerjeva domačija",
         type: "prevedena poezija, dvostranska knjiga",
         link: "mijene"
+
+    },
+    {
+        title: "Močvirje pozabe",
+        year: 2026,
+        author: "Mojca Andrej",
+        genre: Genre.Adult,
+        description: `<b>Bojan Sedmak</b> je v spremni besedi Plemenitost v močvirju pozabe zapisal:
+        <em>»Pesnici je povsem jasno, da je največji zanikovalec čas, v pozabo zbriše vse, kar ni
+        čvrsto priraščeno vanj. In iz korenin, prepojenih z močvirjem (voda ljubi in sovraži vse,
+        česar se dotakne), poganjajo čudesa, med drugim tudi besede – brez njih tako kot brez
+        spomina nas ni. /.../ In povzetek; zadnje tri pesniške zbirke Mojce Andrej je priporočljivo
+        brati skupaj. V udobnem fotelju si je tako namesto male malice iz povprečne antologijske
+        površnosti mogoče pripraviti pojedino iz skupka najbolj okusnih delov ene skrbno
+        premišljene, zrele in plemenite poezije.«</em>`,
+        image: "mocvirje_pozabe.jpg",
+        backImage: "Mocvirje/mocvirje_backpage.jpg",
+        publisher: "Volosov hram, Murska Sobota; Društvo Glazerjeva domačija, Ruše",
+        type: "pesniška zbirka",
+        link: "mocvirje-pozabe"
 
     },
 

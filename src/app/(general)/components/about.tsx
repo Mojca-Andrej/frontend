@@ -8,15 +8,13 @@ export default function About() {
         <b>Mojca Andrej</b> (dekliško Alešovec) se je rodila leta 1973 v Mariboru. Po srednji
         ekonomski šoli je študirala slovenščino in hrvaščino na Filozofski fakulteti Maribor.
         Danes je profesorica slovenščine. <br /> 
-        Piše za odrasle in za otroke. Izdala je tri pesniške zbirke: <em>Nikoli ne reci, da ni
+        Piše za odrasle in za otroke. Izdala je štiri pesniške zbirke: <em>Nikoli ne reci, da ni
         skrivnosti</em> (Mariborska literarna družba, 2000), <em>Dež v gugalnici</em> (Mariborska literarna
         družba, Klub KU-KU in Kulturni klub Nomadi, 2015), <em>Ostanek umrle zvezde</em> (Maribor:
-        Litera, 2020) in roman <em>Kavč učiteljice Veronike</em> (Maribor: Litera, 2022). <br />
+        Litera, 2020), <em>Močvirje pozabe</em> (Volosov Hram, Murska Sobota, Društvo Glazarjeva domačija, Ruše, 2026) in roman <em>Kavč učiteljice Veronike</em> (Maribor: Litera, 2022). <br />
         Za otroke je napisala zbirko pesmi <em>Rastem do tebe</em> in ilustrirano pripoved <em>Agica, mala
         čarovnica</em>; obe sta doživeli večkratno uprizoritev in uglasbitev. Pesmi za otroke
         objavlja tudi v reviji Galeb, ki izhaja v Trstu. <br />
-        Vodi srečanja in usmerja pogovore v Glazerjevem bralnem klubu, ki je nastal maja
-        2023 v Zavodu Rast Ruše v sodelovanju z Društvom Glazerjeva domačija.
         Junija 2024 je postala članica <a target= "_blank" className="text-blue-700 hover:text-blue-500" href="https://drustvo-dsp.si/pisatelji/mojcaandrej/">Društva slovenskih pisateljev.</a> <br />
         Svojo poezijo predstavlja na festivalih doma in v tujini. Nekatere njene pesmi so
         prevedene v slovaški, hrvaški, makedonski, bolgarski, arabski in angleški jezik in so

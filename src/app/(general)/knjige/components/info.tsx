@@ -21,8 +21,9 @@ export default function Info({ book }: InfoProps) {
                         <p><span className="font-semibold">Leto izdaje: </span> {book.year}</p> 
                     </section>
                 </div>  
-                <div className="md:col-span-1 flex items-center justify-center">
+                <div className="md:col-span-1 flex flex-col items-center justify-center gap-4">
                     <Image priority={true} src={`/${book.image}`} alt={book.title} height={400} width={400} className="w-2/3 sm:w-1/2 md:w-full xl:w-2/3 object-contain rounded-sm shadow-md" />
+                    {book.backImage && <Image priority={true} src={`/${book.backImage}`} alt={`${book.title} – zadnja stran`} height={400} width={400} className="w-2/3 sm:w-1/2 md:w-full xl:w-2/3 object-contain rounded-sm shadow-md" />}
                 </div>
             </div>
         </main>

@@ -13,7 +13,7 @@ export default function Knjige() {
       <h2 className="font-semibold text-2xl mb-8 bg-gradient-to-r from-[#11998e] to-[#38ef7d] text-transparent bg-clip-text w-fit">
         Knjige za odrasle
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 2xl:grid-cols-7 gap-4 md:gap-4 max-w-screen-2xl">
+      <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 max-w-screen-2xl">
         {booksForAdults.map((book) => (
           <div key={book.title} className="flex items-center justify-center">
             <Link href={`/knjige/${book.link}`}>
