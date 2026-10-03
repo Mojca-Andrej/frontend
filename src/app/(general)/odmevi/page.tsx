@@ -7,6 +7,8 @@ export default function Odmevi() {
   const veronikaOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.veronika);
   const arsOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.ars);
   const raznoOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.razno);
+  const mocvirjeOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.mocvirje);
+  const agicaOdmevi = odmevi.filter(odmev => odmev.type === TipiOdmevov.agica);
   
   return (
     <main>
@@ -55,6 +57,38 @@ export default function Odmevi() {
                     ))}
                 </ul>
             </section>
+        </section>
+
+        <h2 className="text-xl text-neutral-700 font-semibold py-4">Odmevi pesniške zbirke Močvirje pozabe</h2>
+        <section className="md:text-lg pl-2 mb-8">
+            <ul className="pb-4">
+                {mocvirjeOdmevi.map(odmev => (
+                    <li className="flex py-2 md:py-0" key={odmev.title}>
+                      <div className="text-neutral-900 mr-2">
+                        {odmev.title}
+                      </div>
+                      <Link className="text-sky-400 hover:text-sky-600 flex items-center justify-center transition-colors" href={odmev.src} target="_blank"> 
+                        <SquareArrowOutUpRight className="h-[18px] aspect-square"/>
+                      </Link>
+                    </li>
+                ))}
+            </ul>
+        </section>
+
+        <h2 className="text-xl text-neutral-700 font-semibold py-4">Agica, mala čarovnica</h2>
+        <section className="md:text-lg pl-2 mb-8">
+            <ul className="pb-4">
+                {agicaOdmevi.map(odmev => (
+                    <li className="flex py-2 md:py-0" key={odmev.title}>
+                      <div className="text-neutral-900 mr-2">
+                        {odmev.title}
+                      </div>
+                      <Link className="text-sky-400 hover:text-sky-600 flex items-center justify-center transition-colors" href={odmev.src} target="_blank"> 
+                        <SquareArrowOutUpRight className="h-[18px] aspect-square"/>
+                      </Link>
+                    </li>
+                ))}
+            </ul>
         </section>
     </main>
   )

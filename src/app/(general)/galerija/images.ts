@@ -131,6 +131,18 @@ export const agicaImages: IImage[] = [
         alt: 'Agica',
         title: "razstava Ustvarjalna dvojina ilustracij slikanice Agica, mala čarovnica",
         description: "Pionirska knjižnica v TPC City, November 2024",
+    },
+    {
+        src:'/Agica/17.jpg',
+        alt: 'Agica',
+        title: "15. Pohorska pravljica: glasbena pravljica Agica, mala čarovnica",
+        description: "Trg vstaje pred občino Ruše, 19. 8. 2026",
+    },
+    {
+        src:'/Agica/18.jpg',
+        alt: 'Agica',
+        title: "15. Pohorska pravljica: glasbena pravljica Agica, mala čarovnica",
+        description: "Trg vstaje pred občino Ruše, 19. 8. 2026",
     }
 ];
 

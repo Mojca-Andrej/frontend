@@ -2,7 +2,9 @@ export enum TipiOdmevov {
     veronika,
     ars,
     razno,
-    zvezda
+    zvezda,
+    mocvirje,
+    agica
 }
 
 
@@ -22,8 +24,7 @@ export const odmevi: Odmevi[] = [
     },
     {
         title: "Radio Maribor, novinarka Brigita Mohorič, januar 2023, spletni zapis",
-        src:  `https://www.rtvslo.si/radio-maribor/mojca-andrej-zgodba-uciteljice
-        -veronike-je-pripoved-o-danasnji-druzbi-o-mnogih-med-nami/655484`,
+        src:  `https://www.rtvslo.si/radio-maribor/mojca-andrej-zgodba-uciteljice-veronike-je-pripoved-o-danasnji-druzbi-o-mnogih-med-nami/655484`,
         type: TipiOdmevov.veronika
     },
     {
@@ -33,8 +34,7 @@ export const odmevi: Odmevi[] = [
     },
     {
         title: `Intervju na radiu Maribor (od 7.55 naprej) z Brigito Mohorič`,
-        src: `https://www.rtvslo.si/radio/podkasti/kultura-zdravi-umetnost-
-        lajsa/155779478/174926726`,
+        src: `https://www.rtvslo.si/radio/podkasti/kultura-zdravi-umetnost-lajsa/155779478/174926726`,
         type: TipiOdmevov.veronika
     },
     {
@@ -71,5 +71,20 @@ export const odmevi: Odmevi[] = [
         title: `odlomki`,
         src: `https://www.arslitera.org/2023/02/07/kavc-uciteljice-veronike-odlomki/`,
         type: TipiOdmevov.ars
+    },
+    {
+        title: "Radio Maribor, Brigita Mohorič, 7. 8. 2026",
+        src: "https://radiomaribor.rtvslo.si/podkast/kultura-zdravi-umetnost-lajsa/155779478/175241147",
+        type: TipiOdmevov.mocvirje
+    },
+    {
+        title: "ARS radio, Brigita Mohorič, Žiga Bratoš, 11. 8. 2026 (1–6 min)",
+        src: "https://ars.rtvslo.si/podkast/svet-kulture/64838778/175241959",
+        type: TipiOdmevov.mocvirje
+    },
+    {
+        title: "Video prispevek Letnega odra Ruše in Video produkcije Plamen – nastop z glasbeno pravljico Agica, mala čarovnica",
+        src: "https://www.facebook.com/reel/1808740247206517/?s=single_unit",
+        type: TipiOdmevov.agica
     },
 ]

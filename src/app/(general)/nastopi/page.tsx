@@ -173,6 +173,25 @@ export default function Nastopi() {
           </p>
         </div>
       </section>
+
+      <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-base">
+        <h3 className="text-sm font-light mt-1 md:mt-0">2026</h3>
+        <div>
+          <p>
+            15. Pohorska pravljica: predstava (glasbena pravljica){" "}
+            <em className="font-semibold">Agica, mala čarovnica</em>; Trg vstaje
+            pred občino Ruše, 19. 8. 2026
+          </p>
+          <p>
+            Nastopali: Mojca Andrej, Barbara Gabrielle, Lucie in Matjaž Dajčar
+            in Peter Andrej, avtor glasbe in songov!
+          </p>
+          <p>
+            Organizatorji: Glazerjeva domačija v sodelovanju z Javnim zavodom
+            Športni park Ruše, Klub KU KU ter Občino Ruše.
+          </p>
+        </div>
+      </section>
       {/* </div> */}
 
       <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-sky-400 from-40% md:my-4 mt-4 mb-2">
