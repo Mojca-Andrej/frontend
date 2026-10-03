@@ -64,10 +64,3 @@
     scroll-behavior: smooth;
   }
 }
-
-/* Besedila pesmi: ohranimo prelome vrstic in kitic, kot so zapisani v podatkih. */
-@utility verse {
-  white-space: pre-line;
-  font-family: var(--font-serif);
-  line-height: 1.75;
-}

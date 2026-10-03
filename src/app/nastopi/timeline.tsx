@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
+import { plural } from "@/lib/plural";
 import { filters, isFilterId, type FilterId } from "./filters";
 
 export type TimelineItem = { key: string; tags: FilterId[]; node: ReactNode };
@@ -38,11 +39,7 @@ function selectFilter(id: FilterId) {
 }
 
 function countLabel(n: number): string {
-  const mod = n % 100;
-  if (mod === 1) return `${n} nastop`;
-  if (mod === 2) return `${n} nastopa`;
-  if (mod === 3 || mod === 4) return `${n} nastopi`;
-  return `${n} nastopov`;
+  return `${n} ${plural(n, ["nastop", "nastopa", "nastopi", "nastopov"])}`;
 }
 
 export function NastopiTimeline({ groups }: { groups: TimelineGroup[] }) {

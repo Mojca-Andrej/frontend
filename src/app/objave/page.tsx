@@ -8,6 +8,8 @@ import { publications, type Publication } from "@/content/objave";
 import { byDateDesc, formatDate, yearOf } from "@/lib/dates";
 import { imageSize, toSlide } from "@/lib/images";
 import { ReadButton } from "./read-button";
+import { linkClass } from "@/lib/styles";
+import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = {
   title: "Objave",
@@ -85,7 +87,7 @@ export default function ObjavePage() {
                       {entry.link && (
                         <ExternalLink
                           href={entry.link}
-                          className="inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700"
+                          className={cn(linkClass, "inline-flex min-h-11 items-center gap-1.5 text-sm font-medium")}
                         >
                           Več o objavi<span className="sr-only">: {entry.title}</span>
                           <ArrowUpRight aria-hidden className="size-4" />

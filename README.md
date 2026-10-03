@@ -73,8 +73,8 @@ ffmpeg -i posnetek.mp3 -map 0:a -map_metadata 0 -c:a libmp3lame -b:a 160k public
 
 ```
 src/
-  app/                  strani (App Router)
-    (general)/          strani z glavo in nogo
+  app/                  strani (App Router): knjige/, nastopi/, branja/, prevodi/ …
+    layout.tsx          glava, noga in metapodatki za vse strani
     sitemap.ts, robots.ts, manifest.ts, opengraph-image.jpg, icon.png
   components/           skupne komponente (glava, noga, Poem, Lightbox, PageHeader …)
   content/              VSEBINA – tu se ureja stran

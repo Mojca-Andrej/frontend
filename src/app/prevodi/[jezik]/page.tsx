@@ -5,7 +5,8 @@ import { PageHeader } from "@/components/page-header";
 import { Poem } from "@/components/poem";
 import { languages } from "@/content/languages";
 import { translations } from "@/content/translations";
-import { linkClass, poemCount, translationBook } from "../translation-books";
+import { linkClass } from "@/lib/styles";
+import { poemCount, translationBook } from "../translation-books";
 
 type Props = { params: Promise<{ jezik: string }> };
 

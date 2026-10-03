@@ -4,6 +4,7 @@ import { PageHeader, SectionTitle } from "@/components/page-header";
 import { getBook } from "@/content/books";
 import { galleries } from "@/content/galleries";
 import { toSlide } from "@/lib/images";
+import { plural } from "@/lib/plural";
 import { AlbumGrid } from "./album-grid";
 
 export const metadata: Metadata = {
@@ -13,13 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/galerija" },
 };
 
-/** Slovenska dvojina in množina: 1 fotografija, 2 fotografiji, 3 fotografije, 5 fotografij. */
 function photosWord(n: number) {
-  const r = n % 100;
-  if (r === 1) return "fotografija";
-  if (r === 2) return "fotografiji";
-  if (r === 3 || r === 4) return "fotografije";
-  return "fotografij";
+  return plural(n, ["fotografija", "fotografiji", "fotografije", "fotografij"]);
 }
 
 export default function GalleryPage() {

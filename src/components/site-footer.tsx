@@ -3,6 +3,7 @@ import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
 import { site } from "@/content/site";
 import { navigation } from "@/content/navigation";
 import { ExternalLink } from "./external-link";
+import { CurrentYear } from "./current-year";
 
 const socialIcons = { Facebook, YouTube: Youtube, Instagram } as const;
 
@@ -69,7 +70,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-6xl px-4 py-4 text-sm text-plum-200 md:px-8">
-          © {new Date().getFullYear()} {site.name}. Vse pravice pridržane.
+          © <CurrentYear /> {site.name}. Vse pravice pridržane.
         </p>
       </div>
     </footer>

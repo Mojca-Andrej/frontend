@@ -1,4 +1,7 @@
 import { Fragment, type ReactNode } from "react";
+import Link from "next/link";
+import { ExternalLink } from "./external-link";
+import { linkClass } from "@/lib/styles";
 
 /**
  * Preprosto oblikovanje v podatkih namesto HTML-ja:
@@ -17,16 +20,17 @@ export function formatInline(text: string): ReactNode {
         const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
         if (link) {
           const [, label, href = ""] = link;
-          const external = href.startsWith("http");
+          if (href.startsWith("http")) {
+            return (
+              <ExternalLink key={i} href={href} className={linkClass}>
+                {label}
+              </ExternalLink>
+            );
+          }
           return (
-            <a
-              key={i}
-              href={href}
-              className="text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700"
-              {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            >
+            <Link key={i} href={href} className={linkClass}>
               {label}
-            </a>
+            </Link>
           );
         }
         return part;

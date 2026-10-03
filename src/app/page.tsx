@@ -36,7 +36,10 @@ export default function Home() {
 
   return (
     <div className="space-y-20 md:space-y-28">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }}
+      />
 
       {/* Uvod */}
       <section className="grid items-center gap-10 md:grid-cols-[1.25fr_1fr] md:gap-16">

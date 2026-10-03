@@ -50,8 +50,14 @@ export function NavMenu({ items }: { items: NavItem[] }) {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    if (!mobileOpen) return;
+    document.body.style.overflow = "hidden";
+    // Ob razširitvi okna na namizno širino (lg) se mobilni meni skrije, zato ga zapri in sprosti drsenje.
+    const desktop = window.matchMedia("(min-width: 64rem)");
+    const onChange = () => desktop.matches && setMobileOpen(false);
+    desktop.addEventListener("change", onChange);
     return () => {
+      desktop.removeEventListener("change", onChange);
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);

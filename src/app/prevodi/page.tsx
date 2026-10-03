@@ -4,7 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { languages } from "@/content/languages";
 import { translations } from "@/content/translations";
-import { linkClass, poemCount, translationBook } from "./translation-books";
+import { linkClass } from "@/lib/styles";
+import { poemCount, translationBook } from "./translation-books";
 
 export const metadata: Metadata = {
   title: "Prevodi",

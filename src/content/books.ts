@@ -1,4 +1,4 @@
-import type { BookSlug } from "@/content/types";
+import { bookSlugs, type BookSlug } from "@/content/types";
 
 /**
  * KNJIGE MOJCE ANDREJ
@@ -14,7 +14,7 @@ import type { BookSlug } from "@/content/types";
  *     type: "pesniška zbirka",
  *     audience: "odrasli",              // ali "otroci"
  *     authors: ["Mojca Andrej"],
- *     publisher: "Litera Maribor",
+ *     publishers: ["Litera Maribor"],
  *     year: 2027,
  *     cover: "/slike/knjige/nova-knjiga.jpg",
  *     inLanguage: "sl",
@@ -41,7 +41,7 @@ export type BookQuote = {
 
 export type BookEdition = {
   year: number;
-  publisher: string;
+  publishers: string[];
   cover?: string;
   note?: string;
 };
@@ -56,8 +56,8 @@ export type Book = {
   audience: Audience;
   authors: string[];
   illustrator?: string;
-  /** Založba (prve) izdaje. */
-  publisher: string;
+  /** Založbe (prve) izdaje; na strani se izpišejo kot »A, B in C«. */
+  publishers: string[];
   /** Leto (prve) izdaje. */
   year: number;
   /** Naslovnica, pot v public/ z vodilno poševnico. */
@@ -74,7 +74,7 @@ export type Book = {
   isbn?: string;
   /** Jezik besedila (BCP 47): "sl", "en", "hr" … */
   inLanguage: string;
-  /** Če je knjiga izšla večkrat (prva izdaja naj bo enaka year/publisher/cover zgoraj). */
+  /** Če je knjiga izšla večkrat (prva izdaja naj bo enaka year/publishers/cover zgoraj). */
   editions?: BookEdition[];
 };
 
@@ -85,7 +85,7 @@ export const books: Book[] = [
     type: "pesniška zbirka",
     audience: "odrasli",
     authors: ["Mojca Andrej"],
-    publisher: "Mariborska literarna družba",
+    publishers: ["Mariborska literarna družba"],
     year: 2000,
     cover: "/slike/knjige/nikoli-ne-reci-da-ni-skrivnosti.jpg",
     inLanguage: "sl",
@@ -104,7 +104,7 @@ export const books: Book[] = [
     type: "pesniška zbirka",
     audience: "odrasli",
     authors: ["Mojca Andrej"],
-    publisher: "Mariborska literarna družba, Klub KU KU in Kulturni klub Nomadi",
+    publishers: ["Mariborska literarna družba", "Klub KU KU", "Kulturni klub Nomadi"],
     year: 2015,
     cover: "/slike/knjige/dez-v-gugalnici.jpg",
     inLanguage: "sl",
@@ -123,7 +123,7 @@ export const books: Book[] = [
     type: "pesniška zbirka",
     audience: "odrasli",
     authors: ["Mojca Andrej"],
-    publisher: "Litera Maribor",
+    publishers: ["Litera Maribor"],
     year: 2020,
     cover: "/slike/knjige/ostanek-umrle-zvezde.jpg",
     inLanguage: "sl",
@@ -142,7 +142,7 @@ export const books: Book[] = [
     type: "roman",
     audience: "odrasli",
     authors: ["Mojca Andrej"],
-    publisher: "Litera Maribor",
+    publishers: ["Litera Maribor"],
     year: 2022,
     cover: "/slike/knjige/kavc-uciteljice-veronike.jpg",
     inLanguage: "sl",
@@ -160,10 +160,10 @@ export const books: Book[] = [
       },
     ],
     editions: [
-      { year: 2022, publisher: "Litera Maribor", cover: "/slike/knjige/kavc-uciteljice-veronike.jpg" },
+      { year: 2022, publishers: ["Litera Maribor"], cover: "/slike/knjige/kavc-uciteljice-veronike.jpg" },
       {
         year: 2024,
-        publisher: "Klub KU KU, Glazerjeva domačija",
+        publishers: ["Klub KU KU", "Glazerjeva domačija"],
         cover: "/slike/knjige/kavc-uciteljice-veronike-2024.jpg",
         note: "ponatis pri drugi založbi",
       },
@@ -176,7 +176,7 @@ export const books: Book[] = [
     type: "prevedena poezija, dvostranska knjiga",
     audience: "odrasli",
     authors: ["Mojca Andrej", "Peter Andrej"],
-    publisher: "Klub KU KU, Glazerjeva domačija",
+    publishers: ["Klub KU KU", "Glazerjeva domačija"],
     year: 2024,
     cover: "/slike/knjige/transitions.jpg",
     inLanguage: "en",
@@ -189,7 +189,7 @@ export const books: Book[] = [
     type: "prevedena poezija, dvostranska knjiga",
     audience: "odrasli",
     authors: ["Mojca Andrej", "Peter Andrej"],
-    publisher: "Klub KU KU, Glazerjeva domačija",
+    publishers: ["Klub KU KU", "Glazerjeva domačija"],
     year: 2025,
     cover: "/slike/knjige/mijene.jpg",
     inLanguage: "hr",
@@ -202,7 +202,7 @@ export const books: Book[] = [
     type: "pesniška zbirka",
     audience: "odrasli",
     authors: ["Mojca Andrej"],
-    publisher: "Volosov hram, Murska Sobota; Društvo Glazerjeva domačija, Ruše",
+    publishers: ["Volosov hram, Murska Sobota", "Društvo Glazerjeva domačija, Ruše"],
     year: 2026,
     cover: "/slike/knjige/mocvirje-pozabe.jpg",
     backCover: "/slike/knjige/mocvirje-pozabe-zadnja-stran.jpg",
@@ -222,7 +222,7 @@ export const books: Book[] = [
     type: "zbirka pesmi za otroke",
     audience: "otroci",
     authors: ["Mojca Andrej"],
-    publisher: "OŠ Prežihovega Voranca Maribor, Klub KU KU",
+    publishers: ["OŠ Prežihovega Voranca Maribor", "Klub KU KU"],
     year: 2013,
     cover: "/slike/knjige/rastem-do-tebe.jpg",
     cd: "Peter Andrej",
@@ -243,7 +243,7 @@ export const books: Book[] = [
     audience: "otroci",
     authors: ["Mojca Andrej"],
     illustrator: "Darka Erdelji",
-    publisher: "Litera, Klub KU KU, Glazerjeva domačija",
+    publishers: ["Litera", "Klub KU KU", "Glazerjeva domačija"],
     year: 2019,
     cover: "/slike/knjige/agica-mala-carovnica.jpg",
     cd: "Peter Andrej",
@@ -254,6 +254,12 @@ export const books: Book[] = [
       "… poetična zgodba o malem Jakobu in dedku se prične, ko se Jakob sredi črne črne noči nenadoma *prebudi* in z radovednim vprašanjem *prebudi* dedka, da se zazreta v nočno nebo in se skupaj *čudita* mežikajoči zvezdi. Njuno *čudenje* je pravzaprav uvod v zgodbo o Agici, o majhnem bitju, ki je v očeh drugih čudna.\nEdina v svojem gnezdu je, ki ne joče, ampak cviiiili, ki zeha z usti v obliki črke i, ki ne hodi, ampak poskakuje. Počne take reči, ki drugim še na misel ne bi prišle. Tudi oblači se po svoje. In v svojih treh gumbih nenavadne oblike in v sebi nenadoma odkrije čarobno moč.\nNad tem je še sama začudena. Zaradi tega ji vsi rečejo kar mala čarovnica.\n\nNeustavljiva *radovednost* po raziskovanju jo vodi v širno vesolje.\nZapusti domače gnezdo in se naseli na Modro zvezdo (morda zato mežika?). Tu je čisto zadovoljna, vse dokler ji ne postane dolgčas. Same čarovnije nimajo nobenega smisla, če jih z nikomer ne deliš … Na srečo se nekdo, prav takšen kot ona, pojavi na njeni zvezdi …\n\nTo srečanje Agice z Agesom tudi barvno zaznamuje okvirno zgodbo, da se osredini v dveh pesmih, ki sta uglasbeni. Poetična zgodba v sebi nosi mnogo *čudnih* reči in skritih vprašanj. Eno smo si zastavili tudi sami: ali ni »majhnemu« in »velikemu« bitju skupno isto *čudenje?* In ali ni prav čudenje tista najbolj živa neznana sila, ki nas vodi naprej, iz znanega v *neznano?* In da se dva, kot sta Agica in Ages, *srečata na isti zvezdi*, je pravzaprav čudež, kajne?\nDedek že ve.",
   },
 ];
+
+// Vsak slug iz types.ts mora imeti svojo knjigo – sicer se gradnja ustavi s tem sporočilom.
+const missingBooks = bookSlugs.filter((slug) => !books.some((book) => book.slug === slug));
+if (missingBooks.length) {
+  throw new Error(`V src/content/books.ts manjkajo knjige za: ${missingBooks.join(", ")} (glej bookSlugs v types.ts).`);
+}
 
 /** Najnovejše najprej; pri enakem letu po abecedi. */
 function byYearDesc(a: Book, b: Book): number {
@@ -287,6 +293,16 @@ export function getBook(slug: BookSlug): Book {
   return book;
 }
 
+/**
+ * "Litera Maribor", "Klub KU KU in Glazerjeva domačija", "A, B in C".
+ * Če ime vsebuje vejico (npr. kraj), se založbe ločijo s podpičjem.
+ */
+export function publisherNames(publishers: string[]): string {
+  if (publishers.some((name) => name.includes(","))) return publishers.join("; ");
+  const last = publishers.at(-1) ?? "";
+  return publishers.length > 1 ? `${publishers.slice(0, -1).join(", ")} in ${last}` : last;
+}
+
 /** "Mojca Andrej" ali "Mojca Andrej in Peter Andrej". */
 export function authorNames(book: Book): string {
   return book.authors.join(" in ");
@@ -302,7 +318,7 @@ export function bookImages(book: Book): { src: string; alt: string; caption?: st
   add(
     book.cover,
     firstEdition
-      ? `Naslovnica knjige ${book.title} (${firstEdition.publisher}, ${firstEdition.year})`
+      ? `Naslovnica knjige ${book.title} (${publisherNames(firstEdition.publishers)}, ${firstEdition.year})`
       : `Naslovnica knjige ${book.title}`,
     firstEdition ? `Izdaja ${firstEdition.year}` : undefined,
   );
@@ -310,7 +326,7 @@ export function bookImages(book: Book): { src: string; alt: string; caption?: st
   for (const edition of book.editions ?? []) {
     add(
       edition.cover,
-      `Naslovnica knjige ${book.title} (${edition.publisher}, ${edition.year})`,
+      `Naslovnica knjige ${book.title} (${publisherNames(edition.publishers)}, ${edition.year})`,
       `Izdaja ${edition.year}`,
     );
   }

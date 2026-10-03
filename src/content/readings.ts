@@ -2,12 +2,11 @@ import type { BookSlug } from "./types";
 import { poems } from "./poems";
 import { childrenPoems, agicaSong } from "./children-poems";
 import { proseWorks } from "./prose";
+import { plural } from "@/lib/plural";
 import { slugify } from "@/lib/slug";
 
 function excerptCount(n: number) {
-  const mod = n % 100;
-  const word = mod === 1 ? "odlomek" : mod === 2 ? "odlomka" : mod === 3 || mod === 4 ? "odlomki" : "odlomkov";
-  return `${n} ${word}`;
+  return `${n} ${plural(n, ["odlomek", "odlomka", "odlomki", "odlomkov"])}`;
 }
 
 export type Reading = { title: string; href: string; detail?: string };

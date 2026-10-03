@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { RichText, toPlainText } from "@/components/rich-text";
-import { authorNames, bookImages, books, findBook, sortedBooks, type Book } from "@/content/books";
+import { authorNames, bookImages, books, findBook, publisherNames, sortedBooks, type Book } from "@/content/books";
 import { site } from "@/content/site";
 import { imageSize, toSlide } from "@/lib/images";
 import { BookCovers } from "./book-covers";
@@ -59,9 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function jsonLd(book: Book) {
   const url = `${site.url}/knjige/${book.slug}`;
   const person = (name: string) => ({ "@type": "Person", name });
-  // Več založnikov je v podatkih ločenih s podpičjem.
-  const publishers = (names: string) =>
-    names.split(";").map((name) => ({ "@type": "Organization", name: name.trim() }));
+  const publishers = (names: string[]) => names.map((name) => ({ "@type": "Organization", name }));
   return {
     "@context": "https://schema.org",
     "@type": "Book",
@@ -71,7 +69,7 @@ function jsonLd(book: Book) {
     author: book.authors.map(person),
     ...(book.illustrator && { illustrator: person(book.illustrator) }),
     datePublished: String(book.year),
-    publisher: publishers(book.publisher),
+    publisher: publishers(book.publishers),
     image: `${site.url}${book.cover}`,
     inLanguage: book.inLanguage,
     genre: book.type,
@@ -80,7 +78,7 @@ function jsonLd(book: Book) {
       workExample: book.editions.map((edition) => ({
         "@type": "Book",
         datePublished: String(edition.year),
-        publisher: publishers(edition.publisher),
+        publisher: publishers(edition.publishers),
         ...(edition.cover && { image: `${site.url}${edition.cover}` }),
       })),
     }),
@@ -142,7 +140,7 @@ export default async function BookPage({ params }: Props) {
                     .sort((a, b) => a.year - b.year)
                     .map((edition) => (
                       <li key={edition.year}>
-                        {edition.year} – {edition.publisher}
+                        {edition.year} – {publisherNames(edition.publishers)}
                         {edition.note && <span className="text-muted"> ({edition.note})</span>}
                       </li>
                     ))}
@@ -150,7 +148,7 @@ export default async function BookPage({ params }: Props) {
               </Row>
             ) : (
               <>
-                <Row label="Založba">{book.publisher}</Row>
+                <Row label="Založba">{publisherNames(book.publishers)}</Row>
                 <Row label="Leto izdaje">{book.year}</Row>
               </>
             )}

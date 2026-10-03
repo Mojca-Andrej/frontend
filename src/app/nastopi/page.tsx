@@ -17,6 +17,7 @@ import { byDateDesc, formatDate, yearOf } from "@/lib/dates";
 import { cn } from "@/lib/cn";
 import { filterTags } from "./filters";
 import { NastopiTimeline, type TimelineGroup } from "./timeline";
+import { linkClass } from "@/lib/styles";
 
 export const metadata: Metadata = {
   title: "Nastopi in predstavitve",
@@ -88,10 +89,7 @@ function PerformanceCard({ performance: p }: { performance: Performance }) {
       {book && (
         <p className="mt-3 text-sm">
           <span className="text-muted">Knjiga: </span>
-          <Link
-            href={`/knjige/${book.slug}`}
-            className="font-medium text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700"
-          >
+          <Link href={`/knjige/${book.slug}`} className={cn(linkClass, "font-medium")}>
             {book.title}
           </Link>
         </p>

@@ -6,14 +6,13 @@ import { Verse } from "@/components/poem";
 import { formatInline } from "@/components/rich-text";
 import { cn } from "@/lib/cn";
 import { proseWorks, type ProseBlock, type ProseWork } from "@/content/prose";
+import { linkClass } from "@/lib/styles";
 
 export const metadata: Metadata = {
   title: "Proza",
   description: "Odlomki iz romana Kavč učiteljice Veronike Mojce Andrej.",
   alternates: { canonical: "/branja/proza" },
 };
-
-const linkClass = "text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700";
 
 /** Sidra so kratka (#odlomek-1), dokler je na strani eno samo delo. */
 function anchor(work: ProseWork, part: number | "seznam") {

@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Lora } from "next/font/google";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -21,8 +23,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="sl" className={`${inter.variable} ${lora.variable}`}>
-      <body className="bg-paper font-sans text-ink antialiased">{children}</body>
+    <html lang="sl" data-scroll-behavior="smooth" className={`${inter.variable} ${lora.variable}`}>
+      <body className="bg-paper font-sans text-ink antialiased">
+        <SiteHeader />
+        <main id="vsebina" className="mx-auto min-h-[70vh] max-w-6xl px-4 pt-10 pb-24 md:px-8 md:pt-16">
+          {children}
+        </main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

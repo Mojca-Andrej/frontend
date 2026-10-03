@@ -7,6 +7,7 @@ import { Poem } from "@/components/poem";
 import { agicaSong, childrenPoems } from "@/content/children-poems";
 import { imageSize } from "@/lib/images";
 import { slugify } from "@/lib/slug";
+import { linkClass } from "@/lib/styles";
 
 export const metadata: Metadata = {
   title: "Pesmi za otroke",
@@ -35,10 +36,7 @@ export default function ZaOtroke() {
           <p className="mt-3 text-muted">Ilustracije: {agicaSong.illustrations}</p>
           <AudioPlayer src={agicaSong.audio.src} caption={agicaSong.audio.caption} className="mt-6 bg-white" />
           <p className="mt-6">
-            <Link
-              href={`/knjige/${agicaSong.book}`}
-              className="text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700"
-            >
+            <Link href={`/knjige/${agicaSong.book}`} className={linkClass}>
               Več o slikanici Agica, mala čarovnica
             </Link>
           </p>

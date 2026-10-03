@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AudioPlayer } from "@/components/audio-player";
 import { formatInline } from "@/components/rich-text";
 import { cn } from "@/lib/cn";
+import { linkClass } from "@/lib/styles";
 
 /** Razdeli besedilo pesmi na kitice (ločene s prazno vrstico); presledke na robovih vrstic odstrani. */
 export function toStanzas(text: string): string[] {
@@ -69,10 +70,7 @@ export function Poem({
             <p>
               <cite>
                 {sourceHref ? (
-                  <Link
-                    href={sourceHref}
-                    className="text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700"
-                  >
+                  <Link href={sourceHref} className={linkClass}>
                     {source}
                   </Link>
                 ) : (
