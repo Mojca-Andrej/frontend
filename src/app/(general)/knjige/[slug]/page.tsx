@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
-import { RichText } from "@/components/rich-text";
+import { RichText, toPlainText } from "@/components/rich-text";
 import { authorNames, bookImages, books, findBook, sortedBooks, type Book } from "@/content/books";
 import { site } from "@/content/site";
 import { imageSize, toSlide } from "@/lib/images";
@@ -20,15 +20,6 @@ export function generateStaticParams() {
 }
 
 /** Navadno besedilo brez oznak *…* / **…** / […](…). */
-function plain(text: string): string {
-  return text
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-    .replace(/\*\*([^*]+)\*\*/g, "$1")
-    .replace(/\*([^*]+)\*/g, "$1")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 function truncate(text: string, max: number): string {
   if (text.length <= max) return text;
   const cut = text.slice(0, max - 1);
@@ -39,8 +30,8 @@ function truncate(text: string, max: number): string {
 function summary(book: Book): string {
   const lead = `${book.title} (${book.year}) – ${book.type}, ${authorNames(book)}. `;
   const quote = book.quotes?.[0];
-  if (!quote) return truncate(lead + plain(book.description), 155);
-  const text = truncate(`${lead}»${plain(quote.text).replace(/^…\s*/, "")}`, 154);
+  if (!quote) return truncate(lead + toPlainText(book.description), 155);
+  const text = truncate(`${lead}»${toPlainText(quote.text).replace(/^…\s*/, "")}`, 154);
   return `${text}«`;
 }
 
@@ -57,14 +48,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: book.title,
       description: summary(book),
       url: `/knjige/${book.slug}`,
+      siteName: site.name,
+      locale: "sl_SI",
       images: [{ url: book.cover, ...imageSize(book.cover), alt: `Naslovnica knjige ${book.title}` }],
     },
+    twitter: { card: "summary_large_image", images: [book.cover] },
   };
 }
 
 function jsonLd(book: Book) {
   const url = `${site.url}/knjige/${book.slug}`;
   const person = (name: string) => ({ "@type": "Person", name });
+  // Več založnikov je v podatkih ločenih s podpičjem.
+  const publishers = (names: string) =>
+    names.split(";").map((name) => ({ "@type": "Organization", name: name.trim() }));
   return {
     "@context": "https://schema.org",
     "@type": "Book",
@@ -74,7 +71,7 @@ function jsonLd(book: Book) {
     author: book.authors.map(person),
     ...(book.illustrator && { illustrator: person(book.illustrator) }),
     datePublished: String(book.year),
-    publisher: { "@type": "Organization", name: book.publisher },
+    publisher: publishers(book.publisher),
     image: `${site.url}${book.cover}`,
     inLanguage: book.inLanguage,
     genre: book.type,
@@ -83,7 +80,7 @@ function jsonLd(book: Book) {
       workExample: book.editions.map((edition) => ({
         "@type": "Book",
         datePublished: String(edition.year),
-        publisher: { "@type": "Organization", name: edition.publisher },
+        publisher: publishers(edition.publisher),
         ...(edition.cover && { image: `${site.url}${edition.cover}` }),
       })),
     }),

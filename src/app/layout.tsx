@@ -11,8 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} – ${site.tagline}`, template: `%s | ${site.name}` },
   description: site.description,
-  alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: "sl_SI", siteName: site.name, url: "/" },
+  openGraph: { type: "website", locale: "sl_SI", siteName: site.name },
   twitter: { card: "summary_large_image" },
 };
 

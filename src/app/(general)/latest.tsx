@@ -5,7 +5,7 @@ import { publications } from "@/content/objave";
 import { odmevi } from "@/content/odmevi";
 import { SectionTitle } from "@/components/page-header";
 import { ExternalLink } from "@/components/external-link";
-import { formatInline } from "@/components/rich-text";
+import { formatInline, toPlainText } from "@/components/rich-text";
 import { byDateDesc, formatDate } from "@/lib/dates";
 import type { IsoDate } from "@/content/types";
 
@@ -17,7 +17,7 @@ export function Latest() {
     ...nastopi.map((n) => ({
       kind: categoryLabels[n.category],
       date: n.date,
-      title: n.title ?? n.text ?? "",
+      title: n.title ?? toPlainText(n.text ?? ""),
       detail: n.place,
       href: "/nastopi",
     })),

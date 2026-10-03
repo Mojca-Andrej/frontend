@@ -10,6 +10,7 @@ export const navigation: NavItem[] = [
     label: "branja",
     href: "/branja",
     children: [
+      { label: "vsa branja", href: "/branja" },
       { label: "poezija", href: "/branja/poezija" },
       { label: "proza", href: "/branja/proza" },
       { label: "za otroke", href: "/branja/za-otroke" },
@@ -18,7 +19,10 @@ export const navigation: NavItem[] = [
   {
     label: "prevodi",
     href: "/prevodi",
-    children: languages.map((l) => ({ label: l.menuLabel, href: `/prevodi/${l.code}` })),
+    children: [
+      { label: "vsi prevodi", href: "/prevodi" },
+      ...languages.map((l) => ({ label: l.menuLabel, href: `/prevodi/${l.code}` })),
+    ],
   },
   { label: "objave", href: "/objave" },
   { label: "odmevi", href: "/odmevi" },

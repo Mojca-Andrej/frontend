@@ -40,7 +40,7 @@ for await (const file of walk(PUBLIC)) {
           : pipeline.jpeg({ quality: 80, mozjpeg: true });
     const output = await pipeline.toBuffer();
     // Zapiši le ob občutnem prihranku, da ponovni zagoni ne poslabšujejo kakovosti.
-    if (output.length < input.length * 0.8 || needsRotate) {
+    if (needsResize || needsRotate || output.length < input.length * 0.8) {
       await writeFile(file, output);
       saved += input.length - output.length;
       console.log(

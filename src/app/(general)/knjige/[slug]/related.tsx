@@ -41,7 +41,7 @@ function Block({
 
 /** Vse, kar je povezano s knjigo: odmevi, nastopi, objave, branja in fotografije (prek polja `book` v podatkih). */
 export function RelatedContent({ slug }: { slug: BookSlug }) {
-  const bookOdmevi = odmevi.filter((o) => o.book === slug);
+  const bookOdmevi = odmevi.filter((o) => o.book === slug).sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
   const bookNastopi = nastopi.filter((n) => n.book === slug).sort(byDateDesc);
   const bookObjave = publications.filter((p) => p.book === slug).sort(byDateDesc);
   const bookGalleries = galleries.filter((g) => g.book === slug);

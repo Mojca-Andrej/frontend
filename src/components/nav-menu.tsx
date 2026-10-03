@@ -20,6 +20,8 @@ export function NavMenu({ items }: { items: NavItem[] }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [lastPathname, setLastPathname] = useState(pathname);
   const navRef = useRef<HTMLElement>(null);
+  // Z miško se podmeni odpre že ob prehodu, zato ga klik ne sme zapreti; tipkovnica in dotik ga preklapljata.
+  const pointerType = useRef("");
   const mobileId = useId();
 
   // Ob menjavi strani zapri vse menije.
@@ -73,7 +75,14 @@ export function NavMenu({ items }: { items: NavItem[] }) {
                 type="button"
                 aria-expanded={openDropdown === item.label}
                 aria-controls={`podmeni-${item.label}`}
-                onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                onPointerDown={(e) => {
+                  pointerType.current = e.pointerType;
+                }}
+                onClick={() => {
+                  const isMouse = pointerType.current === "mouse";
+                  pointerType.current = "";
+                  setOpenDropdown(isMouse || openDropdown !== item.label ? item.label : null);
+                }}
                 className={cn(
                   linkClass,
                   "inline-flex items-center gap-1",

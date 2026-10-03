@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
-import { bookSlugs } from "@/content/types";
+import { books } from "@/content/books";
 import { languages } from "@/content/languages";
+import { translations } from "@/content/translations";
 
 const staticRoutes = [
   "/",
@@ -18,10 +19,13 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Le strani, ki dejansko obstajajo: knjige iz books.ts in jeziki, ki imajo vsaj en prevod.
   const routes = [
     ...staticRoutes,
-    ...bookSlugs.map((slug) => `/knjige/${slug}`),
-    ...languages.map((language) => `/prevodi/${language.code}`),
+    ...books.map((book) => `/knjige/${book.slug}`),
+    ...languages
+      .filter((language) => translations.some((t) => t.language === language.code))
+      .map((language) => `/prevodi/${language.code}`),
   ];
   return routes.map((route) => ({
     url: new URL(route, site.url).toString(),

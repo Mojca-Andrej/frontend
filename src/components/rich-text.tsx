@@ -35,6 +35,16 @@ export function formatInline(text: string): ReactNode {
   ));
 }
 
+/** Besedilo brez oznak oblikovanja (za metapodatke in mesta, kjer povezave niso dovoljene). */
+export function toPlainText(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function RichText({ text, className }: { text: string; className?: string }) {
   return <p className={className}>{formatInline(text)}</p>;
 }
