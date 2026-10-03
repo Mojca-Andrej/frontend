@@ -16,15 +16,16 @@ export function formatInline(text: string): ReactNode {
         if (part.startsWith("*") && part.endsWith("*") && part.length > 2) return <em key={i}>{part.slice(1, -1)}</em>;
         const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
         if (link) {
-          const external = link[2].startsWith("http");
+          const [, label, href = ""] = link;
+          const external = href.startsWith("http");
           return (
             <a
               key={i}
-              href={link[2]}
+              href={href}
               className="text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700"
               {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
-              {link[1]}
+              {label}
             </a>
           );
         }

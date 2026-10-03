@@ -57,18 +57,20 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <figure className="relative mx-auto w-full max-w-sm md:max-w-none">
-          <div aria-hidden className="absolute -right-3 -bottom-3 h-full w-full rounded-2xl bg-sea-100 md:-right-5 md:-bottom-5" />
-          <Image
+        <figure className="mx-auto w-full max-w-sm md:max-w-none">
+          <div className="relative">
+            <div aria-hidden className="absolute -right-3 -bottom-3 h-full w-full rounded-2xl bg-sea-100 md:-right-5 md:-bottom-5" />
+            <Image
             src={about.portrait.src}
             alt={about.portrait.alt}
             width={portrait.width}
             height={portrait.height}
             sizes="(min-width: 768px) 40vw, 90vw"
             preload
-            className="relative aspect-[4/5] w-full rounded-2xl object-cover shadow-md"
-          />
-          <figcaption className="relative mt-4 text-sm text-muted">{about.portrait.credit}</figcaption>
+              className="relative aspect-[4/5] w-full rounded-2xl object-cover shadow-md"
+            />
+          </div>
+          <figcaption className="mt-6 text-sm text-muted">{about.portrait.credit}</figcaption>
         </figure>
       </section>
 

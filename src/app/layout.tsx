@@ -3,8 +3,9 @@ import { Inter, Lora } from "next/font/google";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-inter" });
-const lora = Lora({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-lora" });
+// Prednaložena sta le latinica in razširjena latinica (č, š, ž); cirilica za makedonske prevode se naloži po potrebi.
+const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter" });
+const lora = Lora({ subsets: ["latin", "latin-ext"], variable: "--font-lora" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

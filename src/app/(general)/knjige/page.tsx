@@ -18,7 +18,7 @@ const sections = [
 
 export default function BooksPage() {
   const newest = newestBook();
-  const firstSlug = sections[0].books[0]?.slug;
+  const firstSlug = sections[0]?.books[0]?.slug;
 
   return (
     <div>

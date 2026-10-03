@@ -267,7 +267,9 @@ export function sortedBooks(): Book[] {
 
 /** Najnovejša knjiga (za oznako »Nova knjiga«). */
 export function newestBook(): Book {
-  return [...books].sort(byYearDesc)[0];
+  const newest = [...books].sort(byYearDesc)[0];
+  if (!newest) throw new Error("Seznam knjig je prazen.");
+  return newest;
 }
 
 export function findBook(slug: string): Book | undefined {

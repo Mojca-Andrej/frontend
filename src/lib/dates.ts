@@ -10,7 +10,7 @@ const months = [
  * Slovenski pravopis: presledki za pikami, mesec z malo začetnico.
  */
 export function formatDate(date: IsoDate): string {
-  const [year, month, day] = date.split("-");
+  const [year = "", month, day] = date.split("-");
   if (day) return `${Number(day)}. ${Number(month)}. ${year}`;
   if (month) return `${months[Number(month) - 1]} ${year}`;
   return year;
