@@ -1,0 +1,304 @@
+import type { Poem } from "./poems";
+
+/**
+ * Pesmi za stran Branja → Za otroke (/branja/za-otroke). Zapis je enak kot v poems.ts (glej zgled tam).
+ *
+ *   {
+ *     title: "Naslov",
+ *     text: `
+ *   vrstica
+ *   vrstica
+ *
+ *   nova kitica
+ *   `,
+ *     source: "Rastem do tebe",
+ *     book: "rastem-do-tebe",
+ *     audio: { src: "/audio/za-otroke/datoteka.mp3", caption: "Kdo poje …" },
+ *   },
+ */
+export const childrenPoems: Poem[] = [
+  {
+    title: "Mama",
+    text: `
+Moja mama ni takšna
+kot je tvoja!
+Moja mama ni podobna
+nobeni mami!
+
+Moja mama
+je mehka kot pižama,
+diši kot
+najboljši žvečilni.
+
+Res je posebna,
+zna bit vsevedna,
+ne posluša ne Micke ne Pepice,
+niti svoje šefice.
+
+Vedno je špica,
+ko v pečici je pica,
+v hladilniku čokolada,
+mamina razvada.
+
+Z mano se podi po sobi,
+to je njen najljubši hobi,
+po postelji skače,
+včasih oponaša kače ...
+
+A moja mama
+zna tudi renčati,
+kriliti z rokami
+in cepetati.
+
+Takrat je neurje pri nas doma.
+Mama je velik in težek oblak,
+bliska se, grmi in piha …
+Z bratom zakleneva usta vsa tiha,
+oče si brke ravna in jih viha …
+
+Ko nevihta mine
+in pride sonce,
+je mama zopet moja mami,
+toplonežna, podobna pižami,
+nasmejana, razigrana.
+`,
+    source: "Rastem do tebe",
+    book: "rastem-do-tebe",
+    audio: {
+      src: "/audio/za-otroke/mama.mp3",
+      caption: "Pesem je uglasbil in jo izvaja kantavtor Peter Andrej.\nPoje Barbara Gabrielle.",
+    },
+  },
+  {
+    title: "Kdaj je pomlad?",
+    text: `
+Se zgodi takrat,
+ko luža v Evo skoči
+in jo do kože premoči?
+
+Ko listje se v drevje oblači
+in hiša mamo zrači?
+
+Je to takrat,
+ko veja vrano obsedi,
+takrat, ko trava dež ozeleni?
+
+Kdaj je pomlad?
+
+Ko čebela sonce prebudi
+in med medvedko zasladi?
+
+Ko se nebo sred utrinka ustavi
+in te daljava pozdravi na dlani?
+
+Ko gnezda nove ptice pletejo
+in se vsi od samote gnetejo?
+
+Kdaj je pomlad?
+
+Svet stoji na glavi,
+vse se za trenutek ustavi,
+ko ti imaš rad,
+je v tebi zaklad!
+
+Takrat je pomlad!
+`,
+    source: "Rastem do tebe",
+    book: "rastem-do-tebe",
+    audio: {
+      src: "/audio/za-otroke/kdaj_je_pomlad.mp3",
+      caption: "Pesem je uglasbil in jo izvaja kantavtor Peter Andrej.",
+    },
+  },
+  {
+    title: "Kresnica",
+    text: `
+Jaz sem Cica,
+mala kresnica.
+Tipalke sem si uredila,
+da bom lepa, mila.
+
+Danes se odpravim v mrak,
+saj po dežju čist je zrak.
+Mali Leni bom svetila
+kot prijazna lučka Vila.
+
+Tam bo tudi svetli Mik,
+moj prijatelj je, kresnik.
+Plesala bova kot nekoč,
+na dotik v zvezdno noč.
+
+Malo v gozdu se ustavim,
+hrošče, mravlje tam pozdravim,
+jim zapojem serenado,
+že hitim na promenado.
+
+Tu se zberemo kresnice,
+mestne frajle, lepotice.
+O skrivnostih govorimo,
+v siju plesa zažarimo.
+
+Ko na nebu sonce zeha,
+se nočna čarovnija neha.
+Žarek v rosi se umiva,
+trava me v svoj sen pokriva.
+`,
+    source: "Rastem do tebe",
+    book: "rastem-do-tebe",
+    audio: {
+      src: "/audio/za-otroke/kresnica.mp3",
+      caption: "Pesem je uglasbil in jo izvaja kantavtor Peter Andrej.\nPoje Barbara Gabrielle.",
+    },
+  },
+  {
+    title: "NA PLAŽI",
+    text: `
+TU NA PLAŽI VSAK SE VAŽI:
+OČE S POTAPLJAŠKO OPREMO,
+MAMA S SVOJO NAJNAJ KREMO,
+SESTRA S TRETJIM SLADOLEDOM,
+ROK POZIRA Z DALJNOGLEDOM.
+
+KAKŠEN DOLGČAS!
+
+ČUDNO, NIHČE NE OPAZI,
+KAKO SE IZ MORJA,
+PREKO OBZORJA,
+TIHA VOJSKA SKRITO PLAZI:
+
+HIŠKE S POLŽI, ZA NJIMI RAKI,
+STRUMNO KORAKAJO VOJAKI,
+TJA, KJER JE HLADILNA TORBA,
+V NJEJ ZA SENDVIČE BO BORBA.
+
+JAZ PA V SENCI GENERAL,
+ČAKAM NA TRENUTEK PRAVI,
+DA ZAPLJUSNE MRZLI VAL
+IN VSE VAŽIČE OPLAZI.
+
+TO BO ZANJE PRAVI ŠOK,
+PLAŽO BO PREPLAVIL JOK,
+KO LAČNI BODO V TORBO SEGLI,
+DA BI SENDVIČE POJEDLI.
+`,
+    source: "Galeb",
+  },
+  {
+    title: "KRT",
+    text: `
+ZA HIŠO NA VRTU
+SE VSI POSVEČAMO KRTU:
+
+OČE Z ROKAMI V BOKU,
+MAMA OBUPANO V JOKU,
+BABI S TANKIM PISKOM,
+SESTRA Z ZAČUDENIM VRISKOM.
+
+JAZ PA V GRADOVE NJEGOVE
+SELIM POLŽJE BOGOVE,
+NAJ ŠE ONI SLUŽIJO KRTU,
+ČE ŽE VLADA NAŠEMU VRTU.
+`,
+    source: "Galeb",
+  },
+  {
+    title: "ZIMA",
+    text: `
+ZIMA JE SVET
+OVILA V BEL PLET.
+
+NA NEBO JE PRIPELA
+NATRGANO VATO,
+GORAM NADELA
+KUČMO BOGATO.
+
+PLETLA JE PLETLA
+ODEJE ZA VEJE,
+V DLANEH GNETLA
+ŠE NEŽNEJŠE PREJE,
+
+DA JE POSTLALA
+ULICE, CESTE
+IN JIH ZAČARALA
+V BELE NEVESTE.
+`,
+    source: "Galeb",
+  },
+  {
+    title: "Pasja dlaka",
+    text: `
+Tako je, če si pasja dlaka.
+Namesto z oblaka
+padeš s kosmatega psa
+naravnost na kuhinjska tla.
+
+Zdaj sem na begu.
+
+Pred metlo se skrivam,
+pod mizo, med stoli,
+rep maha, uživam,
+letim naokoli
+
+med kozarce, žlice, lonce,
+po kredenci na vse konce.
+Končno znajdem se v copati,
+tudi dlaka mora spati.
+
+Zjutraj se okopam v kavi,
+topla je, džakuzi pravi …
+
+Mož za mizo glasno krikne,
+gospa mama jezno sikne,
+Eva zakriči: »Fuj, dlaka,
+kava je zdaj dlačja mlaka!«
+
+A v tej hiši res ne vejo,
+da stvari po svoje grejo?
+Bolha pod odejo fino,
+dlaka pač v kapučino.
+`,
+    source: "Mlada Sodobnost",
+  },
+  {
+    title: "Če bi srečal okostnjaka",
+    text: `
+Danes je praznik. Dan,
+ko duše mrtvih zbujamo iz sanj.
+In če bi srečal okostnjaka,
+bi prepričal korenjaka,
+
+da odšla bi na grobove,
+med nagrobnike, vrtove.
+Tam zaspance bi zbudila,
+jih na karneval zvabila,
+
+na obraze in nosove
+jim narisala cvetove.
+Plesali bi in se smejali,
+živžav, radost praznovali.
+
+Oh, ti strašni okostnjak,
+zlezla bi na nebesni vrtiljak,
+vesele svate nanj pripela,
+se v kolesju zvezd vrtela!
+
+A ko se tam gor zasvita
+in ugasne noč barvita,
+bi duše vrnila v sanje,
+saj midva sanjava zanje.
+`,
+    source: "Mlada Sodobnost",
+  },
+];
+
+/** Uglasbena pesem iz slikanice Agica, mala čarovnica – na vrhu strani Za otroke, ob naslovnici slikanice. */
+export const agicaSong = {
+  title: "Agica, mala čarovnica",
+  book: "agica-mala-carovnica",
+  illustrations: "Darka Erdelji",
+  image: { src: "/agica_slikanica.png", alt: "Stran iz slikanice z ilustracijo Darke Erdelji: Agica v čarovniškem klobuku z bratci in sestricami v gnezdu med vejami, spodaj modra zvezda in smrekov gozd. Nad sliko je odlomek besedila o Agici, ki edina v gnezdu ni jokala, ampak cvilila." },
+  audio: {
+    src: "/audio/za-otroke/agica.mp3",
+    caption: "Pesem je napisal in uglasbil Peter Andrej, pojeta Peter Andrej in Alenka Cilenšek.",
+  },
+} as const;

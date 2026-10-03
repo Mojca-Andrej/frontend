@@ -1,0 +1,567 @@
+import type { LanguageCode } from "./languages";
+
+/**
+ * Prevodi pesmi v tuje jezike (/prevodi in /prevodi/[jezik]). Ime jezika in oznaka za brskalnik sta v languages.ts.
+ *
+ * Kako dodati prevod (vrstni red v seznamu je vrstni red na strani):
+ *   {
+ *     language: "ang",                  // "ang" | "hrv" | "mkd" | "pol" (nov jezik najprej dodaj v languages.ts)
+ *     title: "Naslov prevoda",
+ *     originalTitle: "naslov izvirnika", // neobvezno
+ *     translator: "Ime Priimek",
+ *     note: "jezikovni pregled: …",      // neobvezno, izpiše se za imenom prevajalca
+ *     text: `
+ *   vrstica
+ *   vrstica
+ *
+ *   nova kitica
+ *   `,
+ *   },
+ */
+export type Translation = {
+  language: LanguageCode;
+  title: string;
+  originalTitle?: string;
+  translator: string;
+  note?: string;
+  /** Vrstice ločene z \n, kitice s prazno vrstico. */
+  text: string;
+};
+
+export const translations: Translation[] = [
+  {
+    language: "ang",
+    title: "Ad astra",
+    originalTitle: "ad astra",
+    translator: "Katarina Juvančič",
+    text: `
+In the next Universe
+... we might come across our image
+and begin to talk about things
+we kept secret
+
+... maybe we discover
+who was the shadow
+the eye in the lock
+as we were filling gold chests with lies
+
+frozen streets will melt
+and the branches will shed its icy leaves
+in the glow of a new constellation
+in the next Universe
+
+but we may stand silent
+open the cage
+and release
+all the words
+back to the wilderness
+
+in Silence we fly
+to the endless blue
+melting into
+the glow of a new constellation
+in the next Universe
+
+...the flock returned
+to wipe its punctuation
+One side of the Earth is closed
+The Universe lies in the grass with his hands under his head
+`,
+  },
+  {
+    language: "ang",
+    title: "Beauty",
+    translator: "Urška Daly",
+    note: "jezikovni pregled: Timothy Daly",
+    text: `
+Quiet birches on the shoreline,
+a reflection in the pulsating leaves.
+The well-known distance is fading.
+The sun descends down the slope.
+
+The lioness grants one last dance
+to its young prey.
+Which will be the side of victory?
+The pendulum is resting.
+
+From the orbit of innocence
+nuns beckon.
+They roller skate in their naivety,
+derailing the passers-by.
+
+The final fashion frontiers of space.
+
+You’re standing on the steps clad so funny,
+legwarmers and boat-like shoes.
+Rolled up, your trouser legs go well with
+the sound of your voice.
+
+I will change your name,
+gender, case and number.
+Beauty.
+You sip me though your narrowed eyelids.
+`,
+  },
+  {
+    language: "ang",
+    title: "quarry",
+    originalTitle: "kamnolom",
+    translator: "Jernej Županič",
+    text: `
+before the poem I’m infinite
+stretched through time
+
+in my Garden there’s a quarry
+that’s where I live
+spinning my little knife
+digging with great precision
+broken stones
+from the pyramid
+picking them to be not too big
+and easy to understand
+
+choosing those
+that shine
+those coloured like the sky
+the free spirits
+those with character
+and those that smell of rhythm
+
+with primal ferocity
+I eliminate the unfit
+and shamelessly claim to own
+the souls of the real ones
+
+some of them are pillows
+others a crystal massage
+some enter dreams
+keeping time with change found in playgrounds
+the round ones drop from roofs into the laps of seniors and under the tails of cats
+those with sharp edges climb the bark of decorative trees
+the depressed ones flatten their bellies in the reflections of puddles
+
+in the quarry
+I make love to the loved ones
+fight the ones that burn
+soothe myself with those that feel
+
+stones in a flowering Garden
+my volcanic quarry
+my words
+fleeing and fragile
+like ourselves
+`,
+  },
+  {
+    language: "ang",
+    title: "A night above the city",
+    originalTitle: "noč nad mestom",
+    translator: "Elena Prendjova",
+    note: "prevedeno iz makedonščine",
+    text: `
+night night
+
+above the city
+above the roofs
+a chimney
+a bell tower
+
+above treetops in the park
+the story of toads’ pond
+steps in the garden
+
+above the drowsy
+billboards
+and a quiet corner
+
+above the henhouse
+a fox on full alert
+
+above us
+drowsy
+in the same shirt made of dreams
+
+night
+spread from a shrunken crescent
+and snoring crickets
+nocturnal brothers
+`,
+  },
+  {
+    language: "ang",
+    title: "The mere existence of you",
+    translator: "Elena Prendjova",
+    note: "prevedeno iz makedonščine",
+    text: `
+You float in the stream. You are the flow;
+water that cracks the walls of sense,
+that worns stones and gulps down the earth ahead,
+that carries away memories and melts thoughts with noise.
+
+You step on the snowy woodland. You are the peak.
+The peak, that, from above, watches through its own stomach and stretches ends in a smile;
+that presses snow’s glister on cheeks and feels no cold;
+that daydreams of vicinity and paces on the frozen stage.
+
+You take a bow. You are the bow.
+Mere endless sky and fanfares out of distant skies.
+You are but a curtain behind the scene. And audience crying exultantly. You are the cry.
+Bent to bow, grey hairs instruct your slow motion.
+
+Tiresome eyelashes cover your blue eyes. They shiver. You are the shiver.
+A moment of false easiness.
+A moment that comes down to nothing.
+A void. You only need to blink.
+
+Are you flying? You await for your body to fly away in million pieces.
+You bend into a pine. Into silence. Your knees, your hands – squeeze them in memory!
+From one into another. A shape.
+From this to that. A constellation.
+A cloth covers the words. The words are beneath you. You are the word.
+`,
+  },
+  {
+    language: "hrv",
+    title: "Ti sav",
+    translator: "Senada Smajić",
+    text: `
+Brodiš po potoku. Tok si.
+Voda, koja prodire kroz zidove značenja,
+koja liže kamenje i guta zemlju ispred sebe,
+koja odnosi sjećanje i bukom rastapa misli.
+
+Gaziš po snjegovitoj gori. Vrh si.
+Vrh, koji odozgo gleda niz svoj trbuh i rasteže krajeve u osmijeh,
+koji pritišće sjaj snijega uz obraze i ne osjeća mrzlinu,
+što čezne po blizini i korača na pozornicu ledenika.
+
+Klanjaš se. Ti si naklon.
+Samo beskrajno nebo i fanfare iz sporednih nebesa.
+Zavjesa si iza pozornice. I publika, koja ushićeno plače. Plač si.
+U naklonu, sjedine u kosi naređuju usporene gibe.
+
+Tvoje modre oči pokrivaju umorne vjeđe. Podrhtavaju. Drhtaj si.
+Trenutak lažne bezbrižnosti.
+Trenutak spuštanja u ništa.
+Ne biti. Samo trepnuti.
+
+Letiš. Sunovratiš. Čekaš da se tvoje tijelo razleti u milijunske djeliće.
+Savijaš se u boru. U tišinu. Ta koljena, te ruke – stisni ih u sjećanje!
+Iz jednog u drugi. Oblik.
+Iz ovog u ono. Sazviježđe.
+
+Potplati prekrivaju riječi. Riječi su pod tobom. Riječ si.
+`,
+  },
+  {
+    language: "hrv",
+    title: "Pričin",
+    translator: "Senada Smajić",
+    text: `
+Ako si pričin
+
+i tvoj pas je samo sjena
+što lebdi u zavjetrini tvog tijela.
+Samo tvoj ogrtač je do bljedila iznošen
+i tvoj bol je tek izlizani kamen.
+
+Ako je sve pričin
+
+neka bude ocean lovište kišnih kapi
+iz kojeg će izrasti cvjetajuća pustinja.
+Neka s površine nestanu plivači
+izbacit će ih, prije ili kasnije, na obalu.
+
+Ako pričin je stvarnost
+
+da, u njegovom procijepu naći ćeš istinu,
+tek u snovima doseći ćeš daleke obale.
+Snovi su plitki kao lokve vode,
+kao svjetlucanje valova,
+neka svjetlucaju plitko kao popodnevni san,
+kao sunčeve zrake u odrazu prozora,
+dok sve ne proguta zlatni prah.
+
+I ako pričin je stvarnost
+
+izgubi se i stvarno.
+Snovi su plitki kao lokve vode,
+kao svjetlucanje valova,
+neka svjetlucaju plitko kao popodnevni san,
+kao sunčeve zrake u odrazu prozora,
+dok sve ne proguta zlatni prah.
+`,
+  },
+  {
+    language: "hrv",
+    title: "Ostatak umrle zvijezde",
+    translator: "Senada Smajić",
+    text: `
+Ja sam samo ostatak mrtve zvijezde.
+
+Klizim po leđima neba.
+Ljuske tjelašca kruže po kružnici.
+Alge i olovni vojnici
+stražare pred zaključanim oblacima.
+
+Na bijeloj klupi se odmaram.
+Ja sam samo ostatak mrtve zvijezde.
+
+Gledam u tamu, u zelenu tamu.
+Izlizane oči kruže po kružnici.
+Sjene nebrojenih odsječaka
+dogovaraju se za noćni susret.
+
+Skinut ću svjetlucavi titraj.
+Ostat ću gola. Posve gola.
+Neću navlačiti kožu preko obraza.
+Gola, potpuno gola
+kružim po kružnici.
+
+Iskočit ću.
+Ja sam samo ostatak umrle zvijezde.
+`,
+  },
+  {
+    language: "hrv",
+    title: "Ad astra",
+    originalTitle: "ad astra",
+    translator: "Željko Perović",
+    text: `
+*U sljedećem Svemiru*
+… možda sretnemo svoj lik
+i progovorimo o stvarima
+o kojima smo šutjeli
+
+… možda otkrijemo
+tko je bio sjenka
+oko u ključaonici
+dok smo punili zlatne škrinje lažima
+
+promrzle će se ulice otopiti
+i grane će svući ledeno lišće
+pod sjajem novog sazviježđa
+*u sljedećem Svemiru*
+
+a možemo šutjeti
+kavez otvoriti
+i pustiti
+sve riječi
+iz svojih grudi
+natrag u divljinu
+
+i poletjeti u Tišinu
+u beskrajnu modrinu
+pretopiti se
+pod svjetlošću novog sazviježđa
+*u sljedećem Svemiru*
+
+… jato se vratilo
+da mu interpunkciju brišemo
+*Zemlja ima jednu stranicu zatvorenu*
+*Univerzum leži u travi s rukama pod glavom*
+`,
+  },
+  {
+    language: "hrv",
+    title: "Noć iznad grada",
+    originalTitle: "noč nad mestom",
+    translator: "Peter Andrej",
+    text: `
+noć, noć
+
+iznad grada
+iznad krovova
+dimnjaka
+zvonika
+
+iznad krošanja u parku
+priča žabjih bara
+koraka u bašti
+
+iznad pospanih
+reklamnih panoa
+i zavoja tihih
+
+iznad kokošinjca
+čekajuć lisca
+
+iznad nas
+usnulih
+u istoj košulji snova
+
+noć
+izgužvanog mjeseca
+i rugajućih zrikavca
+`,
+  },
+  {
+    language: "mkd",
+    title: "Сениште",
+    translator: "Borče Panov",
+    text: `
+Ако си сениште
+
+а песот твоје е сенка
+сал што во заветрината на телото ти лебди.
+Само плаштот твој е до бледило износен
+а болката твоја излижан камен.
+
+Ако се е сенишно
+
+Нека биде океан ловиште на дождовните капки
+од која пустина што цвета ќе изникне.
+Нека биде блескот на пченичниот хоризонт
+И гоа стаклена во галеријата на светот.
+
+Ако и гласот е привид
+
+Нека песните твои ме допрат
+и низ небото да ги раздиплам.
+И на подиумот на ноќта нека играчите ѕвездени
+гласно одѕвонуваат во камбанаријата на мислите
+
+Снежи во водената топка...
+
+Читаш тивко, грижливо и нежно.
+Сликите растат и местото свое
+го бараат На ѕидовите празни.
+Сениште си, лепет на крилјата на привидот.
+
+Кој си, привиду?
+
+Ако те отфрлам, ќе се распрснеш ли?
+Ако те прегрнам, ќе се измолкнеш ли?
+Засрци ме во себе,
+да станам вир на страста твоја.
+
+Ако сал привид сум?
+`,
+  },
+  {
+    language: "mkd",
+    title: "Ноќ над градот",
+    originalTitle: "noč nad mestom",
+    translator: "Borče Panov",
+    text: `
+ноќ, ноќ
+над градот
+над покривите
+оџак
+камбанарија
+
+над крошните во паркот
+приказна на жабјите бари
+чекори во градината
+
+над поспаните
+рекламни билборди
+и тивко катче
+
+над кокошарникот
+лисец чекајќи
+
+над нас
+поспани
+во истата кошула од сништа
+
+ноќ
+згужвана месечина
+и потсмешливи штурци
+`,
+  },
+  {
+    language: "mkd",
+    title: "Остаток од изумрени ѕвезди",
+    translator: "Borče Panov",
+    text: `
+Јас сум само остаток од мртвите ѕвезди.
+
+Се лизгам по грбот на небото.
+Траги од телескопот кружат околу кружниците.
+Алги и оловни војници
+стражарат пред заклучените облаци.
+
+На белата клупа се одморам.
+Јас сум само остаток од мртвите ѕвезди.
+
+Гледам во темнината, во зелената темнина.
+Излитените очи кружат околу кружницата.
+Сенки од безброј отсечки
+се договараат за ноќна средба.
+
+Ќе ја соблечам блескавата наметка.
+Ќе останам гола. Сосема гола.
+Нема да ја навлечам кожата преку образите.
+Гола, целосно гола
+кружам околу кружницата.
+
+Ќе излезам..
+Јас сум само остаток од мртвите ѕвезди.
+`,
+  },
+  {
+    language: "mkd",
+    title: "Самиот ти",
+    translator: "Borče Panov",
+    text: `
+Пловиш по потокот. Тек си.
+Вода, која продира низ ѕидовите на смислата,
+која ги лиже камењата и ја голта земјата пред себе,
+која го однесува сеќавањето и со бучава ги растопува мислите.
+
+Газиш по снежната гора. Врв си.
+Врв, кој одгоре ги гледа низ својот стомак и ги протега краевите во насмевка,
+кој го притиска сјајот на снегот низ образите и не чувствува ладно,
+што мечтае по близина и чекори на замрзнатата сцена.
+
+Се поклонуваш. Ти си наклон.
+Само бесконечно небо и фанфари од споредната небеса.
+Завеса си зад сцената. И публика, која восхитено плаче. Плач си.
+Во наклон, седоста во косата наредува бавно движење.
+
+Твоите сини очи ги покриваат уморни клепки. Се тресат. Трепет си.
+Миг на лажна безгрижност.
+Миг на слегување во ништо.
+Небиднина. Само да трепнеш.
+
+Леташ. ?. Чекаш твоето тело да се разлета на милионски парчиња.
+Се свиткуваш во бор. Во тишина. Оние колена, овие раце – стисни ги во сеќавање!
+Од едно до друго. Форма.
+Од ова до тоа. Созвездие.
+Крпа ги покрива зборовите. Зборовите се под тебе. Збор си.
+`,
+  },
+  {
+    language: "pol",
+    title: "Piękno",
+    translator: "Katarina Juvančič",
+    text: `
+Ciche brzozy na brzegu,
+odbicie w pulsujących liściach.
+Znana odległość zanika.
+Słońce zstępuje w dół zbocza.
+
+Lwica ofiarowuje ostatni taniec
+swojemu młodemu łupowi.
+Która strona będzie stroną zwycięstwa?
+Wahadło odpoczywa.
+
+Z orbity niewinności
+machają zakonnice.
+Jadą na rolkach w swojej naiwności,
+zbaczając z drogi przechodniów.
+
+Ostatnie modowe granice kosmosu.
+Stoisz na schodach, ubrany w dziwny sposób,
+w getry i buty przypominające łódki.
+Podwinięte nogawki dobrze komponują się
+z brzmieniem twojego głosu.
+
+Zmienię twoje imię,
+płeć, przypadek i liczbę.
+Piękno.
+Sączysz mnie przez zwężone powieki.
+`,
+  },
+];

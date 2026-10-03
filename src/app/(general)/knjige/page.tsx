@@ -1,50 +1,71 @@
-import { books } from "./data/books";
-import { Genre } from "./data/books";
-import Link from "next/link";
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { PageHeader, SectionTitle } from "@/components/page-header";
+import { booksFor, newestBook, type Book } from "@/content/books";
 
-export default function Knjige() {
-  const booksForAdults = books.filter((book) => book.genre === Genre.Adult);
-  const booksForChildren = books.filter(
-    (book) => book.genre === Genre.Children
-  );
+export const metadata: Metadata = {
+  title: "Knjige",
+  description:
+    "Knjige Mojce Andrej: pesniške zbirke, roman Kavč učiteljice Veronike, zbirke prevodov ter knjige za otroke z uglasbenimi pesmimi.",
+  alternates: { canonical: "/knjige" },
+};
+
+const sections = [
+  { id: "za-odrasle", title: "Za odrasle", books: booksFor("odrasli") },
+  { id: "za-otroke", title: "Za otroke", books: booksFor("otroci") },
+];
+
+export default function BooksPage() {
+  const newest = newestBook();
+  const firstSlug = sections[0].books[0]?.slug;
+
   return (
-    <main>
-      <h2 className="font-semibold text-2xl mb-8 bg-linear-to-r from-[#11998e] to-[#38ef7d] text-transparent bg-clip-text w-fit">
-        Knjige za odrasle
-      </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 max-w-[theme(screens.2xl)]">
-        {booksForAdults.map((book) => (
-          <div key={book.title} className="flex items-center justify-center">
-            <Link href={`/knjige/${book.link}`}>
-              <Image
-                priority={true}
-                height={400}
-                width={400}
-                src={`/${book.image}`}
-                alt={book.title}
-                className="w-full rounded-sm object-contain hover:shadow-md transition ease-in-out delay-0 hover:scale-105"
-              />
-            </Link>
-          </div>
-        ))}
+    <div>
+      <PageHeader
+        title="Knjige"
+        intro="Pesniške zbirke, roman, zbirke prevodov in knjige za otroke z uglasbenimi pesmimi."
+      />
+      {sections.map((section) => (
+        <section key={section.id} aria-labelledby={section.id} className="mb-16 last:mb-0">
+          <SectionTitle id={section.id}>{section.title}</SectionTitle>
+          <ul className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+            {section.books.map((book) => (
+              <li key={book.slug}>
+                <BookCard book={book} isNew={book.slug === newest.slug} priority={book.slug === firstSlug} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function BookCard({ book, isNew, priority }: { book: Book; isNew: boolean; priority: boolean }) {
+  return (
+    <Link href={`/knjige/${book.slug}`} className="group block rounded-lg">
+      <div className="relative aspect-[2/3] overflow-hidden rounded-md border border-line bg-paper-deep shadow-sm transition-shadow motion-safe:duration-200 group-hover:shadow-md">
+        <Image
+          src={book.cover}
+          alt=""
+          fill
+          preload={priority}
+          sizes="(min-width: 1024px) 270px, (min-width: 640px) 31vw, 46vw"
+          className="object-contain p-2"
+        />
+        {isNew && (
+          <span className="absolute top-2 left-2 rounded-full bg-plum-700 px-2.5 py-1 text-xs font-semibold text-white shadow-sm">
+            Nova knjiga
+          </span>
+        )}
       </div>
-      <h1 className="font-semibold text-2xl my-8 bg-linear-to-r from-[#11998e] to-[#38ef7d] w-fit bg-clip-text text-transparent">
-        Knjige za otroke
-      </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-[theme(screens.xl)]">
-        {booksForChildren.map((book) => (
-          <div key={book.title} className="flex items-center justify-center">
-            <Link href={`/knjige/${book.link}`}>
-              <img
-                src={`${book.image}`}
-                alt={book.title}
-                className="w-full rounded-sm hover:shadow-md object-contain transition ease-in-out delay-0 hover:scale-105"
-              />
-            </Link>
-          </div>
-        ))}
-      </div>
-    </main>
+      <h3 className="mt-3 font-serif text-lg leading-snug font-semibold text-ink group-hover:text-plum-700 group-hover:underline group-hover:decoration-plum-300 group-hover:underline-offset-4">
+        {book.title}
+      </h3>
+      <p className="mt-1 text-sm text-muted">
+        {book.type} · {book.year}
+      </p>
+    </Link>
   );
 }

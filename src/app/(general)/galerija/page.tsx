@@ -1,166 +1,78 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Lightbox, { type Slide } from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
-import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
-import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
-import { Captions, Share } from 'yet-another-react-lightbox/plugins';
-import Zoom from 'yet-another-react-lightbox/plugins/zoom';
-import { regeImages, agicaImages, veronikaImages, nastopiImages, gledalisceImages} from './images';
-import Gallery from './gallery';
-import "yet-another-react-lightbox/plugins/captions.css";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { PageHeader, SectionTitle } from "@/components/page-header";
+import { getBook } from "@/content/books";
+import { galleries } from "@/content/galleries";
+import { toSlide } from "@/lib/images";
+import { AlbumGrid } from "./album-grid";
 
-export default function Gal() {
-  const [index1, setindex1] = useState(-1);
-  const [index2, setindex2] = useState(-1);
-  const [index3, setindex3] = useState(-1);
-  const [index4, setindex4] = useState(-1);
-  const [index5, setindex5] = useState(-1);
+export const metadata: Metadata = {
+  title: "Galerija",
+  description:
+    "Fotografije z nastopov, predstavitev knjig, kamišibaja in gledaliških predstav pesnice in pisateljice Mojce Andrej.",
+  alternates: { canonical: "/galerija" },
+};
 
-  const [regePhotos] = useState<Slide[]>(
-    regeImages.map((image) => ({
-      src: image.src,
-      alt: image.alt,
-      width: 1080,
-      height: 1080,
-      title: image.title,
-      description: image.description,
-    })),
-  );
+/** Slovenska dvojina in množina: 1 fotografija, 2 fotografiji, 3 fotografije, 5 fotografij. */
+function photosWord(n: number) {
+  const r = n % 100;
+  if (r === 1) return "fotografija";
+  if (r === 2) return "fotografiji";
+  if (r === 3 || r === 4) return "fotografije";
+  return "fotografij";
+}
 
-  const [agicaPhotos] = useState<Slide[]>(
-    agicaImages.map((image) => ({
-      src: image.src,
-      alt: image.alt,
-      width: 1080,
-      height: 1080,
-      title: image.title,
-      description: image.description,
-    })),
-  );
-  
-  const [veronikaPhotos] = useState<Slide[]>(
-    veronikaImages.map((image) => ({
-      src: image.src,
-      alt: image.alt,
-      width: 1080,
-      height: 1080,
-      title: image.title,
-      description: image.description,
-    })),
-  );
-
-  const [nastopiPhotos] = useState<Slide[]>(
-    nastopiImages.map((image) => ({
-      src: image.src,
-      alt: image.alt,
-      width: 1080,
-      height: 1080,
-      title: image.title,
-      description: image.description,
-    })),
-  );
-
-
-  const [gledaliscePhotos] = useState<Slide[]>(
-    gledalisceImages.map((image) => ({
-      src: image.src,
-      alt: image.alt,
-      width: 1080,
-      height: 1080,
-      title: image.title,
-      description: image.description,
-    })),
-  );
-
-  const [isMobile, setIsMobile] = useState<boolean>(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize(); // initial call to set the initial state
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+export default function GalleryPage() {
   return (
-    <main>
-      <h1 className='text-2xl font-bold bg-linear-to-r text-transparent bg-clip-text from-pink-500 w-fit to-fuchsia-500 pb-4'>Veronika</h1>
-      <div>
-        <Gallery color1="#d9a7c7" color2="#fffcdc" onClick={setindex1} isMobile={isMobile} images={veronikaImages}/>
-          <Lightbox
-            styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
-            slides={veronikaPhotos}
-            open={index1 >= 0}
-            index={index1}
-            close={() => setindex1(-1)}
-            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
-            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
-          />
-        </div>
+    <div>
+      <PageHeader
+        title="Galerija"
+        intro="Utrinki z nastopov, predstavitev knjig, kamišibaja in gledaliških odrov. Za povečavo izberite fotografijo."
+      >
+        <nav aria-label="Albumi" className="mt-6">
+          <ul className="flex flex-wrap gap-2">
+            {galleries.map((gallery) => (
+              <li key={gallery.slug}>
+                <a
+                  href={`#${gallery.slug}`}
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-white px-4 text-sm font-medium text-plum-700 shadow-sm hover:border-plum-300 hover:bg-plum-50"
+                >
+                  {gallery.title}
+                  <span className="text-muted">
+                    {gallery.images.length}
+                    <span className="sr-only"> {photosWord(gallery.images.length)}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </PageHeader>
 
-      <h1 className='text-2xl font-bold pt-10 pb-4 bg-linear-to-r text-transparent bg-clip-text from-indigo-500 w-fit to-violet-500'>Agica</h1>
-        <div>
-        <Gallery color1="#b993d6" color2="#8ca6db" onClick={setindex2} isMobile={isMobile} images={agicaImages}/>
-          <Lightbox
-            styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
-            slides={agicaPhotos}
-            open={index2 >= 0}
-            index={index2}
-            close={() => setindex2(-1)}
-            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
-            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
-          />
-        </div>
-
-        <h1 className='text-2xl font-bold bg-linear-to-r text-transparent bg-clip-text from-emerald-500 w-fit to-green-500 pt-10 pb-4'>Rege, žabje frke</h1>
-        <div>
-        <Gallery color1="#a1ffce" color2="#faffd1" onClick={setindex3} isMobile={isMobile} images={regeImages}/>
-          <Lightbox
-            styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
-            slides={regePhotos}
-            open={index3 >= 0}
-            index={index3}
-            close={() => setindex3(-1)}
-            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
-            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
-          />
-        </div>
-
-        <h1 className='text-2xl font-bold bg-linear-to-r text-transparent bg-clip-text from-cyan-500 w-fit to-sky-500 pt-10 pb-4'>Gledališče</h1>
-        <div>
-        <Gallery color1="#74ebd5" color2="#acb6e5" onClick={setindex4} isMobile={isMobile} images={gledalisceImages}/>
-          <Lightbox
-            styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
-            slides={gledaliscePhotos}
-            open={index4 >= 0}
-            index={index4}
-            close={() => setindex4(-1)}
-            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
-            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
-          />
-        </div>
-
-        <h1 className='text-2xl font-bold bg-linear-to-r text-transparent bg-clip-text from-orange-500 w-fit to-amber-500 pt-10 pb-4'>Nastopi</h1>
-        <div>
-        <Gallery color1="#ff5f6d" color2="#ffc371" onClick={setindex5} isMobile={isMobile} images={nastopiImages}/>
-          <Lightbox
-            styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .8)' } }}
-            slides={nastopiPhotos}
-            open={index5 >= 0}
-            index={index5}
-            close={() => setindex5(-1)}
-            plugins={[Fullscreen, Slideshow, Zoom, Captions, Share]}
-            captions={{showToggle: true ,descriptionTextAlign: 'start', descriptionMaxLines: 3}}
-          />
-        </div>
-    </main>
-
+      <div className="space-y-14 md:space-y-20">
+        {galleries.map((gallery, i) => {
+          const book = gallery.book ? getBook(gallery.book) : undefined;
+          return (
+            <section key={gallery.slug} aria-labelledby={gallery.slug}>
+              <SectionTitle id={gallery.slug}>{gallery.title}</SectionTitle>
+              {(gallery.description || book) && (
+                <div className="-mt-3 mb-6 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                  {gallery.description && <p className="text-muted">{gallery.description}</p>}
+                  {book && (
+                    <Link
+                      href={`/knjige/${book.slug}`}
+                      className="font-medium text-plum-700 underline underline-offset-4 hover:text-plum-900"
+                    >
+                      Več o knjigi <cite>{book.title}</cite>
+                    </Link>
+                  )}
+                </div>
+              )}
+              <AlbumGrid slides={gallery.images.map(toSlide)} preloadFirst={i === 0} />
+            </section>
+          );
+        })}
+      </div>
+    </div>
   );
 }

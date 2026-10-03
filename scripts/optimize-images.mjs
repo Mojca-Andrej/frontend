@@ -1,6 +1,6 @@
 // Zmanjša prevelike slike v public/ in zapiše njihove dimenzije v src/content/image-sizes.json.
 // Uporaba: npm run images  (po dodajanju novih fotografij)
-import { readdir, readFile, writeFile, stat } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 

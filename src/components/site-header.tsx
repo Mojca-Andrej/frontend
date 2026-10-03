@@ -21,7 +21,7 @@ export function SiteHeader() {
             width={56}
             height={56}
             sizes="56px"
-            priority
+            preload
             className="size-12 rounded-full object-cover shadow-sm ring-1 ring-line transition group-hover:ring-plum-300 md:size-14"
           />
           <span className="font-serif text-xl font-semibold tracking-tight text-ink md:text-2xl">{site.name}</span>

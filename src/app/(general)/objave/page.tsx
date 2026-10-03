@@ -1,60 +1,104 @@
-"use client";
-import { objave } from "./data/data";
-import Link from "next/link";
-import Popup from "../components/popup";
-import { useState, useEffect } from "react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import { PageHeader } from "@/components/page-header";
+import { RichText } from "@/components/rich-text";
+import { ExternalLink } from "@/components/external-link";
+import { publications, type Publication } from "@/content/objave";
+import { byDateDesc, formatDate, yearOf } from "@/lib/dates";
+import { imageSize, toSlide } from "@/lib/images";
+import { ReadButton } from "./read-button";
 
-export default function Objave() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+export const metadata: Metadata = {
+  title: "Objave",
+  description:
+    "Pesmi, zgodbe in prevodi Mojce Andrej v literarnih revijah, zbornikih in na radiu – Sodobnost, Mentor, Poetikon, Galeb, Literatura, Radio Ars.",
+  alternates: { canonical: "/objave" },
+};
 
-  useEffect(() => {
-    document.body.style.overflow = openIndex !== null ? "hidden" : "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [openIndex]);
+/** Kratko ime revije za opise slik: "Galeb, revija za otroke …" -> "Galeb". */
+function shortName(publication: string) {
+  return publication.split(/,| – /)[0];
+}
+
+/** Datum ali razpon: "junij–julij 2025" (stični pomišljaj, leto le enkrat). */
+function PublicationDate({ date, dateEnd }: Pick<Publication, "date" | "dateEnd">) {
+  if (!dateEnd) return <time dateTime={date}>{formatDate(date)}</time>;
+  const start = formatDate(date);
+  const sameYear = yearOf(date) === yearOf(dateEnd);
+  return (
+    <>
+      <time dateTime={date}>{sameYear ? start.replace(/\s*\d{4}$/, "") : start}</time>–
+      <time dateTime={dateEnd}>{formatDate(dateEnd)}</time>
+    </>
+  );
+}
+
+function slidesFor(entry: Publication) {
+  const name = shortName(entry.publication);
+  const images = [
+    ...(entry.cover ? [{ src: entry.cover, alt: `${name}, naslovnica` }] : []),
+    ...(entry.pages ?? []).map((src, i) => ({ src, alt: `${name}, stran ${i + 1}` })),
+  ];
+  return images.map((image) => toSlide({ ...image, title: `${entry.title} (${name})` }));
+}
+
+export default function ObjavePage() {
+  const sorted = [...publications].sort(byDateDesc);
 
   return (
-    <main>
-      <h1 className="text-2xl w-fit bg-linear-to-r bg-clip-text text-transparent from-yellow-500 to-amber-500 font-semibold mb-4">
-        Objave
-      </h1>
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4">
-        {objave.map((objava, index) => (
-          <article
-            key={index}
-            className="bg-yellow-100 text-black p-6 rounded-xl shadow-lg relative border border-yellow-300 transition-transform duration-300 hover:scale-105"
-          >
-            <h2 className="text-xl font-bold mb-2 pr-6">{objava.naslov}</h2>
-            <p className="text-sm text-gray-700 mb-1">{objava.mesto}</p>
-            <p className="absolute top-3 right-3 text-gray-500 text-xs">
-              {objava.datum}
-            </p>
-            <p className="text-gray-800 mt-2">{objava.vsebina}</p>
-            {objava.link && (
-              <Link
-                href={objava.link}
-                target="_blank"
-                className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors"
-              >
-                Več →
-              </Link>
-            )}
-            {objava.popup && (
-              <>
-                <button
-                  className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors"
-                  onClick={() => setOpenIndex(index)}
-                >
-                  Preberi tukaj →
-                </button>
-
-                {openIndex === index && <Popup sources={objava.popup} setIsOpen={() => setOpenIndex(null)} />}
-              </>
-            )}
-          </article>
-        ))}
-      </div>
-    </main>
+    <div>
+      <PageHeader
+        title="Objave"
+        intro="Pesmi, zgodbe in prevodi, objavljeni v literarnih revijah, zbornikih in na radiu."
+      />
+      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {sorted.map((entry) => {
+          const slides = slidesFor(entry);
+          const cover = entry.cover ? imageSize(entry.cover) : null;
+          return (
+            <li key={`${entry.date}-${entry.title}`} className="flex">
+              <article className="flex w-full flex-col overflow-hidden rounded-lg border border-line bg-white shadow-sm">
+                {entry.cover && cover && (
+                  <div className="flex justify-center bg-linear-to-br from-plum-50 to-sea-50 px-6 py-5">
+                    <Image
+                      src={entry.cover}
+                      width={cover.width}
+                      height={cover.height}
+                      alt={`Naslovnica: ${shortName(entry.publication)}`}
+                      sizes="160px"
+                      className="h-52 w-auto rounded-sm border border-line object-contain shadow-sm"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-6">
+                  <h2 className="font-serif text-xl font-semibold text-ink">{entry.title}</h2>
+                  <p className="mt-1 text-sm font-medium text-plum-700">{entry.publication}</p>
+                  <p className="mt-0.5 text-sm text-muted">
+                    <PublicationDate date={entry.date} dateEnd={entry.dateEnd} />
+                  </p>
+                  {entry.description && <RichText text={entry.description} className="mt-3 text-ink" />}
+                  {entry.note && <RichText text={entry.note} className="mt-2 text-sm text-muted" />}
+                  {(slides.length > 0 || entry.link) && (
+                    <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-5">
+                      {slides.length > 0 && <ReadButton slides={slides} title={entry.title} />}
+                      {entry.link && (
+                        <ExternalLink
+                          href={entry.link}
+                          className="inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-plum-700 underline decoration-plum-300 underline-offset-2 hover:decoration-plum-700"
+                        >
+                          Več o objavi<span className="sr-only">: {entry.title}</span>
+                          <ArrowUpRight aria-hidden className="size-4" />
+                        </ExternalLink>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </article>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }

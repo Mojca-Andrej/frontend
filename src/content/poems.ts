@@ -1,0 +1,370 @@
+import type { BookSlug } from "./types";
+
+/**
+ * Pesmi za stran Branja → Poezija (/branja/poezija). Pesmi za otroke so v children-poems.ts.
+ *
+ * Kako dodati pesem: kopiraj spodnji zgled in ga prilepi v seznam (vrstni red v seznamu je vrstni red na strani).
+ * Besedilo piši med dva znaka ` – vsaka vrstica pesmi v svojo vrstico, med kiticami pusti prazno vrstico.
+ * Poudarek: *ležeče*, **krepko** (oznaki morata biti v isti vrstici).
+ *
+ *   {
+ *     title: "Naslov pesmi",
+ *     text: `
+ *   prva vrstica
+ *   druga vrstica
+ *
+ *   prva vrstica druge kitice
+ *   `,
+ *     source: "Dež v gugalnici",         // zbirka, revija ali opomba (neobvezno)
+ *     book: "dez-v-gugalnici",           // če je pesem iz ene od knjig (neobvezno)
+ *     audio: { src: "/audio/poezija/datoteka.mp3", caption: "Kdo poje …" }, // posnetek v public/audio (neobvezno)
+ *   },
+ */
+export type Poem = {
+  title: string;
+  /** Vrstice ločene z \n, kitice s prazno vrstico. */
+  text: string;
+  source?: string;
+  book?: BookSlug;
+  audio?: { src: string; caption: string };
+};
+
+export const poems: Poem[] = [
+  {
+    title: "Ulična trojka",
+    text: `
+V mestu skrito dvorišče med hišami,
+davno zakopani spominki,
+podobe živalic s čokolade.
+Peskovnik se s peskom igra,
+le mene ni več in Sandre in Vladeka,
+ulične trojke.
+
+Tam
+so posekali mojo najljubšo brezo,
+pomendrali cvetlični vrt sosede Elzi,
+grm kopriv iztrebili,
+češnjo razrezali,
+kislic za žvečenje tudi ni več.
+
+Ni več trave,
+le asfalt in pločevina,
+parking, plot,
+okrušena fasada.
+V besedah in pogledih
+napetost, ki raste.
+
+Kje so
+vse lesene klopi,
+kje Črni Peter, šnops in lažnivec?
+Kje vešala za perilo,
+ki so delovala na dvojino?
+
+Zdaj vlada drugi čas.
+Vrata hodnikov se zaklepajo,
+kolesa zapirajo v kleti
+in nikogar pod oknom ni,
+da bi klical tvoje ime.
+
+V mestu
+skrito dvorišče med hišami.
+Še vedno so zakopani spominki
+in pesek se s peskom igra
+in jaz in Sandra in Vladek
+sedimo vsak na svojem stopnišču
+svojega dvorišča.
+`,
+    source: "Ostanek umrle zvezde",
+    book: "ostanek-umrle-zvezde",
+  },
+  {
+    title: "Pismo",
+    text: `
+Ah, saj ne vem več,
+zakaj sem se tako odločila,
+a poslala ti bom pismo.
+
+Zeleno ovojnico,
+naslov
+z umetelnimi črkami.
+
+Potrebujem svetlobo,
+hipna je,
+senca se širi.
+
+Ne vem več zakaj,
+a napisala ti bom pismo.
+Vsak dan.
+
+Pozabljena navada je to,
+misli zlagati na papir.
+
+Tudi jokati je pozabljena navada.
+Danes jočem samo še znotraj.
+Nočem vsak dan jokati,
+četudi tema lega v hišo.
+
+Dragi,
+napisala sem ti pismo,
+a kako,
+da tvoj naslov ni več moj?
+`,
+    source: "Ostanek umrle zvezde",
+    book: "ostanek-umrle-zvezde",
+  },
+  {
+    title: "sprehod skozi mesto",
+    text: `
+nikoli nisem slutila
+da bo sprehod
+skozi rodno mesto
+boleče in temačno
+drsenje po sebi
+
+v ugodju
+svoje nečimrnosti
+sem verjela preroku
+*tujstvo je usoda*
+*tega vročega prašnega mesta*
+
+koliko ljudi
+iz tiste moje ulice
+danes nosim s seboj
+in jih selim v telesa neznancev
+
+nikoli nisem slutila
+kako bom
+ob vsaki vrnitvi stopljena
+meduza na soncu
+lisa na vročem kamnu
+`,
+    source: "Ostanek umrle zvezde",
+    book: "ostanek-umrle-zvezde",
+  },
+  {
+    title: "ad astra",
+    text: `
+*v naslednjem Vesolju*
+
+… morda srečamo svojo podobo
+
+in spregovorimo o stvareh
+ki smo jih zamolčali
+
+… morda odkrijemo
+kdo je bil senca
+oko v ključavnici
+ko smo polnili zlate skrinje z lažmi
+
+pozeble ulice se bodo odtalile
+in veje bodo slekle ledene liste
+pod sojem novega ozvezdja
+*v naslednjem Vesolju*
+
+lahko pa molčimo
+kletko odpremo
+in izpustimo
+vse besede
+iz prsi
+nazaj v divjino
+
+in poletimo v Tišino
+v neskončno modrino
+se pretopimo
+pod sojem novega ozvezdja
+*v naslednjem Vesolju*
+
+… jata se je vrnila
+da ji obrišemo ločila
+*Zemlja ima eno stranico zaprto*
+*Univerzum leži v travi z rokami pod glavo*
+`,
+    source: "Dež v gugalnici",
+    book: "dez-v-gugalnici",
+    audio: {
+      src: "/audio/poezija/ad_astra.mp3",
+      caption: "Pesem je uglasbil in jo izvaja kantavtor Peter Andrej.",
+    },
+  },
+  {
+    title: "noč nad mestom",
+    text: `
+noč nad mestom
+nad strehami
+dimniki
+zvoniki
+
+nad krošnjami v parku
+zgodbami žabjih mlak
+koraki vrtnih poti
+
+nad zaspanimi
+reklamnimi panoji
+nemimi ovinki
+
+nad kokošnjakom
+ki čaka
+lisjaka
+
+nad nami
+spečimi
+v isti srajci sanj
+
+noč
+s pošvedranim krajcem
+in cvrčanjem škržatov
+`,
+    source: "Dež v gugalnici",
+    book: "dez-v-gugalnici",
+    audio: {
+      src: "/audio/poezija/noc.mp3",
+      caption: "Pesem je uglasbil in jo izvaja kantavtor Peter Andrej.",
+    },
+  },
+  {
+    title: "Veronika na kolesu",
+    text: `
+Veronika na kolesu
+
+z ilovico in deževnico diha Prometej
+oživele so skulpture
+s krvjo krvodajalcev
+ali vejo?
+ne razumejo kar gledajo
+so bogovi in so boginje
+
+kdo se tam vozi na zlatem kolesu?
+
+nejade se igrajo s spečim psom
+na otoku blaženih
+piranhe spijo
+in povodni ježi mahajo z repki
+
+straža z očmi pod ruto
+spremlja mrože z visokimi čeli
+razvezane kravate drsijo
+po prsih na konice plavuti
+
+skupinska fotografija spet ne bo prava
+trije na njej imajo zaprte misli
+otok blaženih čaka
+
+Veronika že na cesti neba
+`,
+    source: "Dež v gugalnici",
+    book: "dez-v-gugalnici",
+  },
+  {
+    title: "kamnolom",
+    text: `
+pred pesmijo sem neskončna
+razpotegnjena v času
+
+na Vrtu imam kamnolom
+tukaj živim
+vrtim svoj nožek
+iz piramide
+z vso natančnostjo
+dolbem
+lomim kamne
+
+izbiram takšne
+z odtenkom neba
+hrapave
+
+s prvinsko surovostjo
+izločam neprimerne
+in si brez zadrege lastim
+duše izbranih
+
+nekateri so vzglavnik
+drugi kristalna masaža
+eni stopajo v sanje
+merijo čas z drobižem pod otroškimi igrali
+okrogli padajo s streh starcem v naročje in mačkam pod rep
+tisti z ostrimi robovi lezejo po lubju okrasnih dreves
+potrti ploščijo svoje trebuhe v odsevu luž
+
+v kamnolomu
+se ljubim z ljubimi
+borim z gorečimi
+tolažim s čutečimi
+
+kamni v cvetočem Vrtu
+moj vulkanski kamnolom
+moje besede
+splašene in krhke
+kot smo mi
+`,
+    source: "Močvirje pozabe",
+    book: "mocvirje-pozabe",
+  },
+  {
+    title: "Žejna",
+    text: `
+Iz torbe si mi ponudil stekleničko
+s tekočino prijetne barve.
+
+Spet se je prižgala luč
+v mojem spominu.
+
+Z neba je začel pršeti
+rahel dež prizorov,
+
+ki so se z vso natančnostjo
+zlagali vame.
+
+Pospravila jih bom,
+vgnetla v meso,
+zarezala v kosti,
+v glavno žilo vbrizgala
+in v črevo
+
+in kadar bom žejna,
+čarovnik s torbo,
+
+bom čakala
+na luč v steklenički,
+
+da se napijem
+rahlega dežja spominov.
+`,
+    source: "Močvirje pozabe",
+    book: "mocvirje-pozabe",
+  },
+  {
+    title: "trobentačice",
+    text: `
+pred posteljo so se po pomoti pojavile tri trobentačice,
+spraševale so, zakaj imam kamenčke namesto tepiha
+in močerade namesto žarnic
+
+želel sem jim razkazati še ostale prostore,
+a so samo odkimavale, pihnile so v trobente,
+ker so mislile, da bodo tako izginile
+
+potem so v sobo pritekli še drugi iz orkestra,
+posedli po turško in začeli igrati,
+dali so mi mikrofon in en močerad mi je posvetil v obraz
+
+v meni tujem jeziku sem začel peti, ne spomnim se,
+od kod se je pesem priplazila do moje duše,
+pel sem z vsem, kar me je sestavljalo, orkester je bil vedno glasnejši,
+popevanje večglasno in močerad je vedno bolj žarel
+
+trobentačice še vedno niso našle izhoda
+
+ples se je komaj začel,
+ko so se kamenčki začeli pogrezati nekam v notranjost
+in luknja me je pojedla
+
+orkester, zbran okrog odprtega gobca,
+je igral in igral, iz črvine so začele poganjati ivanjščice,
+skozi razpoko je veter v naročju nosil metulje
+
+trobentačice so izginile
+`,
+    source: "Močvirje pozabe",
+    book: "mocvirje-pozabe",
+  },
+];
