@@ -1,8 +1,18 @@
 import type { IsoDate } from "@/content/types";
 
 const months = [
-  "januar", "februar", "marec", "april", "maj", "junij",
-  "julij", "avgust", "september", "oktober", "november", "december",
+  "januar",
+  "februar",
+  "marec",
+  "april",
+  "maj",
+  "junij",
+  "julij",
+  "avgust",
+  "september",
+  "oktober",
+  "november",
+  "december",
 ];
 
 /**

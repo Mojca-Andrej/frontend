@@ -3,8 +3,7 @@
  * Vsak niz v `bio` je svoj odstavek.
  */
 export const about = {
-  lead:
-    "Pesnica in pisateljica iz Ruš, profesorica slovenščine. Piše za odrasle in za otroke, s Petrom Andrejem pa z glasbenim kamišibajem in magnetnim gledališčem nastopa doma in v tujini.",
+  lead: "Pesnica in pisateljica iz Ruš, profesorica slovenščine. Piše za odrasle in za otroke, s Petrom Andrejem pa z glasbenim kamišibajem in magnetnim gledališčem nastopa doma in v tujini.",
   portrait: { src: "/naslovnica.jpg", alt: "Mojca Andrej bere svoje pesmi na odru", credit: "Foto: Boštjan Lah" },
   bio: [
     "**Mojca Andrej** (dekliško Alešovec) se je rodila leta 1973 v Mariboru. Po srednji ekonomski šoli je študirala slovenščino in hrvaščino na Filozofski fakulteti Maribor. Danes je profesorica slovenščine.",

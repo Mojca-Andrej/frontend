@@ -29,7 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const full = `Pesmi Mojce Andrej ${language.menuLabel} (${poemCount(language.poems.length)}). Prevodi: ${translators}.`;
   return {
     title: `Pesmi ${language.menuLabel}`,
-    description: full.length <= 155 ? full : `Pesmi Mojce Andrej ${language.menuLabel} (${poemCount(language.poems.length)}).`,
+    description:
+      full.length <= 155 ? full : `Pesmi Mojce Andrej ${language.menuLabel} (${poemCount(language.poems.length)}).`,
     alternates: { canonical: `/prevodi/${language.code}` },
   };
 }
@@ -42,7 +43,10 @@ export default async function PrevodiJezik({ params }: Props) {
 
   return (
     <div>
-      <PageHeader title={`Pesmi ${language.menuLabel}`} intro="Pesmi Mojce Andrej v prevodu. Pod vsako pesmijo je navedeno, kdo jo je prevedel.">
+      <PageHeader
+        title={`Pesmi ${language.menuLabel}`}
+        intro="Pesmi Mojce Andrej v prevodu. Pod vsako pesmijo je navedeno, kdo jo je prevedel."
+      >
         {book && (
           <p className="mt-4 max-w-2xl text-muted">
             Več prevodov je izšlo v knjigi{" "}

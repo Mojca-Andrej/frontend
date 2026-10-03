@@ -182,7 +182,7 @@ export default async function BookPage({ params }: Props) {
                 <h2 id="kratek-opis" className="mb-4 font-serif text-2xl font-semibold">
                   Kratek opis
                 </h2>
-                <div className="rounded-lg font-serif bg-linear-to-br from-plum-50 to-sea-50 p-6">
+                <div className="rounded-lg bg-linear-to-br from-plum-50 to-sea-50 p-6 font-serif">
                   <Paragraphs text={book.longDescription} />
                 </div>
               </section>

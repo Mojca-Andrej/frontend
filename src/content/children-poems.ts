@@ -296,7 +296,10 @@ export const agicaSong = {
   title: "Agica, mala čarovnica",
   book: "agica-mala-carovnica",
   illustrations: "Darka Erdelji",
-  image: { src: "/agica_slikanica.png", alt: "Stran iz slikanice z ilustracijo Darke Erdelji: Agica v čarovniškem klobuku z bratci in sestricami v gnezdu med vejami, spodaj modra zvezda in smrekov gozd. Nad sliko je odlomek besedila o Agici, ki edina v gnezdu ni jokala, ampak cvilila." },
+  image: {
+    src: "/agica_slikanica.png",
+    alt: "Stran iz slikanice z ilustracijo Darke Erdelji: Agica v čarovniškem klobuku z bratci in sestricami v gnezdu med vejami, spodaj modra zvezda in smrekov gozd. Nad sliko je odlomek besedila o Agici, ki edina v gnezdu ni jokala, ampak cvilila.",
+  },
   audio: {
     src: "/audio/za-otroke/agica.mp3",
     caption: "Pesem je napisal in uglasbil Peter Andrej, pojeta Peter Andrej in Alenka Cilenšek.",

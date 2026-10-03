@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# mojcaandrej.com
 
-## Getting Started
+Spletna stran pesnice in pisateljice Mojce Andrej: knjige, nastopi, branja, prevodi, objave, odmevi in galerija.
 
-First, run the development server:
+Next.js 16 (App Router, statično generirane strani), React 19, Tailwind CSS 4, TypeScript. Gostovanje na Vercelu – vsak `push` na `main` se samodejno objavi.
+
+## Zagon
+
+Potreben je Node.js 22 ali novejši (različica v `.nvmrc`).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # razvojni strežnik na http://localhost:3000
+npm run build        # produkcijska gradnja (pred njo se samodejno zažene npm run images)
+npm run lint         # ESLint
+npm run typecheck    # TypeScript
+npm run format       # Prettier
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Urejanje vsebine
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Vsa vsebina je v mapi **`src/content/`** – strani se iz teh datotek zgradijo same. Na vrhu vsake datoteke je navodilo s primerom vnosa. Razvrščanje (npr. najnovejše najprej) naredi stran sama, zato nov vnos lahko dodaš kamorkoli v seznam.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Kaj dodajam                            | Datoteka                                     | Stran              |
+| -------------------------------------- | -------------------------------------------- | ------------------ |
+| Nastop, predstavo, branje              | `nastopi.ts`                                 | /nastopi           |
+| Odmev (članek, radijska oddaja, video) | `odmevi.ts`                                  | /odmevi            |
+| Objavo v reviji ali zborniku           | `objave.ts`                                  | /objave            |
+| Fotografijo v galerijo                 | `galleries.ts`                               | /galerija          |
+| Novo knjigo                            | `books.ts` (+ slug v `types.ts`)             | /knjige, /knjige/… |
+| Pesem                                  | `poems.ts`, `children-poems.ts`              | /branja/…          |
+| Odlomek proze                          | `prose.ts`                                   | /branja/proza      |
+| Prevod pesmi                           | `translations.ts` (+ jezik v `languages.ts`) | /prevodi/…         |
+| Življenjepis, uvod na domači strani    | `about.ts`                                   | /                  |
+| Kontakt, družbena omrežja              | `site.ts`                                    | noga, metapodatki  |
 
-## Learn More
+**Oblikovanje besedila** v podatkih: `*ležeče*`, `**krepko**`, `[besedilo povezave](https://…)`.
 
-To learn more about Next.js, take a look at the following resources:
+**Datumi** so zapisani kot `"2026-08-19"` (dan), `"2026-08"` (mesec) ali `"2026"` (leto); na strani se izpišejo po slovenskem pravopisu (»19. 8. 2026«, »avgust 2026«).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Povezave med vsebinami:** vnosi s poljem `book: "slug-knjige"` se samodejno prikažejo na strani te knjige v razdelku »Povezano s knjigo«.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Slike
 
-## Deploy on Vercel
+1. Sliko skopiraj v ustrezno mapo v `public/` (npr. `public/Agica/19.jpg`).
+2. Zaženi `npm run images` – prevelike slike pomanjša (največ 2400 px) in zapiše njihove dimenzije v `src/content/image-sizes.json`.
+3. Pot do slike (npr. `/Agica/19.jpg`) vpiši v ustrezno datoteko v `src/content/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Skripta teče tudi pred vsako gradnjo, zato je manifest dimenzij vedno ažuren.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Zgradba
+
+```
+src/
+  app/                  strani (App Router)
+    (general)/          strani z glavo in nogo
+    sitemap.ts, robots.ts, manifest.ts, opengraph-image.jpg, icon.png
+  components/           skupne komponente (glava, noga, Poem, Lightbox, PageHeader …)
+  content/              VSEBINA – tu se ureja stran
+  lib/                  pomožne funkcije (datumi, slike)
+scripts/
+  optimize-images.mjs   pomanjšanje slik in manifest dimenzij
+```
+
+Barve (papir, slivova, morska) in pisavi (Lora za naslove in pesmi, Inter za besedilo) so določene v `src/app/globals.css`.

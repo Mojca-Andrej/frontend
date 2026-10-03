@@ -16,10 +16,13 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-plum-200">Kontakt</h2>
+          <h2 className="text-sm font-semibold tracking-wider text-plum-200 uppercase">Kontakt</h2>
           <ul className="mt-3 space-y-2">
             <li>
-              <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 hover:text-white hover:underline">
+              <a
+                href={`mailto:${site.email}`}
+                className="inline-flex items-center gap-2 hover:text-white hover:underline"
+              >
                 <Mail aria-hidden className="size-5" />
                 {site.email}
               </a>
@@ -50,7 +53,7 @@ export function SiteFooter() {
         </div>
 
         <nav aria-label="Noga">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-plum-200">Strani</h2>
+          <h2 className="text-sm font-semibold tracking-wider text-plum-200 uppercase">Strani</h2>
           <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5">
             {navigation
               .filter((item) => !item.href.startsWith("#"))

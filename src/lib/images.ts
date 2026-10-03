@@ -21,9 +21,10 @@ export type GalleryImage = {
   description?: string;
 };
 
-export type Slide = GalleryImage & ImageSize & {
-  srcSet: { src: string; width: number; height: number }[];
-};
+export type Slide = GalleryImage &
+  ImageSize & {
+    srcSet: { src: string; width: number; height: number }[];
+  };
 
 const SLIDE_WIDTHS = [640, 1080, 1920];
 

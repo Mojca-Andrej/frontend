@@ -12,12 +12,25 @@ import { ExternalLink } from "@/components/external-link";
 import { formatInline } from "@/components/rich-text";
 import { byDateDesc, formatDate } from "@/lib/dates";
 
-function Block({ title, href, linkLabel, children }: { title: string; href: string; linkLabel: string; children: ReactNode }) {
+function Block({
+  title,
+  href,
+  linkLabel,
+  children,
+}: {
+  title: string;
+  href: string;
+  linkLabel: string;
+  children: ReactNode;
+}) {
   return (
     <section className="rounded-lg border border-line bg-white p-6 shadow-sm">
       <div className="flex items-baseline justify-between gap-4">
         <h3 className="font-serif text-xl font-semibold">{title}</h3>
-        <Link href={href} className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-plum-700 hover:underline">
+        <Link
+          href={href}
+          className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-plum-700 hover:underline"
+        >
           {linkLabel} <ArrowRight aria-hidden className="size-4" />
         </Link>
       </div>
@@ -34,7 +47,13 @@ export function RelatedContent({ slug }: { slug: BookSlug }) {
   const bookGalleries = galleries.filter((g) => g.book === slug);
   const bookReadings = readingsFor(slug);
 
-  if (!bookOdmevi.length && !bookNastopi.length && !bookObjave.length && !bookGalleries.length && !bookReadings.length) {
+  if (
+    !bookOdmevi.length &&
+    !bookNastopi.length &&
+    !bookObjave.length &&
+    !bookGalleries.length &&
+    !bookReadings.length
+  ) {
     return null;
   }
 
@@ -65,9 +84,7 @@ export function RelatedContent({ slug }: { slug: BookSlug }) {
             {bookNastopi.slice(0, 5).map((n) => (
               <li key={`${n.date}-${n.title ?? n.text}`}>
                 <p>{formatInline(n.title ?? n.text ?? categoryLabels[n.category])}</p>
-                <p className="text-sm text-muted">
-                  {[n.place, formatDate(n.date)].filter(Boolean).join(" · ")}
-                </p>
+                <p className="text-sm text-muted">{[n.place, formatDate(n.date)].filter(Boolean).join(" · ")}</p>
               </li>
             ))}
           </Block>

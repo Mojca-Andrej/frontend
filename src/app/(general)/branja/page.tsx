@@ -5,7 +5,8 @@ import { PageHeader } from "@/components/page-header";
 
 export const metadata: Metadata = {
   title: "Branja",
-  description: "Pesmi, odlomki proze in pesmi za otroke Mojce Andrej – za branje in poslušanje, nekatere tudi uglasbene.",
+  description:
+    "Pesmi, odlomki proze in pesmi za otroke Mojce Andrej – za branje in poslušanje, nekatere tudi uglasbene.",
   alternates: { canonical: "/branja" },
 };
 

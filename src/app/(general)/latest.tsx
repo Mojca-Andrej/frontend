@@ -21,7 +21,13 @@ export function Latest() {
       detail: n.place,
       href: "/nastopi",
     })),
-    ...publications.map((p) => ({ kind: "Objava", date: p.date, title: p.title, detail: p.publication, href: "/objave" })),
+    ...publications.map((p) => ({
+      kind: "Objava",
+      date: p.date,
+      title: p.title,
+      detail: p.publication,
+      href: "/objave",
+    })),
     ...odmevi
       .filter((o): o is typeof o & { date: IsoDate } => Boolean(o.date))
       .map((o) => ({ kind: "Odmev", date: o.date, title: o.title, detail: o.source, href: o.url, external: true })),

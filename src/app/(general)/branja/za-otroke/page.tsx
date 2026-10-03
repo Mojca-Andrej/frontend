@@ -10,7 +10,8 @@ import { slugify } from "@/lib/slug";
 
 export const metadata: Metadata = {
   title: "Pesmi za otroke",
-  description: "Pesmi za otroke Mojce Andrej iz zbirke Rastem do tebe in revij Galeb ter Mlada Sodobnost – mnoge tudi uglasbene.",
+  description:
+    "Pesmi za otroke Mojce Andrej iz zbirke Rastem do tebe in revij Galeb ter Mlada Sodobnost – mnoge tudi uglasbene.",
   alternates: { canonical: "/branja/za-otroke" },
 };
 

@@ -43,7 +43,9 @@ for await (const file of walk(PUBLIC)) {
     if (output.length < input.length * 0.8 || needsRotate) {
       await writeFile(file, output);
       saved += input.length - output.length;
-      console.log(`${path.relative(PUBLIC, file)}: ${(input.length / 1e6).toFixed(2)} MB -> ${(output.length / 1e6).toFixed(2)} MB`);
+      console.log(
+        `${path.relative(PUBLIC, file)}: ${(input.length / 1e6).toFixed(2)} MB -> ${(output.length / 1e6).toFixed(2)} MB`,
+      );
     }
   }
 
@@ -53,4 +55,6 @@ for await (const file of walk(PUBLIC)) {
 
 const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)));
 await writeFile(MANIFEST, JSON.stringify(sorted, null, 2) + "\n");
-console.log(`\nPrihranjeno: ${(saved / 1e6).toFixed(1)} MB, ${Object.keys(sorted).length} slik v ${path.relative(process.cwd(), MANIFEST)}`);
+console.log(
+  `\nPrihranjeno: ${(saved / 1e6).toFixed(1)} MB, ${Object.keys(sorted).length} slik v ${path.relative(process.cwd(), MANIFEST)}`,
+);

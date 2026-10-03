@@ -161,7 +161,12 @@ export const books: Book[] = [
     ],
     editions: [
       { year: 2022, publisher: "Litera Maribor", cover: "/kuv1.jpg" },
-      { year: 2024, publisher: "Klub KU KU, Glazerjeva domačija", cover: "/kuv2.jpg", note: "ponatis pri drugi založbi" },
+      {
+        year: 2024,
+        publisher: "Klub KU KU, Glazerjeva domačija",
+        cover: "/kuv2.jpg",
+        note: "ponatis pri drugi založbi",
+      },
     ],
     extraImages: [{ src: "/Litera/1-2.jpg", caption: "Katalog Litera 2022" }],
   },
@@ -303,7 +308,11 @@ export function bookImages(book: Book): { src: string; alt: string; caption?: st
   );
   add(book.backCover, `Zadnja stran knjige ${book.title}`, "Zadnja stran");
   for (const edition of book.editions ?? []) {
-    add(edition.cover, `Naslovnica knjige ${book.title} (${edition.publisher}, ${edition.year})`, `Izdaja ${edition.year}`);
+    add(
+      edition.cover,
+      `Naslovnica knjige ${book.title} (${edition.publisher}, ${edition.year})`,
+      `Izdaja ${edition.year}`,
+    );
   }
   for (const image of book.extraImages ?? []) add(image.src, image.caption, image.caption);
   return images;

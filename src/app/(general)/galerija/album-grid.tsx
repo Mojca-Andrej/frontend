@@ -41,7 +41,7 @@ export function AlbumGrid({ slides, preloadFirst = false }: { slides: Slide[]; p
                 fill
                 sizes={i === 0 ? SIZES_FIRST : SIZES_REST}
                 preload={preloadFirst && i === 0}
-                className="object-cover motion-safe:transition-opacity group-hover:opacity-85"
+                className="object-cover group-hover:opacity-85 motion-safe:transition-opacity"
               />
             </button>
           </li>

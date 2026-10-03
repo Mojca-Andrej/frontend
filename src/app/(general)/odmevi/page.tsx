@@ -54,7 +54,7 @@ function OdmevCard({ odmev }: { odmev: Odmev }) {
   return (
     <ExternalLink
       href={odmev.url}
-      className="group flex h-full gap-4 rounded-lg border border-line bg-white p-5 shadow-sm motion-safe:transition hover:border-plum-300 hover:shadow-md"
+      className="group flex h-full gap-4 rounded-lg border border-line bg-white p-5 shadow-sm hover:border-plum-300 hover:shadow-md motion-safe:transition"
     >
       <span
         aria-hidden

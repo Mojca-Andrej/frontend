@@ -74,15 +74,22 @@ export function NavMenu({ items }: { items: NavItem[] }) {
                 aria-expanded={openDropdown === item.label}
                 aria-controls={`podmeni-${item.label}`}
                 onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                className={cn(linkClass, "inline-flex items-center gap-1", isActive(pathname, item.href) && "text-plum-700")}
+                className={cn(
+                  linkClass,
+                  "inline-flex items-center gap-1",
+                  isActive(pathname, item.href) && "text-plum-700",
+                )}
               >
                 {item.label}
-                <ChevronDown aria-hidden className={cn("size-4 transition-transform", openDropdown === item.label && "rotate-180")} />
+                <ChevronDown
+                  aria-hidden
+                  className={cn("size-4 transition-transform", openDropdown === item.label && "rotate-180")}
+                />
               </button>
               <ul
                 id={`podmeni-${item.label}`}
                 hidden={openDropdown !== item.label}
-                className="absolute left-0 top-full z-50 min-w-48 rounded-md border border-line bg-white py-2 shadow-lg"
+                className="absolute top-full left-0 z-50 min-w-48 rounded-md border border-line bg-white py-2 shadow-lg"
               >
                 {item.children.map((child) => (
                   <li key={child.href}>
@@ -99,7 +106,11 @@ export function NavMenu({ items }: { items: NavItem[] }) {
             </li>
           ) : (
             <li key={item.label}>
-              <Link href={item.href} aria-current={isActive(pathname, item.href) ? "page" : undefined} className={linkClass}>
+              <Link
+                href={item.href}
+                aria-current={isActive(pathname, item.href) ? "page" : undefined}
+                className={linkClass}
+              >
                 {item.label}
               </Link>
             </li>
@@ -121,14 +132,14 @@ export function NavMenu({ items }: { items: NavItem[] }) {
       <div
         id={mobileId}
         hidden={!mobileOpen}
-        className="absolute inset-x-0 top-full z-40 h-[calc(100dvh-100%)] overflow-y-auto border-t border-line bg-paper px-6 pb-10 pt-4 lg:hidden"
+        className="absolute inset-x-0 top-full z-40 h-[calc(100dvh-100%)] overflow-y-auto border-t border-line bg-paper px-6 pt-4 pb-10 lg:hidden"
       >
         <ul className="divide-y divide-line">
           {items.map((item) => (
             <li key={item.label} className="py-1">
               {"children" in item ? (
                 <>
-                  <p className="pb-1 pt-3 text-sm font-semibold uppercase tracking-wider text-muted">{item.label}</p>
+                  <p className="pt-3 pb-1 text-sm font-semibold tracking-wider text-muted uppercase">{item.label}</p>
                   <ul className="pb-2">
                     {item.children.map((child) => (
                       <li key={child.href}>

@@ -7,8 +7,16 @@ const nextConfig = {
   async redirects() {
     return [
       // Obe izdaji romana sta zdaj na eni strani.
-      { source: "/knjige/kavc-uciteljice-veronike-2022", destination: "/knjige/kavc-uciteljice-veronike", permanent: true },
-      { source: "/knjige/kavc-uciteljice-veronike-2024", destination: "/knjige/kavc-uciteljice-veronike", permanent: true },
+      {
+        source: "/knjige/kavc-uciteljice-veronike-2022",
+        destination: "/knjige/kavc-uciteljice-veronike",
+        permanent: true,
+      },
+      {
+        source: "/knjige/kavc-uciteljice-veronike-2024",
+        destination: "/knjige/kavc-uciteljice-veronike",
+        permanent: true,
+      },
     ];
   },
 };

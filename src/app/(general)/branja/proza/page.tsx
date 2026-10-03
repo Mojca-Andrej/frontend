@@ -22,12 +22,13 @@ function anchor(work: ProseWork, part: number | "seznam") {
 }
 
 function Block({ block }: { block: ProseBlock }) {
-  if (block.kind === "verse") return <Verse text={block.lines} className="my-8 border-l-2 border-plum-200 pl-6 italic" />;
+  if (block.kind === "verse")
+    return <Verse text={block.lines} className="my-8 border-l-2 border-plum-200 pl-6 italic" />;
   return (
     <p
       className={
         block.dropCap
-          ? "first-letter:font-serif first-letter:text-4xl first-letter:font-semibold first-letter:leading-none first-letter:text-plum-800"
+          ? "first-letter:font-serif first-letter:text-4xl first-letter:leading-none first-letter:font-semibold first-letter:text-plum-800"
           : undefined
       }
     >

@@ -44,7 +44,7 @@ export default function Prevodi() {
               href={`/prevodi/${language.code}`}
               className="group flex h-full flex-col rounded-lg border border-line bg-white p-6 shadow-sm transition-colors hover:border-plum-300 md:p-8"
             >
-              <h2 className="font-serif text-2xl font-semibold text-ink first-letter:uppercase group-hover:text-plum-700">
+              <h2 className="font-serif text-2xl font-semibold text-ink group-hover:text-plum-700 first-letter:uppercase">
                 {language.label}
               </h2>
               <p className="mt-1 text-sm text-muted">{poemCount(language.poems.length)}</p>

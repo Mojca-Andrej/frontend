@@ -6,7 +6,8 @@ import { slugify } from "@/lib/slug";
 
 export const metadata: Metadata = {
   title: "Poezija",
-  description: "Izbor pesmi Mojce Andrej iz zbirk Ostanek umrle zvezde, Dež v gugalnici in Močvirje pozabe, nekatere tudi uglasbene.",
+  description:
+    "Izbor pesmi Mojce Andrej iz zbirk Ostanek umrle zvezde, Dež v gugalnici in Močvirje pozabe, nekatere tudi uglasbene.",
   alternates: { canonical: "/branja/poezija" },
 };
 

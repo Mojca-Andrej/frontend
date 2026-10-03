@@ -23,11 +23,16 @@ export function readingsFor(slug: BookSlug): Reading[] {
     detail: poem.audio ? "pesem s posnetkom" : "pesem",
   }));
 
-  const agica = agicaSong.book === slug ? [{ title: agicaSong.title, href: "/branja/za-otroke#agica", detail: "posnetek" }] : [];
+  const agica =
+    agicaSong.book === slug ? [{ title: agicaSong.title, href: "/branja/za-otroke#agica", detail: "posnetek" }] : [];
 
   const prose = proseWorks
     .filter((w) => w.book === slug)
-    .map((w) => ({ title: `Odlomki iz romana ${w.title}`, href: "/branja/proza", detail: excerptCount(w.excerpts.length) }));
+    .map((w) => ({
+      title: `Odlomki iz romana ${w.title}`,
+      href: "/branja/proza",
+      detail: excerptCount(w.excerpts.length),
+    }));
 
   return [...agica, ...poemReadings, ...prose];
 }

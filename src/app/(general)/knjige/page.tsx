@@ -45,7 +45,7 @@ export default function BooksPage() {
 function BookCard({ book, isNew, priority }: { book: Book; isNew: boolean; priority: boolean }) {
   return (
     <Link href={`/knjige/${book.slug}`} className="group block rounded-lg">
-      <div className="relative aspect-[2/3] overflow-hidden rounded-md border border-line bg-paper-deep shadow-sm transition-shadow motion-safe:duration-200 group-hover:shadow-md">
+      <div className="relative aspect-[2/3] overflow-hidden rounded-md border border-line bg-paper-deep shadow-sm transition-shadow group-hover:shadow-md motion-safe:duration-200">
         <Image
           src={book.cover}
           alt=""

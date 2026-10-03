@@ -41,32 +41,44 @@ export default function Home() {
       {/* Uvod */}
       <section className="grid items-center gap-10 md:grid-cols-[1.25fr_1fr] md:gap-16">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-plum-700">{site.tagline}</p>
+          <p className="text-sm font-semibold tracking-[0.18em] text-plum-700 uppercase">{site.tagline}</p>
           <h1 className="mt-3 font-serif text-5xl font-semibold tracking-tight md:text-7xl">{site.name}</h1>
           <div aria-hidden className="mt-6 h-1 w-20 rounded-full bg-linear-to-r from-plum-500 to-sea-400" />
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted md:text-xl">{about.lead}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/knjige" className="rounded-full bg-plum-700 px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-plum-800">
+            <Link
+              href="/knjige"
+              className="rounded-full bg-plum-700 px-6 py-3 font-medium text-white shadow-sm transition-colors hover:bg-plum-800"
+            >
               Knjige
             </Link>
-            <Link href="/nastopi" className="rounded-full border border-line bg-white px-6 py-3 font-medium transition-colors hover:border-plum-300 hover:text-plum-700">
+            <Link
+              href="/nastopi"
+              className="rounded-full border border-line bg-white px-6 py-3 font-medium transition-colors hover:border-plum-300 hover:text-plum-700"
+            >
               Nastopi
             </Link>
-            <a href={`mailto:${site.email}`} className="rounded-full px-4 py-3 font-medium text-plum-700 underline decoration-plum-300 underline-offset-4 hover:decoration-plum-700">
+            <a
+              href={`mailto:${site.email}`}
+              className="rounded-full px-4 py-3 font-medium text-plum-700 underline decoration-plum-300 underline-offset-4 hover:decoration-plum-700"
+            >
               Pišite mi
             </a>
           </div>
         </div>
         <figure className="mx-auto w-full max-w-sm md:max-w-none">
           <div className="relative">
-            <div aria-hidden className="absolute -right-3 -bottom-3 h-full w-full rounded-2xl bg-sea-100 md:-right-5 md:-bottom-5" />
+            <div
+              aria-hidden
+              className="absolute -right-3 -bottom-3 h-full w-full rounded-2xl bg-sea-100 md:-right-5 md:-bottom-5"
+            />
             <Image
-            src={about.portrait.src}
-            alt={about.portrait.alt}
-            width={portrait.width}
-            height={portrait.height}
-            sizes="(min-width: 768px) 40vw, 90vw"
-            preload
+              src={about.portrait.src}
+              alt={about.portrait.alt}
+              width={portrait.width}
+              height={portrait.height}
+              sizes="(min-width: 768px) 40vw, 90vw"
+              preload
               className="relative aspect-[4/5] w-full rounded-2xl object-cover shadow-md"
             />
           </div>
@@ -75,7 +87,10 @@ export default function Home() {
       </section>
 
       {/* Nova knjiga */}
-      <section aria-labelledby="nova-knjiga" className="overflow-hidden rounded-2xl bg-linear-to-br from-plum-50 via-paper to-sea-50 ring-1 ring-line">
+      <section
+        aria-labelledby="nova-knjiga"
+        className="overflow-hidden rounded-2xl bg-linear-to-br from-plum-50 via-paper to-sea-50 ring-1 ring-line"
+      >
         <div className="grid items-center gap-8 p-6 sm:p-10 md:grid-cols-[minmax(0,15rem)_1fr] md:gap-14">
           <Link href={`/knjige/${newest.slug}`} className="mx-auto block w-44 md:w-full">
             <Image
@@ -88,7 +103,7 @@ export default function Home() {
             />
           </Link>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sea-700">
+            <p className="text-sm font-semibold tracking-[0.18em] text-sea-700 uppercase">
               Nova knjiga · {newest.year}
             </p>
             <h2 id="nova-knjiga" className="mt-2 font-serif text-3xl font-semibold md:text-4xl">
@@ -97,15 +112,23 @@ export default function Home() {
             <p className="mt-1 text-muted">{newest.type}</p>
             {quote && (
               <blockquote className="mt-6 border-l-2 border-plum-300 pl-5">
-                <p className="line-clamp-4 font-serif text-lg leading-relaxed italic text-ink/90">»{formatInline(quote.text)}«</p>
+                <p className="line-clamp-4 font-serif text-lg leading-relaxed text-ink/90 italic">
+                  »{formatInline(quote.text)}«
+                </p>
                 <footer className="mt-2 text-sm text-muted">— {quote.author}</footer>
               </blockquote>
             )}
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href={`/knjige/${newest.slug}`} className="rounded-full bg-plum-700 px-5 py-2.5 font-medium text-white hover:bg-plum-800">
+              <Link
+                href={`/knjige/${newest.slug}`}
+                className="rounded-full bg-plum-700 px-5 py-2.5 font-medium text-white hover:bg-plum-800"
+              >
                 Več o knjigi
               </Link>
-              <Link href="/odmevi" className="rounded-full border border-line bg-white px-5 py-2.5 font-medium hover:border-plum-300 hover:text-plum-700">
+              <Link
+                href="/odmevi"
+                className="rounded-full border border-line bg-white px-5 py-2.5 font-medium hover:border-plum-300 hover:text-plum-700"
+              >
                 Odmevi
               </Link>
             </div>
@@ -130,7 +153,7 @@ export default function Home() {
           <dl className="mt-4 space-y-3">
             {about.facts.map((fact) => (
               <div key={fact.label}>
-                <dt className="text-sm font-semibold uppercase tracking-wider text-muted">{fact.label}</dt>
+                <dt className="text-sm font-semibold tracking-wider text-muted uppercase">{fact.label}</dt>
                 <dd className="mt-0.5">{fact.value}</dd>
               </div>
             ))}

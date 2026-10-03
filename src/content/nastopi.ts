@@ -24,12 +24,7 @@ import type { BookSlug, IsoDate } from "@/content/types";
  * Večdnevni dogodek: dodaj še `dateEnd: "2026-05-16"`.
  */
 export type PerformanceCategory =
-  | "gledalisce"
-  | "kamisibaj"
-  | "magnetno-gledalisce"
-  | "literarni-nastop"
-  | "sejem"
-  | "razstava";
+  "gledalisce" | "kamisibaj" | "magnetno-gledalisce" | "literarni-nastop" | "sejem" | "razstava";
 
 export type Credit = { label: string; value: string };
 
@@ -76,8 +71,14 @@ export const nastopi: Performance[] = [
     text: "Predstava (glasbena pravljica) *Agica, mala čarovnica*.",
     place: "Trg vstaje pred občino Ruše",
     credits: [
-      { label: "Nastopali", value: "Mojca Andrej, Barbara Gabrielle, Lucie in Matjaž Dajčar ter Peter Andrej (avtor glasbe in songov)" },
-      { label: "Organizatorji", value: "Glazerjeva domačija v sodelovanju z Javnim zavodom Športni park Ruše, Klubom KU KU ter Občino Ruše" },
+      {
+        label: "Nastopali",
+        value: "Mojca Andrej, Barbara Gabrielle, Lucie in Matjaž Dajčar ter Peter Andrej (avtor glasbe in songov)",
+      },
+      {
+        label: "Organizatorji",
+        value: "Glazerjeva domačija v sodelovanju z Javnim zavodom Športni park Ruše, Klubom KU KU ter Občino Ruše",
+      },
     ],
     book: "agica-mala-carovnica",
   },
@@ -115,7 +116,9 @@ export const nastopi: Performance[] = [
     title: "Za Prešernom: literarni večer DSP",
     text: "Branje novih članic in članov DSP.",
     place: "Dvorana Alme Karlin, Cankarjev dom, Ljubljana",
-    credits: [{ label: "Brali so", value: "Mojca Andrej, Sanja Rozman, Barbara Hanuš, Igor Karlovšek in Jasmin B. Frelih" }],
+    credits: [
+      { label: "Brali so", value: "Mojca Andrej, Sanja Rozman, Barbara Hanuš, Igor Karlovšek in Jasmin B. Frelih" },
+    ],
   },
   {
     date: "2025-02",

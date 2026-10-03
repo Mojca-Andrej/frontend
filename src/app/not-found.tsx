@@ -32,7 +32,10 @@ export default function NotFound() {
           </li>
           {suggestions.map((s) => (
             <li key={s.href}>
-              <Link href={s.href} className="inline-block rounded-full border border-line bg-white px-5 py-2.5 hover:border-plum-300 hover:text-plum-700">
+              <Link
+                href={s.href}
+                className="inline-block rounded-full border border-line bg-white px-5 py-2.5 hover:border-plum-300 hover:text-plum-700"
+              >
                 {s.label}
               </Link>
             </li>
