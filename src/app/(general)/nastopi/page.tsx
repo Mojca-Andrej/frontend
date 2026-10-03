@@ -1,7 +1,7 @@
 export default function Nastopi() {
   return (
     <main>
-      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-sky-400 from-40% md:mb-4 mb-2">
+      <h1 className="sm:text-2xl text-xl font-semibold bg-linear-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-sky-400 from-40% md:mb-4 mb-2">
         Gledališče
       </h1>
       <h2 className="md:text-xl text-lg text-neutral-700 py-4">
@@ -126,7 +126,7 @@ export default function Nastopi() {
       <h2 className="md:text-xl text-lg text-neutral-700 py-4 font-semibold">
         Magnetno Gledališče
       </h2>
-      {/* <div className="border border-primary-50 border-1 rounded-md p-4"> */}
+      {/* <div className="border border-primary-50 border rounded-md p-4"> */}
 
       <section className="text-neutral-900 pb-2 flex space-x-4 items-start md:items-center md:px-4 px-2 text-sm md:text-base">
         <h3 className="text-sm font-light mt-1 md:mt-0">2022</h3>
@@ -194,7 +194,7 @@ export default function Nastopi() {
       </section>
       {/* </div> */}
 
-      <h1 className="sm:text-2xl text-xl font-semibold bg-gradient-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-sky-400 from-40% md:my-4 mt-4 mb-2">
+      <h1 className="sm:text-2xl text-xl font-semibold bg-linear-to-r bg-clip-text text-transparent w-fit from-[#2193b0] to-sky-400 from-40% md:my-4 mt-4 mb-2">
         Nastopi in Predstavitve
       </h1>
 
@@ -409,7 +409,7 @@ export default function Nastopi() {
         </div>
       </section>
 
-      <div className="border border-1 border-sky-500 p-4 rounded-lg">
+      <div className="border border border-sky-500 p-4 rounded-lg">
         <h3 className="md:text-lg sm:text-base text-neutral-600 font-semibold mb-2">
           Knjižni sejem
         </h3>

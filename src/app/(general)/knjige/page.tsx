@@ -10,10 +10,10 @@ export default function Knjige() {
   );
   return (
     <main>
-      <h2 className="font-semibold text-2xl mb-8 bg-gradient-to-r from-[#11998e] to-[#38ef7d] text-transparent bg-clip-text w-fit">
+      <h2 className="font-semibold text-2xl mb-8 bg-linear-to-r from-[#11998e] to-[#38ef7d] text-transparent bg-clip-text w-fit">
         Knjige za odrasle
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 max-w-screen-2xl">
+      <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 max-w-[theme(screens.2xl)]">
         {booksForAdults.map((book) => (
           <div key={book.title} className="flex items-center justify-center">
             <Link href={`/knjige/${book.link}`}>
@@ -29,10 +29,10 @@ export default function Knjige() {
           </div>
         ))}
       </div>
-      <h1 className="font-semibold text-2xl my-8 bg-gradient-to-r from-[#11998e] to-[#38ef7d] w-fit bg-clip-text text-transparent">
+      <h1 className="font-semibold text-2xl my-8 bg-linear-to-r from-[#11998e] to-[#38ef7d] w-fit bg-clip-text text-transparent">
         Knjige za otroke
       </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-screen-xl">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 md:gap-4 max-w-[theme(screens.xl)]">
         {booksForChildren.map((book) => (
           <div key={book.title} className="flex items-center justify-center">
             <Link href={`/knjige/${book.link}`}>

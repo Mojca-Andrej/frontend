@@ -38,7 +38,7 @@ export default function Popup({ sources, setIsOpen }: PopupProps) {
   if (!isMounted) return null;
 
   return ReactDOM.createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
       <div
         {...swipeHandlers}
         className="relative w-full h-full flex items-center justify-center"

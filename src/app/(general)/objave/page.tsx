@@ -16,7 +16,7 @@ export default function Objave() {
 
   return (
     <main>
-      <h1 className="text-2xl w-fit bg-gradient-to-r bg-clip-text text-transparent from-yellow-500 to-amber-500 font-semibold mb-4">
+      <h1 className="text-2xl w-fit bg-linear-to-r bg-clip-text text-transparent from-yellow-500 to-amber-500 font-semibold mb-4">
         Objave
       </h1>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4">

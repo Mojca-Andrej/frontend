@@ -2,9 +2,9 @@ import { notFound } from "next/navigation";
 import { vsiPrevodi } from "../data/prevodi";
 
 interface Props {
-    params: {
+    params: Promise<{
         jezik: string;
-    }
+    }>
 }
 
 export const dynamicParams = false;
@@ -13,16 +13,17 @@ export function generateStaticParams() {
     return Array.from(new Set(vsiPrevodi.map(prevod => prevod.abv))).map(jezik => ({ jezik }));
 }
 
-export default function Prevodi({ params }: Props) {
-    const prevodi = vsiPrevodi.filter(prevod => prevod.abv === params.jezik);
+export default async function Prevodi({ params }: Props) {
+    const { jezik } = await params;
+    const prevodi = vsiPrevodi.filter(prevod => prevod.abv === jezik);
     if (prevodi.length === 0) notFound();
     const language = prevodi[0].language;
     return (
         <div>
-            <h1 className="text-2xl bg-gradient-to-r font-semibold text-transparent bg-clip-text from-fuchsia-500 w-fit to-stone-500 mb-4">{language}</h1>
+            <h1 className="text-2xl bg-linear-to-r font-semibold text-transparent bg-clip-text from-fuchsia-500 w-fit to-stone-500 mb-4">{language}</h1>
             <div className="container md:px-0 text-black">
                 {prevodi.map((prevod, index) => (
-                    <div key={index} className="mb-8 bg-gradient-to-br from-fuchsia-200 to-stone-200 md:p-8 p-4 rounded-md shadow-md">
+                    <div key={index} className="mb-8 bg-linear-to-br from-fuchsia-200 to-stone-200 md:p-8 p-4 rounded-md shadow-md">
                         <h2 className="text-xl font-semibold mb-2">{prevod.title}</h2>
                         <div className="text-sm text-neutral-900 mb-8">
                             {prevod.text.map((line, index) => (

@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function ZaOtroke() {
     return (
         <div>
-            <h1 className="text-2xl bg-gradient-to-r font-semibold text-transparent bg-clip-text from-indigo-500 w-fit to-sky-500 mb-4">Za otroke</h1>
+            <h1 className="text-2xl bg-linear-to-r font-semibold text-transparent bg-clip-text from-indigo-500 w-fit to-sky-500 mb-4">Za otroke</h1>
             <div className="container md:px-0 text-black">
-                <div className="mb-8 bg-gradient-to-br from-indigo-200 to-sky-200 p-4 md:p-8 rounded-md shadow-md text-neutral-900">
+                <div className="mb-8 bg-linear-to-br from-indigo-200 to-sky-200 p-4 md:p-8 rounded-md shadow-md text-neutral-900">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="">
                             <h2 className="text-xl font-semibold mb-8">Agica, mala čarovnica</h2>
@@ -20,12 +20,12 @@ export default function ZaOtroke() {
                                 </div>                     
                         </div>
                         <div>
-                        <Image height={800} width={800} src="/agica_slikanica.png" alt="Agica slikanica" className="rounded-md shadow-md md:mb-8" quality={100} priority={true}/>
+                        <Image height={800} width={800} src="/agica_slikanica.png" alt="Agica slikanica" className="rounded-md shadow-md md:mb-8" priority={true}/>
                         </div>
                     </div>
                 </div>
                 {pesmi.map((pesem, index) => (
-                    <div key={index} className="mb-8 bg-gradient-to-br from-indigo-200 to-sky-200 p-4 md:p-8 rounded-md shadow-md">
+                    <div key={index} className="mb-8 bg-linear-to-br from-indigo-200 to-sky-200 p-4 md:p-8 rounded-md shadow-md">
                         <h2 className="text-xl font-semibold mb-2">{pesem.title}</h2>
                         <div className="text-sm text-neutral-900 mb-8">
                             {pesem.text.map((line, index) => (

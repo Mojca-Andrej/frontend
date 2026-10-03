@@ -3,7 +3,7 @@ import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
 
 export default function Footer () {
     return (
-        <footer id="footer" className="bg-gradient-to-tr from-sky-300 to-purple-300 via-violet-400  pt-4 pb-2">
+        <footer id="footer" className="bg-linear-to-tr from-sky-300 to-purple-300 via-violet-400  pt-4 pb-2">
             <div className="flex justify-center">
                 <div className="flex flex-col items-center space-y-1">
                     <h2 className="text-lg font-semibold text-white">Kontakt</h2>
