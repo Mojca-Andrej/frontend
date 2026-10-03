@@ -48,6 +48,14 @@ Vsa vsebina je v mapi **`src/content/`** – strani se iz teh datotek zgradijo s
 
 Skripta teče tudi pred vsako gradnjo, zato je manifest dimenzij vedno ažuren.
 
+### Zvočni posnetki
+
+Posnetke shrani v `public/audio/` kot MP3 z največ 160 kbps (dovolj za glas in kitaro, pol manjše datoteke kot 320 kbps). Večje pretvori z [ffmpeg](https://ffmpeg.org):
+
+```bash
+ffmpeg -i posnetek.mp3 -map 0:a -map_metadata 0 -c:a libmp3lame -b:a 160k public/audio/poezija/posnetek.mp3
+```
+
 ## Zgradba
 
 ```
