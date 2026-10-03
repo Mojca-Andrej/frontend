@@ -6,7 +6,8 @@ import type { BookSlug, IsoDate } from "@/content/types";
  * Nov vnos dodaj kamorkoli v seznam – stran jih sama razvrsti od najnovejše do najstarejše.
  * Datum: "2025-04" (mesec), "2025-04-12" (dan) ali "2025" (leto). Za razpon dodaj še `dateEnd`.
  * V `description` in `note` lahko uporabiš *ležeče*, **krepko** in [povezavo](https://…).
- * Slike (naslovnica in fotografije strani) shrani v public/popup/ in zaženi `npm run images`.
+ * Slike shrani v svojo mapo v public/slike/objave/ z imenom leto-mesec-revija (npr. 2026-03-sodobnost/):
+ * naslovnico kot naslovnica.jpg, fotografije strani kot 01.jpg, 02.jpg … Nato zaženi `npm run images`.
  *
  * Primer:
  *   {
@@ -14,10 +15,10 @@ import type { BookSlug, IsoDate } from "@/content/types";
  *     publication: "Sodobnost",
  *     date: "2026-03",
  *     description: "Pesmi iz zbirke *Močvirje pozabe*",
- *     link: "https://…",                         // neobvezno: zunanja povezava (»Več o objavi«)
- *     cover: "/popup/sodobnost_naslovnica.jpeg",  // neobvezno: naslovnica revije
- *     pages: ["/popup/sodobnost_1.jpeg"],         // neobvezno: fotografije strani (»Preberi objavo«)
- *     book: "mocvirje-pozabe",                    // neobvezno: povezana knjiga
+ *     link: "https://…",                                        // neobvezno: zunanja povezava (»Več o objavi«)
+ *     cover: "/slike/objave/2026-03-sodobnost/naslovnica.jpg",  // neobvezno: naslovnica revije
+ *     pages: ["/slike/objave/2026-03-sodobnost/01.jpg"],        // neobvezno: fotografije strani (»Preberi objavo«)
+ *     book: "mocvirje-pozabe",                                  // neobvezno: povezana knjiga
  *   },
  */
 export type Publication = {
@@ -45,8 +46,8 @@ export const publications: Publication[] = [
     publication: "Mlada Sodobnost",
     date: "2024-11",
     description: "Pesmi za otroke",
-    cover: "/popup/ms_naslovnica.jpeg",
-    pages: ["/popup/ms_1.jpeg", "/popup/ms_2.jpeg"],
+    cover: "/slike/objave/2024-11-mlada-sodobnost/naslovnica.jpg",
+    pages: ["/slike/objave/2024-11-mlada-sodobnost/01.jpg", "/slike/objave/2024-11-mlada-sodobnost/02.jpg"],
   },
   {
     title: "Forgotten by birds",
@@ -69,8 +70,8 @@ export const publications: Publication[] = [
     publication: "Mentor",
     date: "2025-03",
     description: "Kratka zgodba",
-    cover: "/popup/mentor_naslovna.jpeg",
-    pages: ["/popup/mentor_objava.jpeg"],
+    cover: "/slike/objave/2025-03-mentor/naslovnica.jpg",
+    pages: ["/slike/objave/2025-03-mentor/01.jpg"],
   },
   {
     title: "Močvirje pozabe",
@@ -78,8 +79,12 @@ export const publications: Publication[] = [
     date: "2025-04",
     description: "Pesmi iz še neobjavljene pesniške zbirke",
     note: publishedNote,
-    cover: "/popup/poetikon_naslovna.jpeg",
-    pages: ["/popup/poetikon_1.jpeg", "/popup/poetikon_2.jpeg", "/popup/poetikon_3.jpeg"],
+    cover: "/slike/objave/2025-04-poetikon/naslovnica.jpg",
+    pages: [
+      "/slike/objave/2025-04-poetikon/01.jpg",
+      "/slike/objave/2025-04-poetikon/02.jpg",
+      "/slike/objave/2025-04-poetikon/03.jpg",
+    ],
     book: "mocvirje-pozabe",
   },
   {
@@ -87,8 +92,8 @@ export const publications: Publication[] = [
     publication: "Galeb, revija za otroke, ki izhaja v Trstu",
     date: "2025-04",
     description: "Za otroke",
-    cover: "/popup/galeb_naslovnica.jpeg",
-    pages: ["/popup/galeb_1.jpeg", "/popup/galeb_2.jpg"],
+    cover: "/slike/objave/2025-04-galeb/naslovnica.jpg",
+    pages: ["/slike/objave/2025-04-galeb/01.jpg", "/slike/objave/2025-04-galeb/02.jpg"],
   },
   {
     title: "Žejna in druge pesmi",
@@ -105,7 +110,11 @@ export const publications: Publication[] = [
     date: "2025-06",
     dateEnd: "2025-07",
     description: "Pesmi iz še neobjavljene pesniške zbirke",
-    cover: "/popup/literatura_naslovna.jpeg",
-    pages: ["/popup/literatura_1.jpeg", "/popup/literatura_2.jpeg", "/popup/literatura_3.jpeg"],
+    cover: "/slike/objave/2025-06-literatura/naslovnica.jpg",
+    pages: [
+      "/slike/objave/2025-06-literatura/01.jpg",
+      "/slike/objave/2025-06-literatura/02.jpg",
+      "/slike/objave/2025-06-literatura/03.jpg",
+    ],
   },
 ];

@@ -16,7 +16,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8">
         <Link href="/" className="group flex items-center gap-3" aria-label={`${site.name} – domov`}>
           <Image
-            src="/art/logo.jpeg"
+            src="/slike/logo.jpg"
             alt=""
             width={56}
             height={56}

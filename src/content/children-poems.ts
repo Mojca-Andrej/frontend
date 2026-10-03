@@ -106,7 +106,7 @@ Takrat je pomlad!
     source: "Rastem do tebe",
     book: "rastem-do-tebe",
     audio: {
-      src: "/audio/za-otroke/kdaj_je_pomlad.mp3",
+      src: "/audio/za-otroke/kdaj-je-pomlad.mp3",
       caption: "Pesem je uglasbil in jo izvaja kantavtor Peter Andrej.",
     },
   },
@@ -297,7 +297,7 @@ export const agicaSong = {
   book: "agica-mala-carovnica",
   illustrations: "Darka Erdelji",
   image: {
-    src: "/agica_slikanica.png",
+    src: "/slike/knjige/agica-mala-carovnica-ilustracija.png",
     alt: "Stran iz slikanice z ilustracijo Darke Erdelji: Agica v čarovniškem klobuku z bratci in sestricami v gnezdu med vejami, spodaj modra zvezda in smrekov gozd. Nad sliko je odlomek besedila o Agici, ki edina v gnezdu ni jokala, ampak cvilila.",
   },
   audio: {

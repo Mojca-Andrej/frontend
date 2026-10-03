@@ -182,7 +182,7 @@ da ji obrišemo ločila
     source: "Dež v gugalnici",
     book: "dez-v-gugalnici",
     audio: {
-      src: "/audio/poezija/ad_astra.mp3",
+      src: "/audio/poezija/ad-astra.mp3",
       caption: "Pesem je uglasbil in jo izvaja kantavtor Peter Andrej.",
     },
   },

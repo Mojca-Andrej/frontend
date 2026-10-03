@@ -1,466 +1,454 @@
 {
-  "/agica_slikanica.png": {
-    "width": 1062,
-    "height": 1065
-  },
-  "/agica.jpg": {
-    "width": 2097,
-    "height": 2053
-  },
-  "/Agica/1.jpg": {
+  "/slike/galerija/agica/01.jpg": {
     "width": 720,
     "height": 960
   },
-  "/Agica/10.jpg": {
-    "width": 2400,
-    "height": 1600
-  },
-  "/Agica/11.jpg": {
-    "width": 2400,
-    "height": 1800
-  },
-  "/Agica/12.png": {
-    "width": 800,
-    "height": 450
-  },
-  "/Agica/13.jpg": {
-    "width": 2400,
-    "height": 1976
-  },
-  "/Agica/14.jpg": {
-    "width": 2400,
-    "height": 1167
-  },
-  "/Agica/15.jpg": {
-    "width": 2400,
-    "height": 2013
-  },
-  "/Agica/16.jpg": {
-    "width": 1533,
-    "height": 2400
-  },
-  "/Agica/17.jpg": {
-    "width": 2400,
-    "height": 1444
-  },
-  "/Agica/18.jpg": {
-    "width": 2400,
-    "height": 1408
-  },
-  "/Agica/2.jpg": {
+  "/slike/galerija/agica/02.jpg": {
     "width": 1511,
     "height": 2015
   },
-  "/Agica/3.jpg": {
+  "/slike/galerija/agica/03.jpg": {
     "width": 1744,
     "height": 2400
   },
-  "/Agica/4.jpg": {
+  "/slike/galerija/agica/04.jpg": {
     "width": 2400,
     "height": 1800
   },
-  "/Agica/5.jpg": {
+  "/slike/galerija/agica/05.jpg": {
     "width": 1824,
     "height": 1368
   },
-  "/Agica/6.jpg": {
+  "/slike/galerija/agica/06.jpg": {
     "width": 1760,
     "height": 896
   },
-  "/Agica/7.jpg": {
+  "/slike/galerija/agica/07.jpg": {
     "width": 1916,
     "height": 1723
   },
-  "/Agica/8.jpg": {
+  "/slike/galerija/agica/08.jpg": {
     "width": 1200,
     "height": 801
   },
-  "/Agica/9.jpg": {
+  "/slike/galerija/agica/09.jpg": {
     "width": 2400,
     "height": 1167
   },
-  "/art/logo.jpeg": {
-    "width": 729,
-    "height": 836
-  },
-  "/art/macek_eva_rajher.png": {
-    "width": 2160,
-    "height": 1620
-  },
-  "/art/macek2.jpg": {
-    "width": 1024,
-    "height": 703
-  },
-  "/art/obrazi.png": {
-    "width": 2160,
-    "height": 1620
-  },
-  "/dez_v_gugalnici.jpg": {
-    "width": 2157,
-    "height": 2092
-  },
-  "/Gledališče/1.jpg": {
-    "width": 960,
-    "height": 642
-  },
-  "/Gledališče/10.jpg": {
-    "width": 2048,
-    "height": 1373
-  },
-  "/Gledališče/11.jpg": {
-    "width": 2048,
-    "height": 1152
-  },
-  "/Gledališče/12.jpg": {
+  "/slike/galerija/agica/10.jpg": {
     "width": 2400,
     "height": 1600
   },
-  "/Gledališče/13.jpg": {
-    "width": 960,
-    "height": 540
+  "/slike/galerija/agica/11.jpg": {
+    "width": 2400,
+    "height": 1800
   },
-  "/Gledališče/14.jpg": {
+  "/slike/galerija/agica/12.png": {
+    "width": 800,
+    "height": 450
+  },
+  "/slike/galerija/agica/13.jpg": {
+    "width": 2400,
+    "height": 1976
+  },
+  "/slike/galerija/agica/14.jpg": {
+    "width": 2400,
+    "height": 1167
+  },
+  "/slike/galerija/agica/15.jpg": {
+    "width": 2400,
+    "height": 2013
+  },
+  "/slike/galerija/agica/16.jpg": {
+    "width": 1533,
+    "height": 2400
+  },
+  "/slike/galerija/agica/17.jpg": {
+    "width": 2400,
+    "height": 1444
+  },
+  "/slike/galerija/agica/18.jpg": {
+    "width": 2400,
+    "height": 1408
+  },
+  "/slike/galerija/gledalisce/01.jpg": {
     "width": 960,
     "height": 642
   },
-  "/Gledališče/2.jpg": {
+  "/slike/galerija/gledalisce/02.jpg": {
     "width": 960,
     "height": 642
   },
-  "/Gledališče/3.jpg": {
+  "/slike/galerija/gledalisce/03.jpg": {
     "width": 960,
     "height": 642
   },
-  "/Gledališče/4.jpg": {
+  "/slike/galerija/gledalisce/04.jpg": {
     "width": 960,
     "height": 642
   },
-  "/Gledališče/5.jpg": {
+  "/slike/galerija/gledalisce/05.jpg": {
     "width": 960,
     "height": 642
   },
-  "/Gledališče/6.jpg": {
+  "/slike/galerija/gledalisce/06.jpg": {
     "width": 960,
     "height": 642
   },
-  "/Gledališče/7.jpg": {
+  "/slike/galerija/gledalisce/07.jpg": {
     "width": 960,
     "height": 642
   },
-  "/Gledališče/8.jpg": {
+  "/slike/galerija/gledalisce/08.jpg": {
     "width": 960,
     "height": 617
   },
-  "/Gledališče/9.jpg": {
+  "/slike/galerija/gledalisce/09.jpg": {
     "width": 960,
     "height": 960
   },
-  "/kuv1.jpg": {
-    "width": 1595,
-    "height": 2400
-  },
-  "/kuv2.jpg": {
-    "width": 1680,
-    "height": 2400
-  },
-  "/Litera/1-2.jpg": {
-    "width": 2400,
-    "height": 1497
-  },
-  "/mijene.jpg": {
-    "width": 1679,
-    "height": 2400
-  },
-  "/mocvirje_pozabe.jpg": {
-    "width": 1772,
-    "height": 2400
-  },
-  "/Mocvirje/mocvirje_backpage.jpg": {
-    "width": 1736,
-    "height": 2400
-  },
-  "/naslovnica.jpg": {
-    "width": 800,
-    "height": 1200
-  },
-  "/Nastopi/1.jpg": {
-    "width": 263,
-    "height": 395
-  },
-  "/Nastopi/10.jpg": {
-    "width": 600,
-    "height": 400
-  },
-  "/Nastopi/11.jpg": {
-    "width": 2400,
-    "height": 1800
-  },
-  "/Nastopi/12.jpg": {
-    "width": 960,
-    "height": 1280
-  },
-  "/Nastopi/13.jpg": {
-    "width": 960,
-    "height": 1280
-  },
-  "/Nastopi/14.jpg": {
-    "width": 960,
-    "height": 1280
-  },
-  "/Nastopi/15.jpeg": {
-    "width": 2000,
-    "height": 1500
-  },
-  "/Nastopi/16.jpg": {
-    "width": 1280,
-    "height": 720
-  },
-  "/Nastopi/17.jpg": {
-    "width": 2400,
-    "height": 1800
-  },
-  "/Nastopi/18.jpg": {
-    "width": 2400,
-    "height": 1800
-  },
-  "/Nastopi/19.jpg": {
-    "width": 2400,
-    "height": 1800
-  },
-  "/Nastopi/2.jpg": {
-    "width": 600,
-    "height": 699
-  },
-  "/Nastopi/20.jpg": {
+  "/slike/galerija/gledalisce/10.jpg": {
     "width": 2048,
-    "height": 1536
+    "height": 1373
   },
-  "/Nastopi/21.jpg": {
-    "width": 1200,
-    "height": 800
-  },
-  "/Nastopi/22.jpg": {
-    "width": 1200,
-    "height": 800
-  },
-  "/Nastopi/23.jpg": {
+  "/slike/galerija/gledalisce/11.jpg": {
     "width": 2048,
-    "height": 1421
+    "height": 1152
   },
-  "/Nastopi/24.jpg": {
-    "width": 952,
-    "height": 1014
-  },
-  "/Nastopi/25.jpg": {
-    "width": 1200,
-    "height": 1600
-  },
-  "/Nastopi/26.jpg": {
-    "width": 1600,
-    "height": 1200
-  },
-  "/Nastopi/27.jpg": {
-    "width": 2400,
-    "height": 1350
-  },
-  "/Nastopi/28.jpg": {
-    "width": 1080,
-    "height": 608
-  },
-  "/Nastopi/29.jpg": {
-    "width": 1080,
-    "height": 810
-  },
-  "/Nastopi/3.jpg": {
-    "width": 600,
-    "height": 400
-  },
-  "/Nastopi/30.jpg": {
-    "width": 2400,
-    "height": 1350
-  },
-  "/Nastopi/4.jpg": {
-    "width": 1350,
-    "height": 2400
-  },
-  "/Nastopi/5.jpg": {
-    "width": 526,
-    "height": 701
-  },
-  "/Nastopi/6.jpg": {
-    "width": 526,
-    "height": 701
-  },
-  "/Nastopi/7.jpg": {
-    "width": 1350,
-    "height": 2400
-  },
-  "/Nastopi/8.jpg": {
-    "width": 2048,
-    "height": 1629
-  },
-  "/Nastopi/9.jpg": {
-    "width": 640,
-    "height": 480
-  },
-  "/nikoli_ne_reci.jpg": {
-    "width": 1230,
-    "height": 2400
-  },
-  "/ostanek_umrle_zvezde.jpg": {
-    "width": 1502,
-    "height": 2400
-  },
-  "/popup/galeb_1.jpeg": {
-    "width": 2048,
-    "height": 1390
-  },
-  "/popup/galeb_2.jpg": {
-    "width": 2400,
-    "height": 1610
-  },
-  "/popup/galeb_naslovnica.jpeg": {
-    "width": 1545,
-    "height": 2048
-  },
-  "/popup/literatura_1.jpeg": {
-    "width": 1073,
-    "height": 1876
-  },
-  "/popup/literatura_2.jpeg": {
-    "width": 1125,
-    "height": 2000
-  },
-  "/popup/literatura_3.jpeg": {
-    "width": 1125,
-    "height": 1684
-  },
-  "/popup/literatura_naslovna.jpeg": {
-    "width": 1125,
-    "height": 1708
-  },
-  "/popup/mentor_naslovna.jpeg": {
-    "width": 1125,
-    "height": 2000
-  },
-  "/popup/mentor_objava.jpeg": {
-    "width": 1125,
-    "height": 1713
-  },
-  "/popup/ms_1.jpeg": {
-    "width": 1059,
-    "height": 1919
-  },
-  "/popup/ms_2.jpeg": {
-    "width": 1125,
-    "height": 1840
-  },
-  "/popup/ms_naslovnica.jpeg": {
-    "width": 1119,
-    "height": 1691
-  },
-  "/popup/poetikon_1.jpeg": {
-    "width": 1425,
-    "height": 2048
-  },
-  "/popup/poetikon_2.jpeg": {
-    "width": 1609,
-    "height": 2048
-  },
-  "/popup/poetikon_3.jpeg": {
-    "width": 1498,
-    "height": 2048
-  },
-  "/popup/poetikon_naslovna.jpeg": {
-    "width": 1401,
-    "height": 2048
-  },
-  "/rastem_do_tebe.jpg": {
-    "width": 1751,
-    "height": 2400
-  },
-  "/rege/1.jpg": {
-    "width": 1600,
-    "height": 2400
-  },
-  "/rege/2.jpg": {
-    "width": 1330,
-    "height": 1342
-  },
-  "/rege/3.jpg": {
+  "/slike/galerija/gledalisce/12.jpg": {
     "width": 2400,
     "height": 1600
   },
-  "/rege/rege.jpg": {
-    "width": 949,
-    "height": 900
+  "/slike/galerija/gledalisce/13.jpg": {
+    "width": 960,
+    "height": 540
   },
-  "/transitions.jpg": {
-    "width": 1787,
-    "height": 2400
+  "/slike/galerija/gledalisce/14.jpg": {
+    "width": 960,
+    "height": 642
   },
-  "/Veronika/1.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/01.jpg": {
     "width": 2400,
     "height": 1350
   },
-  "/Veronika/10.jpg": {
-    "width": 2400,
-    "height": 1800
-  },
-  "/Veronika/11.jpg": {
-    "width": 1747,
-    "height": 2400
-  },
-  "/Veronika/12.jpg": {
-    "width": 1028,
-    "height": 899
-  },
-  "/Veronika/13.jpg": {
-    "width": 2048,
-    "height": 1536
-  },
-  "/Veronika/14.jpg": {
-    "width": 1661,
-    "height": 2400
-  },
-  "/Veronika/15.jpg": {
-    "width": 1200,
-    "height": 1600
-  },
-  "/Veronika/16.jpeg": {
-    "width": 2400,
-    "height": 2400
-  },
-  "/Veronika/2.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/02.jpg": {
     "width": 1019,
     "height": 1359
   },
-  "/Veronika/3.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/03.jpg": {
     "width": 686,
     "height": 772
   },
-  "/Veronika/4.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/04.jpg": {
     "width": 2400,
     "height": 1800
   },
-  "/Veronika/5.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/05.jpg": {
     "width": 2400,
     "height": 1800
   },
-  "/Veronika/6.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/06.jpg": {
     "width": 2400,
     "height": 1800
   },
-  "/Veronika/7.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/07.jpg": {
     "width": 2400,
     "height": 1602
   },
-  "/Veronika/8.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/08.jpg": {
     "width": 2400,
     "height": 1800
   },
-  "/Veronika/9.jpg": {
+  "/slike/galerija/kavc-uciteljice-veronike/09.jpg": {
     "width": 2400,
     "height": 1800
+  },
+  "/slike/galerija/kavc-uciteljice-veronike/10.jpg": {
+    "width": 2400,
+    "height": 1800
+  },
+  "/slike/galerija/kavc-uciteljice-veronike/11.jpg": {
+    "width": 1747,
+    "height": 2400
+  },
+  "/slike/galerija/kavc-uciteljice-veronike/12.jpg": {
+    "width": 1028,
+    "height": 899
+  },
+  "/slike/galerija/kavc-uciteljice-veronike/13.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "/slike/galerija/kavc-uciteljice-veronike/14.jpg": {
+    "width": 1661,
+    "height": 2400
+  },
+  "/slike/galerija/kavc-uciteljice-veronike/15.jpg": {
+    "width": 1200,
+    "height": 1600
+  },
+  "/slike/galerija/kavc-uciteljice-veronike/16.jpg": {
+    "width": 2400,
+    "height": 2400
+  },
+  "/slike/galerija/nastopi/01.jpg": {
+    "width": 263,
+    "height": 395
+  },
+  "/slike/galerija/nastopi/02.jpg": {
+    "width": 600,
+    "height": 699
+  },
+  "/slike/galerija/nastopi/03.jpg": {
+    "width": 600,
+    "height": 400
+  },
+  "/slike/galerija/nastopi/04.jpg": {
+    "width": 1350,
+    "height": 2400
+  },
+  "/slike/galerija/nastopi/05.jpg": {
+    "width": 526,
+    "height": 701
+  },
+  "/slike/galerija/nastopi/06.jpg": {
+    "width": 526,
+    "height": 701
+  },
+  "/slike/galerija/nastopi/07.jpg": {
+    "width": 1350,
+    "height": 2400
+  },
+  "/slike/galerija/nastopi/08.jpg": {
+    "width": 2048,
+    "height": 1629
+  },
+  "/slike/galerija/nastopi/09.jpg": {
+    "width": 640,
+    "height": 480
+  },
+  "/slike/galerija/nastopi/10.jpg": {
+    "width": 600,
+    "height": 400
+  },
+  "/slike/galerija/nastopi/11.jpg": {
+    "width": 2400,
+    "height": 1800
+  },
+  "/slike/galerija/nastopi/12.jpg": {
+    "width": 960,
+    "height": 1280
+  },
+  "/slike/galerija/nastopi/13.jpg": {
+    "width": 960,
+    "height": 1280
+  },
+  "/slike/galerija/nastopi/14.jpg": {
+    "width": 960,
+    "height": 1280
+  },
+  "/slike/galerija/nastopi/15.jpg": {
+    "width": 2000,
+    "height": 1500
+  },
+  "/slike/galerija/nastopi/16.jpg": {
+    "width": 1280,
+    "height": 720
+  },
+  "/slike/galerija/nastopi/17.jpg": {
+    "width": 2400,
+    "height": 1800
+  },
+  "/slike/galerija/nastopi/18.jpg": {
+    "width": 2400,
+    "height": 1800
+  },
+  "/slike/galerija/nastopi/19.jpg": {
+    "width": 2400,
+    "height": 1800
+  },
+  "/slike/galerija/nastopi/20.jpg": {
+    "width": 2048,
+    "height": 1536
+  },
+  "/slike/galerija/nastopi/21.jpg": {
+    "width": 1200,
+    "height": 800
+  },
+  "/slike/galerija/nastopi/22.jpg": {
+    "width": 1200,
+    "height": 800
+  },
+  "/slike/galerija/nastopi/23.jpg": {
+    "width": 2048,
+    "height": 1421
+  },
+  "/slike/galerija/nastopi/24.jpg": {
+    "width": 952,
+    "height": 1014
+  },
+  "/slike/galerija/nastopi/25.jpg": {
+    "width": 1200,
+    "height": 1600
+  },
+  "/slike/galerija/nastopi/26.jpg": {
+    "width": 1600,
+    "height": 1200
+  },
+  "/slike/galerija/nastopi/27.jpg": {
+    "width": 2400,
+    "height": 1350
+  },
+  "/slike/galerija/nastopi/28.jpg": {
+    "width": 1080,
+    "height": 608
+  },
+  "/slike/galerija/nastopi/29.jpg": {
+    "width": 1080,
+    "height": 810
+  },
+  "/slike/galerija/nastopi/30.jpg": {
+    "width": 2400,
+    "height": 1350
+  },
+  "/slike/galerija/rege/01.jpg": {
+    "width": 1600,
+    "height": 2400
+  },
+  "/slike/galerija/rege/02.jpg": {
+    "width": 1330,
+    "height": 1342
+  },
+  "/slike/galerija/rege/03.jpg": {
+    "width": 2400,
+    "height": 1600
+  },
+  "/slike/galerija/rege/04.jpg": {
+    "width": 949,
+    "height": 900
+  },
+  "/slike/knjige/agica-mala-carovnica-ilustracija.png": {
+    "width": 1062,
+    "height": 1065
+  },
+  "/slike/knjige/agica-mala-carovnica.jpg": {
+    "width": 2097,
+    "height": 2053
+  },
+  "/slike/knjige/dez-v-gugalnici.jpg": {
+    "width": 2157,
+    "height": 2092
+  },
+  "/slike/knjige/kavc-uciteljice-veronike-2024.jpg": {
+    "width": 1680,
+    "height": 2400
+  },
+  "/slike/knjige/kavc-uciteljice-veronike-katalog-litera.jpg": {
+    "width": 2400,
+    "height": 1497
+  },
+  "/slike/knjige/kavc-uciteljice-veronike.jpg": {
+    "width": 1595,
+    "height": 2400
+  },
+  "/slike/knjige/mijene.jpg": {
+    "width": 1679,
+    "height": 2400
+  },
+  "/slike/knjige/mocvirje-pozabe-zadnja-stran.jpg": {
+    "width": 1736,
+    "height": 2400
+  },
+  "/slike/knjige/mocvirje-pozabe.jpg": {
+    "width": 1772,
+    "height": 2400
+  },
+  "/slike/knjige/nikoli-ne-reci-da-ni-skrivnosti.jpg": {
+    "width": 1230,
+    "height": 2400
+  },
+  "/slike/knjige/ostanek-umrle-zvezde.jpg": {
+    "width": 1502,
+    "height": 2400
+  },
+  "/slike/knjige/rastem-do-tebe.jpg": {
+    "width": 1751,
+    "height": 2400
+  },
+  "/slike/knjige/transitions.jpg": {
+    "width": 1787,
+    "height": 2400
+  },
+  "/slike/logo.jpg": {
+    "width": 729,
+    "height": 836
+  },
+  "/slike/objave/2024-11-mlada-sodobnost/01.jpg": {
+    "width": 1059,
+    "height": 1919
+  },
+  "/slike/objave/2024-11-mlada-sodobnost/02.jpg": {
+    "width": 1125,
+    "height": 1840
+  },
+  "/slike/objave/2024-11-mlada-sodobnost/naslovnica.jpg": {
+    "width": 1119,
+    "height": 1691
+  },
+  "/slike/objave/2025-03-mentor/01.jpg": {
+    "width": 1125,
+    "height": 1713
+  },
+  "/slike/objave/2025-03-mentor/naslovnica.jpg": {
+    "width": 1125,
+    "height": 2000
+  },
+  "/slike/objave/2025-04-galeb/01.jpg": {
+    "width": 2048,
+    "height": 1390
+  },
+  "/slike/objave/2025-04-galeb/02.jpg": {
+    "width": 2400,
+    "height": 1610
+  },
+  "/slike/objave/2025-04-galeb/naslovnica.jpg": {
+    "width": 1545,
+    "height": 2048
+  },
+  "/slike/objave/2025-04-poetikon/01.jpg": {
+    "width": 1425,
+    "height": 2048
+  },
+  "/slike/objave/2025-04-poetikon/02.jpg": {
+    "width": 1609,
+    "height": 2048
+  },
+  "/slike/objave/2025-04-poetikon/03.jpg": {
+    "width": 1498,
+    "height": 2048
+  },
+  "/slike/objave/2025-04-poetikon/naslovnica.jpg": {
+    "width": 1401,
+    "height": 2048
+  },
+  "/slike/objave/2025-06-literatura/01.jpg": {
+    "width": 1073,
+    "height": 1876
+  },
+  "/slike/objave/2025-06-literatura/02.jpg": {
+    "width": 1125,
+    "height": 2000
+  },
+  "/slike/objave/2025-06-literatura/03.jpg": {
+    "width": 1125,
+    "height": 1684
+  },
+  "/slike/objave/2025-06-literatura/naslovnica.jpg": {
+    "width": 1125,
+    "height": 1708
+  },
+  "/slike/portret.jpg": {
+    "width": 800,
+    "height": 1200
   }
 }

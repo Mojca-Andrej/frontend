@@ -4,7 +4,7 @@ import type { BookSlug } from "@/content/types";
  * KNJIGE MOJCE ANDREJ
  *
  * Kako dodati novo knjigo:
- * 1. Naslovnico shrani v public/ (npr. public/nova_knjiga.jpg) in zaženi `npm run images`.
+ * 1. Naslovnico shrani v public/slike/knjige/ z imenom po slugu (npr. nova-knjiga.jpg) in zaženi `npm run images`.
  * 2. Slug (del naslova URL, npr. "nova-knjiga") dodaj v seznam `bookSlugs` v src/content/types.ts.
  * 3. Spodaj v seznam `books` dodaj nov vnos, na primer:
  *
@@ -16,7 +16,7 @@ import type { BookSlug } from "@/content/types";
  *     authors: ["Mojca Andrej"],
  *     publisher: "Litera Maribor",
  *     year: 2027,
- *     cover: "/nova_knjiga.jpg",
+ *     cover: "/slike/knjige/nova-knjiga.jpg",
  *     inLanguage: "sl",
  *     description: "**Ime Priimek** je v spremni besedi zapisal:",
  *     quotes: [{ text: "Besedilo citata brez narekovajev …", author: "Ime Priimek", role: "spremna beseda" }],
@@ -87,7 +87,7 @@ export const books: Book[] = [
     authors: ["Mojca Andrej"],
     publisher: "Mariborska literarna družba",
     year: 2000,
-    cover: "/nikoli_ne_reci.jpg",
+    cover: "/slike/knjige/nikoli-ne-reci-da-ni-skrivnosti.jpg",
     inLanguage: "sl",
     description: "V spremni besedi urednik MLD, **Marjan Pungartnik**, pesniško zbirko označi kot:",
     quotes: [
@@ -106,7 +106,7 @@ export const books: Book[] = [
     authors: ["Mojca Andrej"],
     publisher: "Mariborska literarna družba, Klub KU KU in Kulturni klub Nomadi",
     year: 2015,
-    cover: "/dez_v_gugalnici.jpg",
+    cover: "/slike/knjige/dez-v-gugalnici.jpg",
     inLanguage: "sl",
     description: "**Zoran Pevec** v spremni besedi *Beseda in tišina* razmišlja:",
     quotes: [
@@ -125,7 +125,7 @@ export const books: Book[] = [
     authors: ["Mojca Andrej"],
     publisher: "Litera Maribor",
     year: 2020,
-    cover: "/ostanek_umrle_zvezde.jpg",
+    cover: "/slike/knjige/ostanek-umrle-zvezde.jpg",
     inLanguage: "sl",
     description: "V spremni besedi *Tudi jokati je pozabljena navada* je **Vinko Möderndorfer** zapisal:",
     quotes: [
@@ -144,7 +144,7 @@ export const books: Book[] = [
     authors: ["Mojca Andrej"],
     publisher: "Litera Maribor",
     year: 2022,
-    cover: "/kuv1.jpg",
+    cover: "/slike/knjige/kavc-uciteljice-veronike.jpg",
     inLanguage: "sl",
     description: "Spremno besedo k romanu je napisala urednica Litere **Gabriela Babnik Ouattara**:",
     quotes: [
@@ -160,15 +160,15 @@ export const books: Book[] = [
       },
     ],
     editions: [
-      { year: 2022, publisher: "Litera Maribor", cover: "/kuv1.jpg" },
+      { year: 2022, publisher: "Litera Maribor", cover: "/slike/knjige/kavc-uciteljice-veronike.jpg" },
       {
         year: 2024,
         publisher: "Klub KU KU, Glazerjeva domačija",
-        cover: "/kuv2.jpg",
+        cover: "/slike/knjige/kavc-uciteljice-veronike-2024.jpg",
         note: "ponatis pri drugi založbi",
       },
     ],
-    extraImages: [{ src: "/Litera/1-2.jpg", caption: "Katalog Litera 2022" }],
+    extraImages: [{ src: "/slike/knjige/kavc-uciteljice-veronike-katalog-litera.jpg", caption: "Katalog Litera 2022" }],
   },
   {
     slug: "transitions",
@@ -178,7 +178,7 @@ export const books: Book[] = [
     authors: ["Mojca Andrej", "Peter Andrej"],
     publisher: "Klub KU KU, Glazerjeva domačija",
     year: 2024,
-    cover: "/transitions.jpg",
+    cover: "/slike/knjige/transitions.jpg",
     inLanguage: "en",
     description:
       "Zbirka poezije, prevedene v angleški jezik; vsak avtor se predstavi z desetimi prevodi svoje poezije v angleščini. Prevajalci so različni.",
@@ -191,7 +191,7 @@ export const books: Book[] = [
     authors: ["Mojca Andrej", "Peter Andrej"],
     publisher: "Klub KU KU, Glazerjeva domačija",
     year: 2025,
-    cover: "/mijene.jpg",
+    cover: "/slike/knjige/mijene.jpg",
     inLanguage: "hr",
     description:
       "Zbirka poezije, prevedene v hrvaški jezik; vsak avtor se predstavi z desetimi prevodi svoje poezije v hrvaščini. Prevajalci so različni.",
@@ -204,8 +204,8 @@ export const books: Book[] = [
     authors: ["Mojca Andrej"],
     publisher: "Volosov hram, Murska Sobota; Društvo Glazerjeva domačija, Ruše",
     year: 2026,
-    cover: "/mocvirje_pozabe.jpg",
-    backCover: "/Mocvirje/mocvirje_backpage.jpg",
+    cover: "/slike/knjige/mocvirje-pozabe.jpg",
+    backCover: "/slike/knjige/mocvirje-pozabe-zadnja-stran.jpg",
     inLanguage: "sl",
     description: "**Bojan Sedmak** je v spremni besedi *Plemenitost v močvirju pozabe* zapisal:",
     quotes: [
@@ -224,7 +224,7 @@ export const books: Book[] = [
     authors: ["Mojca Andrej"],
     publisher: "OŠ Prežihovega Voranca Maribor, Klub KU KU",
     year: 2013,
-    cover: "/rastem_do_tebe.jpg",
+    cover: "/slike/knjige/rastem-do-tebe.jpg",
     cd: "Peter Andrej",
     inLanguage: "sl",
     description:
@@ -245,7 +245,7 @@ export const books: Book[] = [
     illustrator: "Darka Erdelji",
     publisher: "Litera, Klub KU KU, Glazerjeva domačija",
     year: 2019,
-    cover: "/agica.jpg",
+    cover: "/slike/knjige/agica-mala-carovnica.jpg",
     cd: "Peter Andrej",
     inLanguage: "sl",
     description:

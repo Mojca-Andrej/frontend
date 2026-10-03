@@ -42,11 +42,24 @@ Vsa vsebina je v mapi **`src/content/`** – strani se iz teh datotek zgradijo s
 
 ### Slike
 
-1. Sliko skopiraj v ustrezno mapo v `public/` (npr. `public/Agica/19.jpg`).
-2. Zaženi `npm run images` – prevelike slike pomanjša (največ 2400 px) in zapiše njihove dimenzije v `src/content/image-sizes.json`.
-3. Pot do slike (npr. `/Agica/19.jpg`) vpiši v ustrezno datoteko v `src/content/`.
+Vse slike so v `public/slike/`, mape pa sledijo strani:
 
-Skripta teče tudi pred vsako gradnjo, zato je manifest dimenzij vedno ažuren.
+```
+public/slike/
+  logo.jpg, portret.jpg
+  knjige/<slug-knjige>.jpg                 naslovnice (+ -2024, -zadnja-stran …)
+  galerija/<slug-albuma>/01.jpg, 02.jpg …  fotografije albuma, oštevilčene
+  objave/<leto-mesec>-<revija>/            naslovnica.jpg, 01.jpg, 02.jpg …
+public/audio/poezija/, public/audio/za-otroke/
+```
+
+**Imena:** male črke brez šumnikov, besede ločene z vezaji, številke dvomestne (`01.jpg`), končnica `.jpg` (ne `.jpeg`). Slug knjige ali albuma je enak kot v `src/content/`.
+
+1. Sliko skopiraj v ustrezno mapo (npr. `public/slike/galerija/agica/19.jpg`).
+2. Zaženi `npm run images` – prevelike slike pomanjša (največ 2400 px), zapiše njihove dimenzije v `src/content/image-sizes.json`, opozori na imena, ki ne sledijo dogovoru, in preveri, ali vse poti v `src/content/` res obstajajo.
+3. Pot do slike (npr. `/slike/galerija/agica/19.jpg`) vpiši v ustrezno datoteko v `src/content/`.
+
+Skripta teče tudi pred vsako gradnjo; če kakšna pot v vsebini ne obstaja (tipkarska napaka), se gradnja ustavi z navedbo datoteke in vrstice.
 
 ### Zvočni posnetki
 

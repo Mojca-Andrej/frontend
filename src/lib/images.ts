@@ -7,10 +7,7 @@ const manifest: Record<string, ImageSize> = sizes;
 /** Dejanske dimenzije slike iz public/. Manifest ustvari `npm run images` (teče tudi pred vsako gradnjo). */
 export function imageSize(src: string): ImageSize {
   const size = manifest[src];
-  if (!size) {
-    console.warn(`Ni dimenzij za ${src} – zaženi npm run images.`);
-    return { width: 1600, height: 1200 };
-  }
+  if (!size) throw new Error(`Slike ${src} ni v public/ ali še ni v manifestu – preveri pot in zaženi npm run images.`);
   return size;
 }
 
