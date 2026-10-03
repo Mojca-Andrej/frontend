@@ -1,15 +1,15 @@
-import Topbar from "./components/topbar";
-import Footer from "./components/footer";
+import type { ReactNode } from "react";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
-import { ReactNode } from "react";
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div>
-      <Topbar />
-      <main className="px-4 pt-8 pb-16 md:px-16 xl:px-32 bg-white min-h-[70vh]">
+    <>
+      <SiteHeader />
+      <main id="vsebina" className="mx-auto min-h-[70vh] max-w-6xl px-4 pb-24 pt-10 md:px-8 md:pt-16">
         {children}
       </main>
-      <Footer />
-    </div>
+      <SiteFooter />
+    </>
   );
 }

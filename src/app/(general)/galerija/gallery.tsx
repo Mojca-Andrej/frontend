@@ -1,5 +1,5 @@
 "use client";
-import { cn } from '@/app/utils/cn';
+import { cn } from '@/lib/cn';
 import { IImage } from './images';
 import Image from 'next/image';
 

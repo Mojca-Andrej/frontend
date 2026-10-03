@@ -1,14 +1,61 @@
 @import 'tailwindcss';
 
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+
+  /* Papir in črnilo – osnova vseh strani */
+  --color-paper: #faf7f2;
+  --color-paper-deep: #f2ece2;
+  --color-ink: #211c19;
+  --color-muted: #5c534d;
+  --color-line: #e4dcd0;
+
+  /* Slivova (rokopis v logotipu) – glavni poudarek */
+  --color-plum-50: #fbf4f8;
+  --color-plum-100: #f5e6ef;
+  --color-plum-200: #ead0e0;
+  --color-plum-300: #d9aac6;
+  --color-plum-400: #c27ba5;
+  --color-plum-500: #a85587;
+  --color-plum-600: #8e3f70;
+  --color-plum-700: #76335d;
+  --color-plum-800: #5f2b4c;
+  --color-plum-900: #4a2440;
+  --color-plum-950: #2e1427;
+
+  /* Morska (pero v logotipu) – drugi poudarek */
+  --color-sea-50: #effafa;
+  --color-sea-100: #d6f0f0;
+  --color-sea-200: #aee0e1;
+  --color-sea-300: #7ccaca;
+  --color-sea-400: #4fadb0;
+  --color-sea-500: #368f94;
+  --color-sea-600: #2c737a;
+  --color-sea-700: #285d63;
+  --color-sea-800: #254d52;
+  --color-sea-900: #223f43;
+}
+
 @layer base {
-  body {
-    color: rgb(0, 0, 0);
-    background: linear-gradient(to bottom, transparent, rgb(255, 255, 255)) rgb(214, 219, 220);
+  html {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
   }
 
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-plum-600);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-plum-200);
   }
 }
 
@@ -18,52 +65,9 @@
   }
 }
 
-
-
-.hover-border-bottom {
-  position: relative;
+/* Besedila pesmi: ohranimo prelome vrstic in kitic, kot so zapisani v podatkih. */
+@utility verse {
+  white-space: pre-line;
+  font-family: var(--font-serif);
+  line-height: 1.75;
 }
-
-.hover-border-bottom::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-  bottom: -1px; /* Adjust the position as needed */
-  width: 80%;
-  height: 1px; /* Adjust the height as needed */
-  background-color: #8b5cf6; /* Use the current text color */
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.hover-border-bottom:hover::after {
-  transform: scaleX(1);
-}
-
-
-
-.hover-border-bottom-2 {
-  position: relative;
-}
-
-.hover-border-bottom-2::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-  bottom: -1px; /* Adjust the position as needed */
-  width: 40%;
-  height: 1px; /* Adjust the height as needed */
-  background-color: #7c63b6; /* Use the current text color */
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.hover-border-bottom-2:hover::after {
-  transform: scaleX(1);
-}
-
-
