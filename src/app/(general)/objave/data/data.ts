@@ -56,7 +56,7 @@ export const objave: Objava[] = [
     mesto: "Vrabec Anarhist",
     vsebina: "Pesmi iz še neobjavljene pesniške zbirke",
     datum: "maj 2025",
-    link: "https://vrabecanarhist.eu/2025/05/22/zejna-in-druge-pesmi/"
+    link: "https://www.vrabecanarhist.si/2025/05/22/zejna-in-druge-pesmi/"
   },
   {
     naslov: "Pet pesmi",

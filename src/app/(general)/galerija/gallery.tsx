@@ -1,5 +1,4 @@
 "use client";
-import { regeImages } from './images';
 import { cn } from '@/app/utils/cn';
 import { IImage } from './images';
 import Image from 'next/image';

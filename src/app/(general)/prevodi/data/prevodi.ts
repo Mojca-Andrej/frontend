@@ -556,7 +556,7 @@ export const vsiPrevodi: Prevodi[] = [
             "Piękno.",
             "Sączysz mnie przez zwężone powieki."
         ],
-        translation: "Tłumaczenie: Katarzyna Juvančič"
+        translation: "Tłumaczenie: Katarina Juvančič"
         
     }
 ];

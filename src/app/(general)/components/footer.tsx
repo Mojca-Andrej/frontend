@@ -9,20 +9,20 @@ export default function Footer () {
                     <h2 className="text-lg font-semibold text-white">Kontakt</h2>
                     <div className="flex space-x-2 items-center text-neutral-100">
                         <Mail size={20}/>
-                        <p className="text-base">petojca@gmail.com</p>
+                        <a href="mailto:petojca@gmail.com" className="text-base hover:text-black">petojca@gmail.com</a>
                     </div>
                     <div className="flex space-x-2 items-center text-neutral-100">
                         <Phone size={20}/>
-                        <p className="text-base">+386 51 368 588</p>
+                        <a href="tel:+38651368588" className="text-base hover:text-black">+386 51 368 588</a>
                     </div>
                     <div className="flex space-x-3 items-center justify-center text-neutral-100">
-                        <Link href="https://www.facebook.com/mojca.andrej" target="_blank">
+                        <Link href="https://www.facebook.com/mojca.andrej" target="_blank" aria-label="Facebook">
                             <Facebook size={22} className="hover:text-black"/>
                         </Link>
-                        <Link href="https://www.youtube.com/channel/UCFa7IHSXM1oKzEXmXG3NC5Q" target="_blank">
+                        <Link href="https://www.youtube.com/channel/UCFa7IHSXM1oKzEXmXG3NC5Q" target="_blank" aria-label="YouTube">
                             <Youtube strokeWidth={2} size={24} className="hover:text-black"/>
                         </Link>
-                        <Link href="https://www.instagram.com/mojcaandrej/" target="_blank">
+                        <Link href="https://www.instagram.com/mojcaandrej/" target="_blank" aria-label="Instagram">
                             <Instagram size={22} className="hover:text-black"/>
                         </Link>
                     </div>

@@ -1,13 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Photo } from 'react-photo-album';
-import Lightbox from 'yet-another-react-lightbox';
+import Lightbox, { type Slide } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
 import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
 import { Captions, Share } from 'yet-another-react-lightbox/plugins';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
-import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import { regeImages, agicaImages, veronikaImages, nastopiImages, gledalisceImages} from './images';
 import Gallery from './gallery';
 import "yet-another-react-lightbox/plugins/captions.css";
@@ -19,7 +17,7 @@ export default function Gal() {
   const [index4, setindex4] = useState(-1);
   const [index5, setindex5] = useState(-1);
 
-  const [regePhotos] = useState<Photo[]>(
+  const [regePhotos] = useState<Slide[]>(
     regeImages.map((image) => ({
       src: image.src,
       alt: image.alt,
@@ -30,7 +28,7 @@ export default function Gal() {
     })),
   );
 
-  const [agicaPhotos] = useState<Photo[]>(
+  const [agicaPhotos] = useState<Slide[]>(
     agicaImages.map((image) => ({
       src: image.src,
       alt: image.alt,
@@ -41,7 +39,7 @@ export default function Gal() {
     })),
   );
   
-  const [veronikaPhotos] = useState<Photo[]>(
+  const [veronikaPhotos] = useState<Slide[]>(
     veronikaImages.map((image) => ({
       src: image.src,
       alt: image.alt,
@@ -52,7 +50,7 @@ export default function Gal() {
     })),
   );
 
-  const [nastopiPhotos] = useState<Photo[]>(
+  const [nastopiPhotos] = useState<Slide[]>(
     nastopiImages.map((image) => ({
       src: image.src,
       alt: image.alt,
@@ -64,7 +62,7 @@ export default function Gal() {
   );
 
 
-  const [gledaliscePhotos] = useState<Photo[]>(
+  const [gledaliscePhotos] = useState<Slide[]>(
     gledalisceImages.map((image) => ({
       src: image.src,
       alt: image.alt,

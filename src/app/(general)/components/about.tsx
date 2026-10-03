@@ -15,7 +15,7 @@ export default function About() {
         Za otroke je napisala zbirko pesmi <em>Rastem do tebe</em> in ilustrirano pripoved <em>Agica, mala
         čarovnica</em>; obe sta doživeli večkratno uprizoritev in uglasbitev. Pesmi za otroke
         objavlja tudi v reviji Galeb, ki izhaja v Trstu. <br />
-        Junija 2024 je postala članica <a target= "_blank" className="text-blue-700 hover:text-blue-500" href="https://drustvo-dsp.si/pisatelji/mojcaandrej/">Društva slovenskih pisateljev.</a> <br />
+        Junija 2024 je postala članica <a target= "_blank" className="text-blue-700 hover:text-blue-500" href="https://drustvo-dsp.si/pisatelji/">Društva slovenskih pisateljev.</a> <br />
         Svojo poezijo predstavlja na festivalih doma in v tujini. Nekatere njene pesmi so
         prevedene v slovaški, hrvaški, makedonski, bolgarski, arabski in angleški jezik in so
         objavljene v domačih in tujih revijah in zbornikih. <br />
@@ -26,7 +26,7 @@ export default function About() {
         </p>
       </div>
       <div className="flex flex-col justify-center md:col-span-1 items-center md:items-start ">
-        <Image priority={true} width={400} height={400} src="/naslovnica.jpg" alt="Descriptive Alt Text" className="md:w-full max-h-[90%] object-cover w-2/3 rounded-md shadow-md" />
+        <Image priority={true} width={400} height={400} src="/naslovnica.jpg" alt="Mojca Andrej bere iz svoje knjige" className="md:w-full max-h-[90%] object-cover w-2/3 rounded-md shadow-md" />
         <p className="text-neutral-500 text-sm flex justify-start px-1 py-2">Foto: Boštjan Lah</p>
       </div>
     </div>

@@ -1,14 +1,21 @@
+import { notFound } from "next/navigation";
+import { vsiPrevodi } from "../data/prevodi";
+
 interface Props {
     params: {
         jezik: string;
-    
     }
 }
 
-import { vsiPrevodi } from "../data/prevodi";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+    return Array.from(new Set(vsiPrevodi.map(prevod => prevod.abv))).map(jezik => ({ jezik }));
+}
 
 export default function Prevodi({ params }: Props) {
     const prevodi = vsiPrevodi.filter(prevod => prevod.abv === params.jezik);
+    if (prevodi.length === 0) notFound();
     const language = prevodi[0].language;
     return (
         <div>

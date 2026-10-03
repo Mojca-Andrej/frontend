@@ -24,7 +24,6 @@ export default function Content({ proza }: Props) {
                 {toDisplay.content.map((line, index) => (
                     <div key={index} className="text-sm md:text-base">
                         {typeof line==="object" && line.text.map((item, index) => (
-                            console.log(item),
                             <p key={index} className={`${index === line.text.length - 1 ? "mb-4" : "mb-1"} italic ${index === 0 ? "mt-4" : ""}`}>{item}</p>
                         ))}
                         {typeof line==="string" && line !== "" && <p key={index} className={`mb-2 ${index === 0 || index === toDisplay.content.length - 1 ? "mt-4" : ""}`} dangerouslySetInnerHTML={{__html: line}}></p>}

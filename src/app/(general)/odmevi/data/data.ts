@@ -24,7 +24,7 @@ export const odmevi: Odmevi[] = [
     },
     {
         title: "Radio Maribor, novinarka Brigita Mohorič, januar 2023, spletni zapis",
-        src:  `https://www.rtvslo.si/radio-maribor/mojca-andrej-zgodba-uciteljice-veronike-je-pripoved-o-danasnji-druzbi-o-mnogih-med-nami/655484`,
+        src:  `https://radiomaribor.rtvslo.si/clanek/mojca-andrej-zgodba-uciteljice-veronike-je-pripoved-o-danasnji-druzbi-o-mnogih-med-nami/655484`,
         type: TipiOdmevov.veronika
     },
     {
@@ -34,12 +34,12 @@ export const odmevi: Odmevi[] = [
     },
     {
         title: `Intervju na radiu Maribor (od 7.55 naprej) z Brigito Mohorič`,
-        src: `https://www.rtvslo.si/radio/podkasti/kultura-zdravi-umetnost-lajsa/155779478/174926726`,
+        src: `https://radiomaribor.rtvslo.si/podkast/kultura-zdravi-umetnost-lajsa/155779478/174926726`,
         type: TipiOdmevov.veronika
     },
     {
         title: `Podcast Zorni kot z Natašo Rižnar, januar 2023`,
-        src: `https://www.rtvslo.si/radio-maribor/podcast-zorni-kot-18-otroci-mislijo-da-so-vsi-odgovori-na-googlu-oziroma-le-klik-stran/656679?fbclid=IwAR1QVIaVSz3A1CpwgMwskysCjZx6qctmmt3j08TJn2Fuuvn5rT0WoxKD-OQ`,
+        src: `https://radiomaribor.rtvslo.si/clanek/podcast-zorni-kot-18-otroci-mislijo-da-so-vsi-odgovori-na-googlu-oziroma-le-klik-stran/656679`,
         type: TipiOdmevov.veronika
     },
     {
@@ -54,7 +54,7 @@ export const odmevi: Odmevi[] = [
     },
     {
         title: "Primorske novice, 21. 6. 2024",
-        src: "https://primorske.svet24.si/kultura/knjizna-polica/do-sijaja-zlosceno-ogledalo",
+        src: "https://primorske.si/kultura/knjizna-polica/do-sijaja-zlosceno-ogledalo/",
         type: TipiOdmevov.veronika
     },
     {
@@ -84,7 +84,7 @@ export const odmevi: Odmevi[] = [
     },
     {
         title: "Video prispevek Letnega odra Ruše in Video produkcije Plamen – nastop z glasbeno pravljico Agica, mala čarovnica",
-        src: "https://www.facebook.com/reel/1808740247206517/?s=single_unit",
+        src: "https://www.facebook.com/reel/1808740247206517",
         type: TipiOdmevov.agica
     },
 ]

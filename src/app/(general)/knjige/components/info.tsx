@@ -16,7 +16,7 @@ export default function Info({ book }: InfoProps) {
                         <p dangerouslySetInnerHTML={{ __html: book.description }}></p>
                         {book.ilustrator && <p><span className="font-semibold">Ilustratorka: </span>{book.ilustrator}</p>}
                         {book.cd && <p><span className="font-semibold">CD uglasbenih pesmi: </span>{book.cd}</p>}
-                        <p><span className="font-semibold">{book.title === "Transitions" ? "Avtorja:": "Avtorica:"} </span>{book.author}</p>
+                        <p><span className="font-semibold">{book.author.includes(" in ") ? "Avtorja:" : "Avtorica:"} </span>{book.author}</p>
                         <p><span className="font-semibold">Založba: </span> {book.publisher}</p>
                         <p><span className="font-semibold">Leto izdaje: </span> {book.year}</p> 
                     </section>
